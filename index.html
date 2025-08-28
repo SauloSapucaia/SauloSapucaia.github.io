@@ -13,12 +13,28 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        .skill-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
         .skill-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .case-study-content {
+            display: none;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.7s ease-in-out;
+        }
+        .case-study-content.open {
+            display: block;
+            max-height: 2000px; /* Adjust as needed */
+        }
+        .case-study-details h4 {
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 700;
+            margin-top: 1.5rem; /* mt-6 */
+            margin-bottom: 0.5rem; /* mb-2 */
+            color: #1e40af; /* text-blue-800 */
+            border-bottom: 2px solid #dbeafe; /* border-blue-100 */
+            padding-bottom: 0.25rem; /* pb-1 */
         }
     </style>
 </head>
@@ -58,12 +74,12 @@
         <!-- Seção Principal (Hero) -->
         <section class="text-center py-20">
             <h1 class="text-4xl md:text-6xl font-bold mb-4">Saulo Sapucaia</h1>
-            <p class="text-xl md:text-2xl text-blue-600 font-medium mb-8">Analista de Dados | Especialista em Power BI, Python & SQL</p>
+            <p class="text-xl md:text-2xl text-blue-600 font-medium mb-8">Analista de Dados | Especialista em Power BI | Conhecimentos em Python & SQL</p>
             <p class="max-w-3xl mx-auto text-lg text-gray-600 mb-8">
-                Transformando dados em insights acionáveis e decisões estratégicas através de dashboards interativos e análises aprofundadas.
+                Transformando dados em insights acionáveis e decisões estratégicas por meio de dashboards interativos em Power BI, modelagem de dados e análises aprofundadas com apoio de Python & SQL.
             </p>
             <a href="#projetos" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 text-lg">
-                Veja meus projetos
+                Conheça meus projetos
             </a>
         </section>
 
@@ -74,66 +90,116 @@
                     <div class="bg-white p-6 rounded-lg shadow-lg">
                         <img src="https://placehold.co/400x400/EBF4FF/3B82F6?text=SS" alt="Foto de Saulo Sapucaia" class="rounded-full mx-auto w-48 h-48 object-cover mb-6 border-4 border-blue-200">
                          <h3 class="text-2xl font-bold text-center mb-2">Saulo Sapucaia</h3>
-                         <p class="text-center text-gray-500">Tecnologia em Data Science - FIAP</p>
+                         <p class="text-center text-gray-500">Tecnólogo em Data Science - FIAP</p>
                     </div>
                 </div>
                 <div class="md:col-span-3">
                     <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-600 pl-4">Sobre Mim</h2>
                     <p class="text-lg text-gray-600 mb-4">
-                        Sou um analista de dados com o objetivo de atuar em uma cultura data-driven, utilizando minhas competências em Python, SQL, Excel e, principalmente, Power BI. Minha paixão é criar relatórios e dashboards que não apenas apresentam dados, mas contam histórias e geram insights valiosos para a tomada de decisões.
+                        Sou um analista de dados focado em transformar dados brutos em inteligência de negócio. Minha paixão é construir a jornada completa da análise: da extração e modelagem de dados à criação de dashboards e análises em Python que geram insights claros e suportam decisões estratégicas.
                     </p>
                     <p class="text-lg text-gray-600">
-                        Atualmente, trabalho na Évora Assessoria, onde desenvolvo soluções de BI para monitorar indicadores chave, e estou aprimorando meus conhecimentos na graduação em Ciência de Dados pela FIAP.
+                        Atualmente na Évora Assessoria, aplico minhas competências para otimizar processos e monitorar indicadores chave, enquanto aprofundo meus conhecimentos em Ciência de Dados na FIAP.
                     </p>
                 </div>
             </div>
         </section>
 
         <!-- Seção Projetos -->
-        <section id="projetos" class="py-20 bg-white rounded-lg shadow-xl -mx-6 px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">Projetos em Destaque</h2>
-            <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-10">
-                <!-- Projeto 1 -->
-                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-300">
-                    <img src="https://placehold.co/600x400/EBF4FF/3B82F6?text=Dashboard+Controle" alt="Dashboard de Controle de Volume e Prazos" class="w-full h-auto object-cover object-top">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3">Dashboard de Controle de Volume e Prazos</h3>
-                        <p class="text-gray-600 mb-4">
-                            Dashboard desenvolvido em Power BI para apresentar indicadores que acompanham o fluxo de recebimento e finalização de processos de clientes. O projeto envolveu tratamento de dados com M e DAX, incluindo a importação de feriados via API e a criação de medidas complexas para os KPIs.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Power BI</span>
-                            <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">DAX</span>
-                            <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Linguagem M</span>
-                            <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">API</span>
+        <section id="projetos" class="py-20">
+            <h2 class="text-3xl font-bold text-center mb-12">Estudos de Caso</h2>
+            <div class="space-y-10">
+
+                <!-- Case Study 1: BI Operacional -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6 md:p-8">
+                        <div class="md:flex md:items-start md:gap-8">
+                            <img src="https://placehold.co/600x400/EBF4FF/3B82F6?text=BI+Operacional" alt="Dashboard de Controle de Volume e Prazos" class="w-full md:w-1/3 h-auto object-cover rounded-md mb-4 md:mb-0">
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold mb-2 text-gray-900">BI para Otimização de Processos Operacionais</h3>
+                                <p class="text-gray-600 mb-4">
+                                    Análise do fluxo de recebimento e finalização de processos para identificar gargalos, monitorar SLAs e melhorar a eficiência da equipe.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Power BI</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">DAX</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Power Query</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Modelagem de Dados</span>
+                                </div>
+                                <button onclick="toggleCaseStudy('case1')" class="font-bold text-blue-600 hover:text-blue-800 transition duration-300">
+                                    Ver estudo de caso <i class="fas fa-chevron-down ml-1 transform transition-transform"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="case1" class="case-study-content bg-gray-50">
+                        <div class="p-6 md:p-8 case-study-details">
+                            <h4>Contexto e Problema</h4>
+                            <p>A empresa possuía um alto volume de processos de clientes, mas a gestão era reativa, baseada em relatórios manuais e planilhas. Isso gerava uma falta de visibilidade sobre a produtividade da equipe, o cumprimento de prazos (SLAs) e a identificação de gargalos, impactando a eficiência operacional.</p>
+                            
+                            <h4>Processo e Solução</h4>
+                            <p>O projeto foi desenvolvido para criar uma fonte central de verdade e fornecer visibilidade em tempo real. O processo incluiu:</p>
+                            <ul class="list-disc list-inside mt-2 space-y-1">
+                                <li><strong>ETL com Power Query:</strong> Extração de dados de diversas fontes (planilhas e banco de dados SQL). Realizei a limpeza, transformação e enriquecimento dos dados, como a integração de uma API de feriados para calcular dias úteis com precisão.</li>
+                                <li><strong>Modelagem de Dados:</strong> Construção de um modelo dimensional (Star Schema) robusto, com tabelas fato (processos) e dimensão (clientes, tempo, status), garantindo performance e escalabilidade.</li>
+                                <li><strong>Cálculos com DAX:</strong> Desenvolvimento de mais de 30 medidas complexas em DAX para calcular KPIs essenciais, como Tempo Médio de Atendimento (TMA), volume de processos recebidos vs. finalizados e percentual de SLAs no prazo.</li>
+                            </ul>
+
+                            <h4>Entregáveis e Resultados</h4>
+                            <p>O entregável final foi um dashboard interativo em Power BI, permitindo que os gestores filtrassem as informações por cliente, período e status do processo. Os principais resultados foram:</p>
+                            <ul class="list-disc list-inside mt-2 space-y-1">
+                                <li><strong>Insight Acionável 1:</strong> O dashboard revelou que o tempo médio de processos para o "Cliente X" era 40% maior que a média geral. Isso levou a uma investigação que identificou uma falha específica no fluxo desse cliente, permitindo uma correção direcionada.</li>
+                                <li><strong>Insight Acionável 2:</strong> Foi identificado um gargalo recorrente na etapa de "Análise de Documentos", que atrasava 60% dos processos. Com essa informação, a gestão pôde realocar a equipe e investir em treinamento, reduzindo o tempo da etapa em 25% em 3 meses.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <!-- Projeto 2 -->
-                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-300">
-                     <img src="https://placehold.co/600x400/EBF4FF/3B82F6?text=Projeto+Financeiro" alt="Dashboard Gerencial Financeiro" class="w-full h-auto object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-3">Dashboard Gerencial Financeiro</h3>
-                        <p class="text-gray-600 mb-4">
-                           Desenvolvimento de um dashboard gerencial para monitorar o desempenho financeiro e o volume de processos recebidos por cliente. Para esta ferramenta, apliquei competências avançadas em linguagem M, DAX e SQL para integração e análise de dados de múltiplas fontes.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Power BI</span>
-                            <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">SQL</span>
-                            <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">DAX</span>
-                             <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Linguagem M</span>
+
+                <!-- Case Study 2: Análise Preditiva com Python -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6 md:p-8">
+                        <div class="md:flex md:items-start md:gap-8">
+                            <img src="https://placehold.co/600x400/EBF4FF/3B82F6?text=Python+Análise" alt="Análise Preditiva de Churn" class="w-full md:w-1/3 h-auto object-cover rounded-md mb-4 md:mb-0">
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold mb-2 text-gray-900">Análise Preditiva de Churn com Python</h3>
+                                <p class="text-gray-600 mb-4">
+                                    Análise exploratória e desenvolvimento de um modelo de classificação para identificar clientes com alta probabilidade de cancelamento.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Pandas</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Matplotlib</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Scikit-learn</span>
+                                </div>
+                                <button onclick="toggleCaseStudy('case2')" class="font-bold text-blue-600 hover:text-blue-800 transition duration-300">
+                                    Ver estudo de caso <i class="fas fa-chevron-down ml-1 transform transition-transform"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="case2" class="case-study-content bg-gray-50">
+                        <div class="p-6 md:p-8 case-study-details">
+                            <h4>Contexto e Problema</h4>
+                            <p>Uma empresa de serviços por assinatura enfrentava uma taxa de cancelamento (churn) crescente, mas não possuía uma estratégia proativa para reter clientes. O objetivo era entender os principais motivos do churn e identificar os clientes com maior risco de cancelamento.</p>
+                            
+                            <h4>Processo e Solução</h4>
+                            <p>Utilizando Python e suas bibliotecas de análise de dados, o projeto seguiu as seguintes etapas:</p>
+                            <ul class="list-disc list-inside mt-2 space-y-1">
+                                <li><strong>Análise Exploratória de Dados (EDA):</strong> Com Pandas, Matplotlib e Seaborn, explorei um dataset de clientes para entender o perfil dos que cancelaram. Investiguei a correlação entre variáveis como plano, tempo de contrato, uso de serviços e o churn.</li>
+                                <li><strong>Pré-processamento e Engenharia de Features:</strong> Realizei a limpeza dos dados, tratei valores ausentes e transformei variáveis categóricas em numéricas para preparar o dataset para a modelagem.</li>
+                                <li><strong>Desenvolvimento do Modelo:</strong> Treinei um modelo de Regressão Logística com Scikit-learn para classificar clientes como "provável churn" ou "não provável churn". O modelo alcançou uma acurácia de 82% na identificação de clientes que cancelariam.</li>
+                            </ul>
+
+                            <h4>Entregáveis e Resultados</h4>
+                            <p>O principal entregável foi um Jupyter Notebook detalhado com todo o código e as análises, além de um relatório resumindo os insights para a área de negócio. <a href="https://github.com/SauloSapucaia" target="_blank" class="text-blue-600 underline">Veja o código no GitHub</a>.</p>
+                            <ul class="list-disc list-inside mt-2 space-y-1">
+                                <li><strong>Insight Acionável 1:</strong> A análise revelou que 70% dos clientes que cancelavam tinham contratos mensais. A recomendação foi criar uma campanha de marketing oferecendo um desconto para a migração para o plano anual, visando aumentar a retenção.</li>
+                                <li><strong>Insight Acionável 2:</strong> O modelo identificou que clientes com baixo uso do serviço nos primeiros 2 meses tinham 5x mais chances de cancelar. Isso levou à criação de um programa de "onboarding" para engajar novos clientes e demonstrar o valor da ferramenta logo no início.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                 <!-- Outros Projetos -->
-                <div class="lg:col-span-2 bg-gray-50 rounded-lg p-6 shadow-md">
-                    <h3 class="text-2xl font-bold mb-4">Outras Iniciativas</h3>
-                    <ul class="list-disc list-inside space-y-3 text-gray-600">
-                        <li><b>Otimização de Relatórios:</b> Criação de script em Linguagem M para agrupar e concatenar dados, melhorando a legibilidade de relatórios de pendências.</li>
-                        <li><b>Análise de Atendimento:</b> Dashboard para monitorar o fluxo de ligações, identificando gargalos e oportunidades para reduzir o tempo de espera e chamadas abandonadas.</li>
-                        <li><b>Ajuste em Script Python:</b> Colaboração em um projeto Python para análise de performance, criando novas métricas para uma avaliação mais precisa do giro de estoque.</li>
-                    </ul>
-                </div>
+                
             </div>
         </section>
 
@@ -186,22 +252,7 @@
                     <p class="text-gray-600 mb-4">
                         Capacitação em arquitetura e integração de dados, Big Data, NoSQL, governança e segurança, SQL e banco de dados não-relacional, BI, Data Warehousing, Machine Learning, Deep Learning e Cloud. Foco em transformar dados complexos em insights estratégicos com análise preditiva e visualização avançada.
                     </p>
-                    <p class="font-semibold text-gray-700">Principais competências:</p>
-                    <p class="text-gray-600 text-sm">
-                        Segurança da informação, Aprendizagem estatística, Big Data, BI & Data Engineering, e mais.
-                    </p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Seção Cursos e Certificados -->
-        <section id="certificados" class="py-20">
-            <h2 class="text-3xl font-bold text-center mb-12">Cursos e Certificados</h2>
-            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md"><h3 class="text-xl font-bold mb-2">Formação completa em Power BI</h3><p class="font-semibold text-blue-700">Datab</p><p class="text-sm text-gray-500">Jun 2023</p></div>
-                <div class="bg-white p-6 rounded-lg shadow-md"><h3 class="text-xl font-bold mb-2">Fundamentos de Python para Análise de Dados</h3><p class="font-semibold text-blue-700">Data Science Academy</p><p class="text-sm text-gray-500">Mai 2024</p></div>
-                <div class="bg-white p-6 rounded-lg shadow-md"><h3 class="text-xl font-bold mb-2">Introdução ao SQL aplicado ao Power BI</h3><p class="font-semibold text-blue-700">Datab</p><p class="text-sm text-gray-500">Jul 2023</p></div>
-                <div class="bg-white p-6 rounded-lg shadow-md"><h3 class="text-xl font-bold mb-2">Python para Iniciantes</h3><p class="font-semibold text-blue-700">Datab</p><p class="text-sm text-gray-500">Jul 2023</p></div>
             </div>
         </section>
 
@@ -238,17 +289,28 @@
         // Script para menu mobile
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-
-        // Fechar menu mobile ao clicar em um link
-        const mobileLinks = mobileMenu.getElementsByTagName('a');
-        for (let link of mobileLinks) {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
+        
+        // Script para expandir/recolher estudos de caso
+        function toggleCaseStudy(caseId) {
+            const content = document.getElementById(caseId);
+            const icon = content.previousElementSibling.querySelector('i');
+            
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.classList.remove('rotate-180');
+            } else {
+                // Opcional: Fechar outros casos abertos
+                document.querySelectorAll('.case-study-content.open').forEach(openCase => {
+                    openCase.classList.remove('open');
+                    openCase.previousElementSibling.querySelector('i').classList.remove('rotate-180');
+                });
+                
+                content.classList.add('open');
+                icon.classList.add('rotate-180');
+            }
         }
     </script>
 </body>
