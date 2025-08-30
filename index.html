@@ -88,7 +88,7 @@
             <div class="grid md:grid-cols-5 gap-12 items-center">
                 <div class="md:col-span-2">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <img src="https://placehold.co/400x400/EBF4FF/3B82F6?text=SS" alt="Foto de Saulo Sapucaia" class="rounded-full mx-auto w-48 h-48 object-cover mb-6 border-4 border-blue-200">
+                        <img src="https://SauloSapucaia.github.io/Sobre_mim.jpg" alt="Foto de Saulo Sapucaia" class="rounded-full mx-auto w-48 h-48 object-cover mb-6 border-4 border-blue-200">
                          <h3 class="text-2xl font-bold text-center mb-2">Saulo Sapucaia</h3>
                          <p class="text-center text-gray-500">Tecnólogo em Data Science - FIAP</p>
                     </div>
@@ -117,10 +117,10 @@
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                         <div class="p-6 md:p-8">
                             <div class="md:flex md:items-start md:gap-8">
-                                <img src="https://placehold.co/600x400/EBF4FF/3B82F6?text=BI+Sinistros" alt="Dashboard Operacional" class="w-full md:w-1/3 h-auto object-cover rounded-md mb-4 md:mb-0">
+                                <img src="https://placehold.co/600x400/EBF4FF/3B82F6?text=BI+Operacional" alt="Dashboard Operacional" class="w-full md:w-1/3 h-auto object-cover rounded-md mb-4 md:mb-0">
                                 <div class="flex-1">
-                                    <h3 class="text-xl font-bold mb-2 text-gray-900">Dashboard Operacional (Segmento de Sinistros)</h3>
-                                    <p class="text-gray-600 mb-4">Análise de produtividade e SLAs para otimizar o fluxo de processos no setor de seguros.</p>
+                                    <h3 class="text-xl font-bold mb-2 text-gray-900">Dashboard Operacional</h3>
+                                    <p class="text-gray-600 mb-4">Análise de produtividade, prazos e gargalos para otimizar a eficiência de processos operacionais.</p>
                                     <div class="flex flex-wrap gap-2 mb-6">
                                         <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Power BI</span>
                                         <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">DAX</span>
@@ -132,27 +132,28 @@
                             </div>
                         </div>
                         <div id="case1" class="case-study-content bg-gray-50"><div class="p-6 md:p-8 case-study-details">
-                            <h4>Contexto e Problema</h4><p>A empresa, do setor de seguros, possuía um alto volume de processos de recebimento e finalização, mas a gestão era reativa, baseada em relatórios manuais e planilhas. Isso dificultava a análise de produtividade da equipe, o cumprimento de prazos (SLAs) e a identificação de gargalos, impactando diretamente a eficiência operacional e a qualidade do serviço.</p>
-                            <h4>Processo e Solução</h4><p>O projeto foi desenvolvido para centralizar as informações e fornecer uma visão consolidada dos processos. O processo incluiu:</p>
+                            <h4>Contexto e Problema</h4><p>A organização possuía um grande volume de processos operacionais, mas a gestão era baseada em relatórios manuais e planilhas fragmentadas. Isso dificultava a análise de produtividade, o acompanhamento de prazos e a identificação de gargalos, comprometendo a eficiência e a qualidade do serviço.</p>
+                            <h4>Processo e Solução</h4>
                             <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li><strong>ETL com Power Query:</strong> Extração e transformação de dados de diferentes fontes. Realizei a integração de uma API de feriados para calcular dias úteis com maior precisão e uma conexão no banco de dados através de SQL.</li>
-                                <li><strong>Modelagem de Dados:</strong> Construção de um modelo dimensional (Star Schema) robusto, com tabelas fato (detalhe dos processos) e dimensão (clientes, faixa de tempo, status), garantindo performance e escalabilidade.</li>
-                                <li><strong>Cálculos com DAX:</strong> Criação de medidas e indicadores essenciais, como tempo médio (estoque, finalização e um kpi ponderando os dos prazos), volume de processos em recebidos vs. finalizados, e percentual de crescimento do mês em relação ao mês anterior.</li>
+                                <li><strong>ETL com Power Query:</strong> extração e transformação de dados de múltiplas fontes, incluindo integração com API de feriados para cálculo preciso de dias úteis e conexão a banco de dados via SQL.</li>
+                                <li><strong>Modelagem de Dados:</strong> criação de modelo dimensional (Star Schema) com tabelas fato e dimensões, garantindo performance e escalabilidade.</li>
+                                <li><strong>Cálculos com DAX:</strong> desenvolvimento de indicadores como tempo médio de estoque e finalização, volume de processos recebidos vs. finalizados e comparativos mensais.</li>
                             </ul>
-                            <h4>Entregáveis e Resultados</h4><p>O entregável final foi um dashboard interativo em Power BI, permitindo que os gestores filtrassem as informações por cliente, período e status dos processos. Os principais resultados foram:</p>
+                            <h4>Entregáveis e Resultados</h4><p>Dashboard interativo em Power BI, permitindo análises detalhadas por período e status. Entre os benefícios:</p>
                             <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li><strong>Insight Acionável 1:</strong> Identificação de etapas do fluxo com maior tempo de espera detalhada por clientes, possibilitando que a gestão montasse um plano estratégico que gerou uma redução de 40% nos prazos desses processos e consequentemente diminuindo o tempo de finalização.</li>
-                                <li><strong>Insight Acionável 2:</strong> Comparação entre prazos revelou gargalos específicos onde o SLA estava sendo descumprido. Isso orientou ações corretivas que reduziram atrasos recorrentes em até 20% de forma geral.</li>
+                                <li>Identificação de gargalos no fluxo, possibilitando ações para reduzir prazos de conclusão.</li>
+                                <li>Detecção de descumprimentos de prazos, orientando correções e melhorias na operação.</li>
                             </ul>
                         </div></div>
                     </div>
+                    <!-- Case Study 2 -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                         <div class="p-6 md:p-8">
                             <div class="md:flex md:items-start md:gap-8">
                                 <img src="https://placehold.co/600x400/EBF4FF/3B82F6?text=BI+Atendimento" alt="Dashboard de Ligações" class="w-full md:w-1/3 h-auto object-cover rounded-md mb-4 md:mb-0">
                                 <div class="flex-1">
-                                    <h3 class="text-xl font-bold mb-2 text-gray-900">Dashboard de Ligações (Atendimento)</h3>
-                                    <p class="text-gray-600 mb-4">Monitoramento de indicadores críticos da operação de atendimento para reduzir contatos vencidos e melhorar a experiência do cliente.</p>
+                                    <h3 class="text-xl font-bold mb-2 text-gray-900">Dashboard de Ligações</h3>
+                                    <p class="text-gray-600 mb-4">Monitoramento de indicadores de atendimento para reduzir pendências e aumentar a eficiência da equipe.</p>
                                     <div class="flex flex-wrap gap-2 mb-6">
                                         <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Power BI</span>
                                         <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
@@ -164,52 +165,52 @@
                             </div>
                         </div>
                         <div id="case2" class="case-study-content bg-gray-50"><div class="p-6 md:p-8 case-study-details">
-                            <h4>Contexto e Problema</h4><p>A equipe de atendimento recebia um grande volume de processos para realizar ligações, mas não havia clareza sobre indicadores críticos, como volume diário e status dos contatos ativos (no prazo e vencidos). Isso resultava em gestão reativa, dificuldade em priorizar chamados e acúmulo de contatos vencidos, afetando a experiência do cliente final.</p>
-                            <h4>Processo e Solução</h4><p>O projeto foi desenvolvido para fornecer visibilidade em tempo quase real da operação de atendimento. O processo incluiu:</p>
+                            <h4>Contexto e Problema</h4><p>A equipe de atendimento lidava com alto volume de contatos sem visibilidade clara de indicadores como status e tempo de atendimento. Isso dificultava a priorização e gerava acúmulo de pendências.</p>
+                            <h4>Processo e Solução</h4>
                             <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li><strong>ETL com Python:</strong> Consolidação de diferentes tipos de relatórios em excel e tabela do banco de dados, padronizando informações de status (vencida, em andamento e programadas).</li>
-                                <li><strong>Modelagem de Dados:</strong> Estruturação de tabelas fato (ligações) e dimensões (tempo, status, operador), garantindo flexibilidade nas análises.</li>
-                                <li><strong>Cálculos com DAX:</strong> Criação de medidas como volume de contatos vencidos, tempo médio de atendimento e distribuição de ligações por operador e horário.</li>
+                                <li><strong>ETL com Python:</strong> consolidação de relatórios em Excel e tabelas de banco de dados, padronizando informações de status.</li>
+                                <li><strong>Modelagem de Dados:</strong> estruturação de tabelas fato e dimensões (tempo, status, operador).</li>
+                                <li><strong>Cálculos com DAX:</strong> criação de métricas como volume de contatos pendentes, tempo médio de atendimento e distribuição por operador.</li>
                             </ul>
-                            <h4>Entregáveis e Resultados</h4><p>O entregável final foi um dashboard em Power BI que permitiu acompanhamento detalhado por período e tipo de ligação. Os principais resultados foram:</p>
+                            <h4>Entregáveis e Resultados</h4><p>Dashboard em Power BI que trouxe visibilidade em tempo quase real da operação. Entre os impactos:</p>
                             <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li><strong>Insight Acionável 1:</strong> O dashboard mostrou que mais de 29.6% das ligações estavam sendo abandonadas. Essa visibilidade levou a atuar de forma preventiva, evitando o acúmulo de contatos atrasados e garantindo que quase todos os contatos sejam realizados dentro do prazo.</li>
-                                <li><strong>Insight Acionável 2:</strong> A análise dos contatos vencidos revelou gargalos na priorização, permitindo realocar esforços para reduzir o backlog. Com isso, o volume médio de contatos atrasados foi reduzido em 75% nos primeiros 6 meses e atualmente em 98%.</li>
+                                <li>Redução significativa do acúmulo de contatos pendentes.</li>
+                                <li>Melhora na alocação de esforços e aumento da eficiência no cumprimento de prazos.</li>
                             </ul>
                         </div></div>
                     </div>
+                    <!-- Case Study 3 -->
                      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                         <div class="p-6 md:p-8">
                             <div class="md:flex md:items-start md:gap-8">
-                                <img src="https://placehold.co/600x400/EBF4FF/3B82F6?text=BI+Financeiro" alt="Dashboard de Auditoria Financeira" class="w-full md:w-1/3 h-auto object-cover rounded-md mb-4 md:mb-0">
+                                <img src="https://placehold.co/600x400/EBF4FF/3B82F6?text=BI+Financeiro" alt="Dashboard de Auditoria de Custos" class="w-full md:w-1/3 h-auto object-cover rounded-md mb-4 md:mb-0">
                                 <div class="flex-1">
-                                    <h3 class="text-xl font-bold mb-2 text-gray-900">Dashboard de Auditoria Financeira “Fullcost”</h3>
-                                    <p class="text-gray-600 mb-4">Criação de uma visão consolidada de custos operacionais para identificar ineficiências e avaliar o desempenho financeiro por cliente, grupo e loja.</p>
+                                    <h3 class="text-xl font-bold mb-2 text-gray-900">Dashboard Financeiro</h3>
+                                    <p class="text-gray-600 mb-4">Visão consolidada de custos para análise de desempenho, eficiência e suporte à decisão estratégica.</p>
                                     <div class="flex flex-wrap gap-2 mb-6">
                                         <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Power BI</span>
                                         <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">DAX</span>
                                         <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">DataViz</span>
-                                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Excel</span>
+                                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">ETL</span>
                                     </div>
                                     <button onclick="toggleCaseStudy('case3')" class="font-bold text-blue-600 hover:text-blue-800 transition duration-300">Ver detalhes <i class="fas fa-chevron-down ml-1 transform transition-transform"></i></button>
                                 </div>
                             </div>
                         </div>
                         <div id="case3" class="case-study-content bg-gray-50"><div class="p-6 md:p-8 case-study-details">
-                            <h4>Contexto e Problema</h4><p>O time de auditoria precisava de uma visão consolidada dos custos operacionais por cliente, grupo e loja. As análises eram feitas em relatórios Excel fragmentados, dificultando a identificação de ineficiências e a avaliação do desempenho financeiro, impactando a tomada de decisão estratégica.</p>
-                            <h4>Processo e Solução</h4><p>O projeto transformou relatórios dispersos em um dashboard analítico no Power BI. O processo incluiu:</p>
+                            <h4>Contexto e Problema</h4><p>O time responsável por auditoria financeira utilizava relatórios dispersos em Excel, o que dificultava a análise de custos, a avaliação de desempenho e a comparação entre diferentes unidades de negócio.</p>
+                            <h4>Processo e Solução</h4>
                             <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li><strong>ETL com Power Query:</strong> Tratamento e consolidação dos dados de Excel, padronizando as informações de custos.</li>
-                                <li><strong>Modelagem de Dados:</strong> Estruturação de um modelo com tabelas fato (custos, faturamento) e dimensões (clientes, grupos, lojas).</li>
-                                <li><strong>Cálculos com DAX:</strong> Desenvolvimento de medidas financeiras como Faturamento, Despesas, Fullcost e Resultado Operacional (%).</li>
-                                <li><strong>Data Visualization:</strong> Aplicação de técnicas de visualização para destacar evolução de crescimento e eficiência por unidade.</li>
+                                <li><strong>ETL com Power Query:</strong> tratamento e consolidação de dados financeiros.</li>
+                                <li><strong>Modelagem de Dados:</strong> criação de modelo analítico com tabelas fato (custos e faturamento) e dimensões (unidade, segmento, categoria).</li>
+                                <li><strong>Cálculos com DAX:</strong> desenvolvimento de medidas como custos totais, despesas internas/externas, margem operacional e eficiência por unidade.</li>
+                                <li><strong>Data Visualization:</strong> aplicação de técnicas de visualização para evidenciar evolução e comparativos.</li>
                             </ul>
-                            <h4>Entregáveis e Resultados</h4><p>O entregável final foi um dashboard financeiro interativo. Os principais resultados foram:</p>
+                            <h4>Entregáveis e Resultados</h4><p>Dashboard em Power BI com visão consolidada e interativa. Entre os ganhos:</p>
                             <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li><strong>Insight Acionável 1:</strong> Identificação de grupos e lojas com baixa eficiência, direcionando planos de ação para reduzir custos.</li>
-                                <li><strong>Insight Acionável 2:</strong> Visualização clara do crescimento por segmento, permitindo priorizar investimentos.</li>
-                                <li><strong>Insight Acionável 3:</strong> Substituição de relatórios manuais, gerando economia de tempo e aumentando a confiabilidade das análises.</li>
-                                <li><strong>Insight Acionável 4:</strong> Possibilidade de cruzar informações entre clientes e segmentos, abrindo espaço para estratégias de expansão comercial.</li>
+                                <li>Identificação de unidades com baixa eficiência operacional.</li>
+                                <li>Priorização de investimentos em áreas com melhor retorno.</li>
+                                <li>Substituição de relatórios manuais por uma solução automatizada, aumentando confiabilidade e economia de tempo.</li>
                             </ul>
                         </div></div>
                     </div>
@@ -220,13 +221,14 @@
             <div>
                 <h3 class="text-2xl font-bold text-center mb-10 text-gray-700 border-b-2 pb-2">Projetos de Python & Automação</h3>
                 <div class="space-y-10">
+                    <!-- Case Study 4 -->
                      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                         <div class="p-6 md:p-8">
                             <div class="md:flex md:items-start md:gap-8">
-                                <img src="https://placehold.co/600x400/EBF4FF/3B82F6?text=Python+Métrica" alt="Ajuste de Métrica de Performance" class="w-full md:w-1/3 h-auto object-cover rounded-md mb-4 md:mb-0">
+                                <img src="https://SauloSapucaia.github.io/python_grafic.jpg" alt="Ajuste de Métrica de Performance" class="w-full md:w-1/4 aspect-square object-cover rounded-md mb-4 md:mb-0">
                                 <div class="flex-1">
-                                    <h3 class="text-xl font-bold mb-2 text-gray-900">Ajuste de Métrica de Performance (Python + Dados Operacionais)</h3>
-                                    <p class="text-gray-600 mb-4">Refino de uma métrica de giro de estoque para corrigir distorções e refletir o real desempenho da operação.</p>
+                                    <h3 class="text-xl font-bold mb-2 text-gray-900">Ajuste de Métrica de Performance</h3>
+                                    <p class="text-gray-600 mb-4">Refino de uma métrica de desempenho com Python para refletir a realidade operacional e aumentar a confiabilidade das análises.</p>
                                     <div class="flex flex-wrap gap-2 mb-6">
                                         <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
                                         <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Regra de Negócio</span>
@@ -237,27 +239,28 @@
                             </div>
                         </div>
                         <div id="case4" class="case-study-content bg-gray-50"><div class="p-6 md:p-8 case-study-details">
-                            <h4>Contexto e Problema</h4><p>A métrica de giro de estoque utilizada para avaliar a performance mensal não considerava os processos cancelados no próprio mês. Isso distorcia os cálculos de desempenho, gerando pontuações abaixo da realidade e dificultando análises corretas para a tomada de decisão.</p>
-                            <h4>Processo e Solução</h4><p>O projeto teve como objetivo refinar a métrica para refletir melhor o desempenho real da operação. O processo incluiu:</p>
+                            <h4>Contexto e Problema</h4><p>Uma métrica de desempenho utilizada internamente não refletia adequadamente a realidade, pois não considerava cenários específicos que impactavam a pontuação final, distorcendo análises e dificultando decisões.</p>
+                            <h4>Processo e Solução</h4>
                             <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li><strong>Ajustes em Python:</strong> Revisão e alteração de linhas de código, criando novas variáveis que integravam processos cancelados dentro do cálculo mensal.</li>
-                                <li><strong>Modelagem de Dados:</strong> Readequação da regra de negócio para que os cancelamentos fossem contabilizados corretamente na métrica de giro.</li>
-                                <li><strong>Validação Analítica:</strong> Testes comparativos entre a métrica antiga e a nova para confirmar a aderência aos cenários reais da operação.</li>
+                                <li><strong>Ajustes em Python:</strong> revisão do código e criação de variáveis para contemplar diferentes cenários.</li>
+                                <li><strong>Modelagem de Dados:</strong> adaptação da regra de negócio para que a métrica refletisse a realidade operacional.</li>
+                                <li><strong>Validação Analítica:</strong> testes comparativos entre a métrica antiga e a nova para confirmar consistência.</li>
                             </ul>
-                            <h4>Entregáveis e Resultados</h4><p>O entregável foi uma métrica de giro de estoque revisada, integrada ao fluxo de relatórios de performance. Os principais resultados foram:</p>
+                            <h4>Entregáveis e Resultados</h4><p>Uma métrica revisada, integrada ao fluxo de relatórios, que trouxe:</p>
                             <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li><strong>Insight Acionável 1:</strong> A inclusão dos processos cancelados corrigiu distorções que impactavam a pontuação de desempenho, trazendo maior confiabilidade às análises mensais.</li>
-                                <li><strong>Insight Acionável 2:</strong> A nova métrica passou a refletir com precisão a relação entre estoque e acionamentos, permitindo que a gestão identificasse meses de baixa eficiência e atuasse em correções mais direcionadas.</li>
+                                <li>Maior confiabilidade nos indicadores de performance.</li>
+                                <li>Identificação de períodos de baixa eficiência e suporte à tomada de decisão mais assertiva.</li>
                             </ul>
                         </div></div>
                     </div>
+                    <!-- Case Study 5 -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                         <div class="p-6 md:p-8">
                             <div class="md:flex md:items-start md:gap-8">
-                                <img src="https://placehold.co/600x400/EBF4FF/3B82F6?text=Python+Automação" alt="Automação de Input de Relatórios" class="w-full md:w-1/3 h-auto object-cover rounded-md mb-4 md:mb-0">
+                                <img src="https://SauloSapucaia.github.io/python_tech.jpg" alt="Automação de Input de Relatórios" class="w-full md:w-1/4 aspect-square object-cover rounded-md mb-4 md:mb-0">
                                 <div class="flex-1">
-                                    <h3 class="text-xl font-bold mb-2 text-gray-900">Automação de Input de Relatórios (Python + Web Automation)</h3>
-                                    <p class="text-gray-600 mb-4">Desenvolvimento de um script para automatizar o upload de relatórios em PDF, aumentando a produtividade em 400%.</p>
+                                    <h3 class="text-xl font-bold mb-2 text-gray-900">Automação de Input de Relatórios</h3>
+                                    <p class="text-gray-600 mb-4">Automação de tarefas manuais de envio de relatórios, resultando em aumento de produtividade e redução de erros.</p>
                                     <div class="flex flex-wrap gap-2 mb-6">
                                         <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
                                         <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Web Automation</span>
@@ -268,17 +271,18 @@
                             </div>
                         </div>
                         <div id="case5" class="case-study-content bg-gray-50"><div class="p-6 md:p-8 case-study-details">
-                            <h4>Contexto e Problema</h4><p>O processo de input de relatórios em PDF no sistema online era realizado manualmente, com média de apenas 70 processos concluídos por dia. Essa tarefa repetitiva era suscetível a erros e limitava o volume de documentos enviados, impactando a agilidade operacional.</p>
-                            <h4>Processo e Solução</h4><p>O projeto teve como objetivo automatizar o fluxo de interação com o sistema. O processo incluiu:</p>
+                            <h4>Contexto e Problema</h4><p>O processo de envio de relatórios em PDF para um sistema online era feito manualmente, consumindo tempo e sujeito a falhas. Isso limitava a produtividade e atrasava etapas críticas da operação.</p>
+                            <h4>Processo e Solução</h4>
                             <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li><strong>Automação em Python:</strong> Desenvolvimento de um script que acessava o site, realizava login, localizava os processos e fazia o upload automático dos arquivos PDF.</li>
-                                <li><strong>Integração com Relatórios:</strong> O script foi configurado para identificar automaticamente os processos concluídos, evitando duplicidade.</li>
-                                <li><strong>Validação do Input:</strong> Implementação de logs e verificações para confirmar que cada upload havia sido realizado com sucesso.</li>
+                                <li><strong>Automação em Python:</strong> desenvolvimento de script para login, localização de processos e upload automatizado de documentos.</li>
+                                <li><strong>Integração com Relatórios:</strong> identificação automática de processos concluídos para evitar duplicidades.</li>
+                                <li><strong>Validação:</strong> implementação de logs e verificações para garantir o sucesso de cada envio.</li>
                             </ul>
-                            <h4>Entregáveis e Resultados</h4><p>O entregável foi uma automação robusta em Python integrada ao fluxo diário. Os principais resultados foram:</p>
+                            <h4>Entregáveis e Resultados</h4><p>Automação robusta que passou a integrar o fluxo diário, com benefícios como:</p>
                             <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li><strong>Insight Acionável 1:</strong> O volume de documentos enviados ao site aumentou de 70 para 350 processos por dia, um crescimento de 400% na produtividade.</li>
-                                <li><strong>Insight Acionável 2:</strong> A automatização eliminou erros manuais de input, garantindo maior confiabilidade no processo e liberando a equipe para focar em atividades de maior valor agregado.</li>
+                                <li>Aumento expressivo na produtividade.</li>
+                                <li>Eliminação de falhas manuais e maior confiabilidade nos processos.</li>
+                                <li>Liberação da equipe para atividades de maior valor agregado.</li>
                             </ul>
                         </div></div>
                     </div>
@@ -309,9 +313,9 @@
             <div class="max-w-4xl mx-auto">
                 <div class="bg-white p-8 rounded-lg shadow-lg relative border-l-4 border-blue-500">
                      <div class="absolute -left-3 top-8 w-6 h-6 bg-blue-500 rounded-full border-4 border-white"></div>
-                    <p class="text-gray-500 mb-1">Ago 2019 - Presente</p>
+                    <p class="text-gray-500 mb-1">Ago 2020 - Presente</p>
                     <h3 class="text-2xl font-bold">Analista de Dados</h3>
-                    <p class="text-lg font-semibold text-blue-700 mb-4">Évora Assessoria</p>
+                    <p class="text-lg font-semibold text-blue-700 mb-4">Grupo Évora</p>
                     <ul class="list-disc list-inside space-y-2 text-gray-600">
                         <li>Desenvolvimento e manutenção de dashboards em Power BI para acompanhamento de KPIs de clientes.</li>
                         <li>Tratamento e modelagem de dados utilizando Linguagem M e DAX.</li>
@@ -350,6 +354,10 @@
                     <i class="fas fa-envelope fa-2x"></i>
                     <span class="ml-2 text-lg align-middle">saulo.sapucaia1014@gmail.com</span>
                 </a>
+                 <a href="https://wa.me/5511993995516" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition duration-300 my-2 flex items-center">
+                    <i class="fab fa-whatsapp fa-2x"></i>
+                    <span class="ml-2 text-lg align-middle">WhatsApp</span>
+                </a>
                 <a href="https://linkedin.com/in/saulo-sapucaia" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition duration-300 my-2 flex items-center">
                     <i class="fab fa-linkedin fa-2x"></i>
                     <span class="ml-2 text-lg align-middle">LinkedIn</span>
@@ -365,7 +373,7 @@
 
     <!-- Rodapé -->
     <footer class="bg-gray-800 text-white text-center py-6">
-        <p>&copy; 2024 Saulo Sapucaia. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Saulo Sapucaia. Todos os direitos reservados.</p>
     </footer>
 
     <script>
@@ -379,26 +387,30 @@
         // Script para expandir/recolher estudos de caso
         function toggleCaseStudy(caseId) {
             const content = document.getElementById(caseId);
-            const button = content.previousElementSibling.querySelector('button');
+            const button = content.parentElement.querySelector('button');
             const icon = button.querySelector('i');
             
             if (content.classList.contains('open')) {
                 content.classList.remove('open');
-                icon.classList.remove('rotate-180');
-                button.innerHTML = 'Ver detalhes <i class="fas fa-chevron-down ml-1 transform transition-transform"></i>';
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+                button.childNodes[0].nodeValue = "Ver detalhes ";
 
             } else {
                 // Opcional: Fechar outros casos abertos
                 document.querySelectorAll('.case-study-content.open').forEach(openCase => {
                     openCase.classList.remove('open');
-                    const openButton = openCase.previousElementSibling.querySelector('button');
-                    openButton.querySelector('i').classList.remove('rotate-180');
-                    openButton.innerHTML = 'Ver detalhes <i class="fas fa-chevron-down ml-1 transform transition-transform"></i>';
+                    const openButton = openCase.parentElement.querySelector('button');
+                    const openIcon = openButton.querySelector('i');
+                    openIcon.classList.remove('fa-chevron-up');
+                    openIcon.classList.add('fa-chevron-down');
+                    openButton.childNodes[0].nodeValue = "Ver detalhes ";
                 });
                 
                 content.classList.add('open');
-                icon.classList.add('rotate-180');
-                button.innerHTML = 'Ocultar detalhes <i class="fas fa-chevron-up ml-1 transform transition-transform"></i>';
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+                button.childNodes[0].nodeValue = "Ocultar detalhes ";
             }
         }
     </script>
