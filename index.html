@@ -82,7 +82,7 @@
 <body class="bg-gray-50 text-gray-800">
 
     <!-- Cabeçalho e Navegação -->
-    <header class="bg-gray-800 shadow-md sticky top-0 z-50">
+    <!-- <header class="bg-gray-800 shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-white">Saulo Sapucaia</a>
             <div class="hidden md:flex space-x-6">
@@ -98,9 +98,9 @@
                     <i class="fas fa-bars fa-lg"></i>
                 </button>
             </div>
-        </nav>
+        </nav>-->
         <!-- Menu Mobile -->
-        <div id="mobile-menu" class="md:hidden hidden bg-gray-800 py-2">
+        <!-- <div id="mobile-menu" class="md:hidden hidden bg-gray-800 py-2">
             <a href="#sobre" class="block px-6 py-2 text-sm text-gray-300 hover:bg-gray-700">Sobre</a>
             <a href="#projetos" class="block px-6 py-2 text-sm text-gray-300 hover:bg-gray-700">Projetos</a>
             <a href="#habilidades" class="block px-6 py-2 text-sm text-gray-300 hover:bg-gray-700">Habilidades</a>
@@ -108,7 +108,31 @@
             <a href="#formacao" class="block px-6 py-2 text-sm text-gray-300 hover:bg-gray-700">Formação</a>
             <a href="#contato" class="block px-6 py-2 text-sm text-gray-300 hover:bg-gray-700">Contato</a>
         </div>
+    </header> -->
+    <header class="bg-gray-800 shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">Saulo Sapucaia</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#sobre" class="text-gray-300 hover:text-white transition duration-300">Sobre</a>
+                <a href="#projetos" class="text-gray-300 hover:text-white transition duration-300">Projetos</a>
+                <a href="#habilidades" class="text-gray-300 hover:text-white transition duration-300">Habilidades</a>
+                <button id="theme-toggle" class="text-gray-300 hover:text-white focus:outline-none p-2 rounded-lg border border-gray-600">
+                    <i id="theme-toggle-dark-icon" class="hidden fas fa-moon"></i>
+                    <i id="theme-toggle-light-icon" class="hidden fas fa-sun"></i>
+                </button>
+                <a href="#contato" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Contato</a>
+            </div>
+            <div class="md:hidden flex items-center space-x-4">
+                <button id="theme-toggle-mobile" class="text-gray-300 p-2">
+                    <i class="fas fa-adjust"></i>
+                </button>
+                <button id="menu-btn" class="text-gray-300 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </nav>
     </header>
+
 
     <main class="container mx-auto px-6 py-12">
 
@@ -128,11 +152,18 @@
         <section id="sobre" class="py-20">
             <div class="grid md:grid-cols-5 gap-12 items-center">
                 <div class="md:col-span-2">
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <img src="https://SauloSapucaia.github.io/Sobre_mim.jpg" alt="Foto de Saulo Sapucaia" class="rounded-full mx-auto w-48 h-48 object-cover mb-6 border-4 border-blue-200">
-                         <h3 class="text-2xl font-bold text-center mb-2">Saulo Sapucaia</h3>
-                         <p class="text-center text-gray-500">Tecnólogo em Data Science - FIAP</p>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/Sobre_mim.jpeg" alt="Foto de Saulo Sapucaia" class="rounded-full mx-auto w-48 h-48 object-cover mb-6 border-4 border-blue-200">
+                        <h3 class="text-2xl font-bold mb-2">Saulo Sapucaia</h3>
+                        <p class="text-gray-500 mb-6">Tecnólogo em Data Science - FIAP</p>
+                        
+                        <a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/Cv_Saulo_Sapucaia_v10.03.26.pdf" 
+                        download 
+                        class="inline-flex items-center bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md">
+                            <i class="fas fa-file-download mr-2"></i> Baixar CV (PDF)
+                        </a>
                     </div>
+                </div>
                 </div>
                 <div class="md:col-span-3">
                     <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-600 pl-4">Sobre Mim</h2>
@@ -189,6 +220,22 @@
                                 <li>Identificação de gargalos no fluxo, possibilitando ações para reduzir prazos de conclusão.</li>
                                 <li>Detecção de descumprimentos de prazos, orientando correções e melhorias na operação.</li>
                             </ul>
+                            <h4 class="mt-8 mb-4">Dashboard Interativo</h4>
+                            <div class="relative w-full" style="padding-top: 56.25%;"> 
+                                <iframe 
+                                <div class="mt-4 bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                                    <p class="text-sm text-blue-800"><strong><i class="fas fa-lightbulb mr-2"></i>Dica de Análise:</strong> Filtre pelo período de maior volume e observe como o <em>SLA de finalização</em> se comporta. Note que a automação de ETL reduziu o tempo de processamento manual em mais de 20%.</p>
+                                </div>
+                                    title="Dashbord Operacional" 
+                                    class="absolute top-0 left-0 w-full h-full rounded-lg shadow-md"
+                                    src="https://app.powerbi.com/view?r=eyJrIjoiNDczMDA4N2EtMWVkOC00OWNlLTlhY2EtOTAxNGNjNWMxYjE3IiwidCI6IjExZGJiZmUyLTg5YjgtNDU0OS1iZTEwLWNlYzM2NGU1OTU1MSIsImMiOjR9" 
+                                    frameborder="0" 
+                                    allowFullScreen="true">
+                                </iframe>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-2 italic text-center">
+                                Nota: Caso o dashboard não carregue, <a href="https://app.powerbi.com/view?r=eyJrIjoiNDczMDA4N2EtMWVkOC00OWNlLTlhY2EtOTAxNGNjNWMxYjE3IiwidCI6IjExZGJiZmUyLTg5YjgtNDU0OS1iZTEwLWNlYzM2NGU1OTU1MSIsImMiOjR9" target="_blank" class="text-blue-600 underline">clique aqui para abrir em tela cheia</a>.
+                            </p>
                             <!-- Galeria PROJETO 1 -->
                             <h4>Galeria do Projeto</h4>
                             <div class="project-gallery" data-project-id="case1">
@@ -237,6 +284,22 @@
                                 <li>Redução significativa do acúmulo de chamados atrasados (Vencidos).</li>
                                 <li>Melhora na alocação de esforços e aumento da eficiência no cumprimento de prazos.</li>
                             </ul>
+                            <h4 class="mt-8 mb-4">Dashboard Interativo</h4>
+                            <div class="relative w-full" style="padding-top: 56.25%;"> 
+                                <iframe 
+                                <div class="mt-4 bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                                    <p class="text-sm text-blue-800"><strong><i class="fas fa-lightbulb mr-2"></i>Dica de Análise:</strong> Veja o gráfico de "Tickets Vencidos". O foco principal aqui foi a identificação visual rápida para priorização da equipe, reduzindo gargalos operacionais no <strong>Grupo Évora</strong>.</p>
+                                </div>
+                                    title="Dashboard Atendimento" 
+                                    class="absolute top-0 left-0 w-full h-full rounded-lg shadow-md"
+                                    src="https://app.powerbi.com/view?r=eyJrIjoiYjQ1ZWZjY2MtMTE0OC00M2I5LTlmNDYtMjJlZThjYjcwYmM5IiwidCI6IjExZGJiZmUyLTg5YjgtNDU0OS1iZTEwLWNlYzM2NGU1OTU1MSIsImMiOjR9" 
+                                    frameborder="0" 
+                                    allowFullScreen="true">
+                                </iframe>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-2 italic text-center">
+                                Nota: Caso o dashboard não carregue, <a href="https://app.powerbi.com/view?r=eyJrIjoiYjQ1ZWZjY2MtMTE0OC00M2I5LTlmNDYtMjJlZThjYjcwYmM5IiwidCI6IjExZGJiZmUyLTg5YjgtNDU0OS1iZTEwLWNlYzM2NGU1OTU1MSIsImMiOjR9" target="_blank" class="text-blue-600 underline">clique aqui para abrir em tela cheia</a>.
+                            </p>
                             <!-- Galeria PROJETO 2 -->
                             <h4>Galeria do Projeto</h4>
                             <div class="project-gallery" data-project-id="case2">
@@ -285,6 +348,22 @@
                                 <li>Priorização de investimentos em áreas com melhor retorno.</li>
                                 <li>Substituição de relatórios manuais por uma solução automatizada, aumentando confiabilidade e economia de tempo.</li>
                             </ul>
+                            <h4 class="mt-8 mb-4">Dashboard Interativo</h4>
+                            <div class="relative w-full shadow-lg rounded-lg overflow-hidden border border-gray-200" style="padding-top: 56.25%;"> 
+                                <iframe 
+                                <div class="mt-4 bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                                    <p class="text-sm text-blue-800"><strong><i class="fas fa-lightbulb mr-2"></i>Dica de Análise:</strong> Explore a comparação entre as unidades de negócio. Este painel permite identificar instantaneamente quais áreas possuem a maior margem operacional e onde estão os maiores custos fixos.</p>
+                                </div>
+                                    title="Dashbord Financeiro" 
+                                    class="absolute top-0 left-0 w-full h-full"
+                                    src="https://app.powerbi.com/view?r=eyJrIjoiNDg0ZTI4Y2ItMmRlNS00MzE2LWExYjgtM2M4NTk4N2IyYjJmIiwidCI6IjExZGJiZmUyLTg5YjgtNDU0OS1iZTEwLWNlYzM2NGU1OTU1MSIsImMiOjR9" 
+                                    frameborder="0" 
+                                    allowFullScreen="true">
+                                </iframe>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-2 italic text-center">
+                                Nota: Se o dashboard não carregar, <a href="https://app.powerbi.com/view?r=eyJrIjoiNDg0ZTI4Y2ItMmRlNS00MzE2LWExYjgtM2M4NTk4N2IyYjJmIiwidCI6IjExZGJiZmUyLTg5YjgtNDU0OS1iZTEwLWNlYzM2NGU1OTU1MSIsImMiOjR9" target="_blank" class="text-blue-600 underline">clique aqui para visualizar em tela cheia</a>.
+                            </p>
                              <!-- Galeria PROJETO 3 -->
                             <h4>Galeria do Projeto</h4>
                             <div class="project-gallery" data-project-id="case3">
@@ -455,9 +534,9 @@
                     <i class="fab fa-whatsapp fa-2x"></i>
                     <span class="ml-2 text-lg align-middle">WhatsApp</span>
                 </a>
-                <a href="https://www.linkedin.com/in/saulo-sapucaia-2821401b9" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition duration-300 my-2 flex items-center">
-                    <i class="fab fa-linkedin fa-2x"></i>
-                    <span class="ml-2 text-lg align-middle">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/saulo-sapucaia-2821401b9" target="_blank" rel="noopener noreferrer" 
+                    class="bg-[#0077b5] text-white font-bold py-3 px-8 rounded-full hover:bg-[#005582] transition duration-300 shadow-lg flex items-center">
+                    <i class="fab fa-linkedin fa-lg mr-2"></i> Conectar no LinkedIn
                 </a>
                 <a href="https://github.com/SauloSapucaia" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition duration-300 my-2 flex items-center">
                     <i class="fab fa-github fa-2x"></i>
@@ -470,7 +549,7 @@
 
     <!-- Rodapé -->
     <footer class="bg-gray-800 text-white text-center py-6">
-        <p>&copy; 2025 Saulo Sapucaia. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Saulo Sapucaia. Todos os direitos reservados.</p>
     </footer>
 
     <script>
