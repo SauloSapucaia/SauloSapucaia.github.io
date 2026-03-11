@@ -388,6 +388,50 @@
                             </ul>
                         </div></div>
                     </div>
+
+                    <div class="bg-white dark:bg-darkCard rounded-lg shadow-lg overflow-hidden border dark:border-gray-700">
+                        <div class="p-6 md:p-8">
+                            <div class="md:flex md:items-start md:gap-8">
+                                <div class="w-full md:w-1/5 project-image-container mb-4 md:mb-0">
+                                    <a href="#" target="_blank" rel="noopener noreferrer">
+                                        <img src="https://via.placeholder.com/400?text=Arquitetura+End-to-End" alt="Integração de APIs e Fabric" class="w-full aspect-square object-cover rounded-md shadow bg-gray-200 dark:bg-gray-700">
+                                    </a>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Pipeline End-to-End: APIs, Azure Fabric e Monitoramento</h3>
+                                    <p class="text-gray-600 dark:text-gray-400 mb-4">Desenvolvimento de pipeline completo com Python, bancos de dados no Azure (Fabric) e Power Automate para processamento de JSON e controle via Power BI.</p>
+                                    <div class="flex flex-wrap gap-2 mb-6">
+                                        <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Azure Fabric</span>
+                                        <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">Power Automate</span>
+                                        <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">Power BI</span>
+                                    </div>
+                                    <button onclick="toggleCaseStudy('case6')" class="font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 transition duration-300">Ver detalhes <i class="fas fa-chevron-down ml-1 transform transition-transform"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="case6" class="case-study-content bg-gray-50 dark:bg-gray-800 border-t dark:border-gray-700">
+                            <div class="p-6 md:p-8 case-study-details dark:text-gray-300">
+                                <h4>Contexto e Problema</h4>
+                                <p>O fluxo dependia de consultas manuais em sistemas externos para atualizar documentações operacionais. Era necessário processar dados de formulários para identificar com precisão a autoria dos processos, distinguindo automaticamente qual usuário foi o responsável pela tratativa, e garantir a notificação imediata das partes envolvidas, tudo de forma escalável, segura e rastreável.</p>
+                                
+                                <h4>Processo e Solução</h4>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li><strong>Integração e Pipeline:</strong> Criação de pipeline em Python para consumo de APIs REST de terceiros, realizando a extração e o processamento complexo de payloads no formato JSON.</li>
+                                    <li><strong>Cloud & Engenharia de Dados:</strong> Estruturação e gravação das informações processadas em um banco de dados hospedado no Azure, orquestrado através do Microsoft Fabric.</li>
+                                    <li><strong>Automação de Comunicação:</strong> Integração direta com o Power Automate para o roteamento inteligente e disparo automatizado de e-mails customizados baseados nas regras de negócio extraídas da API.</li>
+                                </ul>
+                                
+                                <h4>Entregáveis e Resultados</h4>
+                                <p>Um ecossistema de dados automatizado e robusto que entregou:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>Eliminação total de consultas sistêmicas repetitivas e clareza na rastreabilidade de responsabilidades da equipe.</li>
+                                    <li><strong>Dashboard de Governança:</strong> Criação de um painel interativo no Power BI, consumindo os dados diretamente do banco no Azure, permitindo monitorar o envio dos processos de acionamento e acompanhar o controle de execução e saúde do programa em tempo real.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -420,12 +464,14 @@
             <div class="max-w-4xl mx-auto">
                 <div class="bg-white dark:bg-darkCard p-8 rounded-lg shadow-lg relative border-l-4 border-blue-500 border dark:border-gray-700">
                      <div class="absolute -left-3 top-8 w-6 h-6 bg-blue-500 rounded-full border-4 border-white dark:border-gray-800"></div>
-                    <p class="text-gray-500 dark:text-gray-400 mb-1">Ago 2020 - Presente</p>
+                    <p class="text-gray-500 dark:text-gray-400 mb-1">Ago 2019 - Presente</p>
                     <h3 class="text-2xl font-bold dark:text-white">Analista de Dados</h3>
                     <p class="text-lg font-semibold text-blue-700 dark:text-blue-400 mb-4">Grupo Évora</p>
                     <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
                         <li>Desenvolvimento e manutenção de dashboards em Power BI para acompanhamento de KPIs de clientes.</li>
                         <li>Tratamento e modelagem de dados utilizando Linguagem M e DAX.</li>
+                        <li>Orquestração de pipelines de dados e gerenciamento de banco de dados em nuvem utilizando o ecossistema <strong>Microsoft Fabric</strong>.</li>
+                        <li>Integração de APIs de terceiros para automação de fluxo de dados, processamento de documentos e disparo de notificações via e-mail (Power Automate).</li>
                         <li>Criação de scripts para otimização e automação de relatórios.</li>
                         <li>Análise de dados financeiros e operacionais para suportar decisões gerenciais.</li>
                         <li>Colaboração em projetos de análise de dados com Python.</li>
@@ -558,4 +604,4 @@
         }
     </script>
 </body>
-</html> 
+</html>
