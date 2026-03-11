@@ -104,29 +104,30 @@
             </a>
         </section>
 
-        <section id="sobre" class="py-20">
-            <div class="grid md:grid-cols-5 gap-12 items-center">
+        <section id="sobre" class="py-20 border-t dark:border-gray-700">
+            <div class="grid md:grid-cols-5 gap-10 items-center">
                 <div class="md:col-span-2">
-                    <div class="bg-white dark:bg-darkCard p-6 rounded-lg shadow-lg text-center border dark:border-gray-700">
-                        <img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/Sobre_mim.jpeg" alt="Foto de Saulo Sapucaia" class="rounded-full mx-auto w-48 h-48 object-cover mb-6 border-4 border-blue-200 dark:border-blue-600 shadow-md">
-                        <h3 class="text-2xl font-bold mb-2 dark:text-white">Saulo Sapucaia</h3>
-                        <p class="text-gray-500 dark:text-gray-400 mb-6">Tecnólogo em Data Science - FIAP</p>
-                        
-                        <a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/Cv_Saulo_Sapucaia_v10.03.26.pdf" 
-                        download 
-                        class="inline-flex items-center bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md">
-                            <i class="fas fa-file-download mr-2"></i> Baixar CV (PDF)
-                        </a>
+                    <div class="bg-white dark:bg-darkCard p-8 rounded-2xl shadow-xl text-center">
+                        <img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/Sobre_mim.jpeg" class="rounded-full mx-auto w-48 h-48 object-cover mb-6 border-4 border-blue-500 shadow-md">
+                        <h3 class="text-2xl font-bold dark:text-white">Saulo Sapucaia</h3>
+                        <p class="text-blue-600 dark:text-blue-400 font-medium">Data Science - FIAP</p>
                     </div>
                 </div>
                 <div class="md:col-span-3">
                     <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-600 pl-4 dark:text-white">Sobre Mim</h2>
-                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                        Sou um analista de dados focado em transformar dados brutos em inteligência de negócio. Minha paixão é construir a jornada completa da análise: da extração e modelagem de dados à criação de dashboards e análises em Python que geram insights claros e suportam decisões estratégicas.
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                        Focado em extrair inteligência de dados, atuo no <strong>Grupo Évora</strong> otimizando processos e monitorando KPIs. Atualmente curso Data Science na <strong>FIAP</strong>, unindo prática de mercado com técnicas avançadas de análise preditiva.
                     </p>
-                    <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Atualmente no Grupo Évora, aplico minhas competências para otimizar processos e monitorar indicadores chave, enquanto aprofundo meus conhecimentos em Ciência de Dados na FIAP.
-                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-blue-50 dark:bg-gray-800 rounded-lg">
+                            <span class="block font-bold text-blue-700 dark:text-blue-400 text-xl">5+</span>
+                            <span class="text-sm dark:text-gray-300">Projetos Ativos</span>
+                        </div>
+                        <div class="p-4 bg-blue-50 dark:bg-gray-800 rounded-lg">
+                            <span class="block font-bold text-blue-700 dark:text-blue-400 text-xl">Python/SQL</span>
+                            <span class="text-sm dark:text-gray-300">Stack Principal</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -413,20 +414,20 @@
                         <div id="case6" class="case-study-content bg-gray-50 dark:bg-gray-800 border-t dark:border-gray-700">
                             <div class="p-6 md:p-8 case-study-details dark:text-gray-300">
                                 <h4>Contexto e Problema</h4>
-                                <p>O fluxo dependia de consultas manuais em sistemas externos para atualizar documentações operacionais. Era necessário processar dados de formulários para identificar com precisão a autoria dos processos, distinguindo automaticamente qual usuário foi o responsável pela tratativa, e garantir a notificação imediata das partes envolvidas, tudo de forma escalável, segura e rastreável.</p>
+                                <p>O fluxo operacional dependia da verificação manual em sistemas externos para identificar a entrada de novos processos, exigindo que a equipe consultasse a plataforma mais de 10 vezes ao dia para realizar o cadastro no sistema interno. Essa rotina repetitiva consumia tempo, gerava alto esforço operacional e estava vulnerável a falhas ou atrasos sistêmicos.</p>
                                 
                                 <h4>Processo e Solução</h4>
                                 <ul class="list-disc list-inside mt-2 space-y-1">
-                                    <li><strong>Integração e Pipeline:</strong> Criação de pipeline em Python para consumo de APIs REST de terceiros, realizando a extração e o processamento complexo de payloads no formato JSON.</li>
-                                    <li><strong>Cloud & Engenharia de Dados:</strong> Estruturação e gravação das informações processadas em um banco de dados hospedado no Azure, orquestrado através do Microsoft Fabric.</li>
-                                    <li><strong>Automação de Comunicação:</strong> Integração direta com o Power Automate para o roteamento inteligente e disparo automatizado de e-mails customizados baseados nas regras de negócio extraídas da API.</li>
+                                    <li><strong>Integração e Pipeline:</strong> Criação de pipeline em Python para consumo de APIs REST de terceiros, realizando a extração e o processamento automatizado dos novos processos (payloads em formato JSON).</li>
+                                    <li><strong>Cloud & Engenharia de Dados:</strong> Estruturação e gravação das informações capturadas em um banco de dados hospedado no Azure, orquestrado através do Microsoft Fabric.</li>
+                                    <li><strong>Automação de Comunicação:</strong> Integração direta com o Power Automate para o disparo automatizado de e-mails, garantindo a notificação imediata das partes envolvidas a cada novo cadastro.</li>
                                 </ul>
                                 
                                 <h4>Entregáveis e Resultados</h4>
                                 <p>Um ecossistema de dados automatizado e robusto que entregou:</p>
                                 <ul class="list-disc list-inside mt-2 space-y-1">
-                                    <li>Eliminação total de consultas sistêmicas repetitivas e clareza na rastreabilidade de responsabilidades da equipe.</li>
-                                    <li><strong>Dashboard de Governança:</strong> Criação de um painel interativo no Power BI, consumindo os dados diretamente do banco no Azure, permitindo monitorar o envio dos processos de acionamento e acompanhar o controle de execução e saúde do programa em tempo real.</li>
+                                    <li><strong>Eficiência e Zero Falhas:</strong> Eliminação total do esforço operacional com as consultas repetitivas manuais, reduzindo drasticamente o tempo de cadastro e garantindo que nenhum processo fosse perdido.</li>
+                                    <li><strong>Dashboard de Governança:</strong> Criação de um painel interativo no Power BI, consumindo os dados diretamente do banco no Azure, permitindo monitorar o volume de processos recebidos e acompanhar a saúde e execução da automação em tempo real.</li>
                                 </ul>
                             </div>
                         </div>
@@ -497,24 +498,24 @@
 
         <section id="contato" class="py-20 text-center">
             <h2 class="text-3xl font-bold mb-4 dark:text-white">Vamos Conversar?</h2>
-            <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10">
-                Se você tem um projeto em mente, quer saber mais sobre meu trabalho ou acessar meu currículo completo, entre em contato!
-            </p>
-            <div class="flex justify-center items-center gap-4 flex-wrap">
-                <a href="mailto:saulo.sapucaia1014@gmail.com" class="bg-red-500 text-white font-bold py-3 px-8 rounded-full hover:bg-red-600 transition duration-300 shadow-lg flex items-center">
-                    <i class="fas fa-envelope fa-lg mr-2"></i> E-mail
+            <p class="text-gray-600 dark:text-gray-400 mb-10">Interessado em otimizar seus processos com dados? Entre em contato ou baixe meu currículo!</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:saulo.sapucaia1014@gmail.com" class="flex items-center bg-gray-100 dark:bg-gray-800 px-6 py-3 rounded-full hover:bg-red-500 hover:text-white transition font-bold shadow-sm">
+                    <i class="fas fa-envelope mr-2"></i> E-mail
                 </a>
-                <a href="https://wa.me/5511993995516" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white font-bold py-3 px-8 rounded-full hover:bg-[#128c7e] transition duration-300 shadow-lg flex items-center">
-                    <i class="fab fa-whatsapp fa-lg mr-2"></i> WhatsApp
+                <a href="https://wa.me/5511993995516" target="_blank" rel="noopener noreferrer" class="flex items-center bg-gray-100 dark:bg-gray-800 px-6 py-3 rounded-full hover:bg-green-500 hover:text-white transition font-bold shadow-sm">
+                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp
                 </a>
-                <a href="https://www.linkedin.com/in/saulo-sapucaia-2821401b9" target="_blank" rel="noopener noreferrer" class="bg-[#0077b5] text-white font-bold py-3 px-8 rounded-full hover:bg-[#005582] transition duration-300 shadow-lg flex items-center">
-                    <i class="fab fa-linkedin fa-lg mr-2"></i> LinkedIn
+                <a href="https://www.linkedin.com/in/saulo-sapucaia-2821401b9" target="_blank" rel="noopener noreferrer" class="bg-[#0077b5] text-white font-bold py-3 px-8 rounded-full hover:opacity-90 transition font-bold shadow-lg flex items-center">
+                    <i class="fab fa-linkedin mr-2"></i> Conectar no LinkedIn
                 </a>
-                <a href="https://github.com/SauloSapucaia" target="_blank" rel="noopener noreferrer" class="bg-gray-900 dark:bg-gray-700 text-white font-bold py-3 px-8 rounded-full hover:bg-black transition duration-300 shadow-lg flex items-center">
-                    <i class="fab fa-github fa-lg mr-2"></i> GitHub
+                <a href="https://github.com/SauloSapucaia" target="_blank" rel="noopener noreferrer" class="bg-gray-900 text-white font-bold py-3 px-8 rounded-full hover:opacity-90 transition font-bold shadow-lg flex items-center">
+                    <i class="fab fa-github mr-2"></i> GitHub
                 </a>
-                <a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/Cv_Saulo_Sapucaia_v10.03.26.pdf" download class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 shadow-lg flex items-center">
-                    <i class="fas fa-file-pdf fa-lg mr-2"></i> Baixar CV
+                <a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/Cv_Saulo_Sapucaia_v10.03.26.pdf" 
+                   download 
+                   class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition font-bold shadow-lg flex items-center">
+                    <i class="fas fa-file-pdf mr-2"></i> Baixar CV
                 </a>
             </div>
         </section>
