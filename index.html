@@ -68,6 +68,7 @@
                 <a href="#sobre" class="text-gray-300 hover:text-white transition duration-300">Sobre</a>
                 <a href="#projetos" class="text-gray-300 hover:text-white transition duration-300">Projetos</a>
                 <a href="#habilidades" class="text-gray-300 hover:text-white transition duration-300">Habilidades</a>
+                <a href="#experiencia" class="text-gray-300 hover:text-white transition duration-300">Experiência</a>
                 <button id="theme-toggle" class="text-gray-300 hover:text-white focus:outline-none p-2 rounded-lg border border-gray-600">
                     <i id="theme-toggle-dark-icon" class="fas fa-moon"></i>
                     <i id="theme-toggle-light-icon" class="hidden fas fa-sun"></i>
@@ -87,6 +88,7 @@
             <a href="#sobre" class="block px-6 py-2 text-sm text-gray-200 hover:bg-gray-600">Sobre</a>
             <a href="#projetos" class="block px-6 py-2 text-sm text-gray-200 hover:bg-gray-600">Projetos</a>
             <a href="#habilidades" class="block px-6 py-2 text-sm text-gray-200 hover:bg-gray-600">Habilidades</a>
+            <a href="#experiencia" class="block px-6 py-2 text-sm text-gray-200 hover:bg-gray-600">Experiência</a>
             <a href="#contato" class="block px-6 py-2 text-sm text-gray-200 hover:bg-gray-600">Contato</a>
         </div>
     </header>
@@ -133,308 +135,323 @@
         </section>
 
         <section id="projetos" class="py-20">
-            <h2 class="text-3xl font-bold text-center mb-12 dark:text-white">Projetos Desenvolvidos</h2>
+            <h2 class="text-3xl font-bold text-center mb-8 dark:text-white">Projetos Desenvolvidos</h2>
             
-            <div class="mb-16">
-                <h3 class="text-2xl font-bold text-center mb-10 text-gray-700 dark:text-gray-300 border-b-2 dark:border-gray-700 pb-2">Projetos de Business Intelligence</h3>
-                <div class="space-y-10">
-                    
-                    <div class="bg-white dark:bg-darkCard rounded-lg shadow-lg overflow-hidden border dark:border-gray-700">
-                        <div class="p-6 md:p-8">
-                            <div class="md:flex md:items-start md:gap-8">
-                                <div class="w-full md:w-1/3 project-image-container mb-4 md:mb-0">
-                                    <a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_1.jpg" target="_blank">
-                                        <img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_1.jpg" alt="Dashboard Operacional" class="w-full h-auto object-cover rounded-md shadow">
-                                    </a>
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button id="btn-bi" onclick="showCategory('bi')" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-full shadow-md transition duration-300 flex items-center">
+                    <i class="fas fa-chart-pie mr-2"></i> Business Intelligence
+                </button>
+                <button id="btn-python" onclick="showCategory('python')" class="bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300 font-bold py-2 px-6 rounded-full shadow-md hover:bg-gray-300 dark:hover:bg-gray-600 transition duration-300 flex items-center">
+                    <i class="fab fa-python mr-2"></i> Python & Automação
+                </button>
+            </div>
+            
+            <div id="category-bi" class="space-y-10 block">
+                
+                                <div class="bg-white dark:bg-darkCard rounded-lg shadow-lg overflow-hidden border dark:border-gray-700">
+                    <div class="p-6 md:p-8">
+                        <div class="md:flex md:items-start md:gap-8">
+                            <div class="w-full md:w-1/3 project-image-container mb-4 md:mb-0">
+                                <a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_1.jpg" target="_blank">
+                                    <img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_1.jpg" alt="Dashboard Financeiro" class="w-full h-auto object-cover rounded-md shadow">
+                                </a>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Dashboard Financeiro</h3>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4">Visão consolidada de custos para análise de desempenho, eficiência e suporte à decisão estratégica.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Power BI</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">DAX</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">DataViz</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">ETL</span>
                                 </div>
-                                <div class="flex-1">
-                                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Dashboard Operacional</h3>
-                                    <p class="text-gray-600 dark:text-gray-400 mb-4">Análise de produtividade, prazos e gargalos para otimizar a eficiência de processos operacionais.</p>
-                                    <div class="flex flex-wrap gap-2 mb-6">
-                                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Power BI</span>
-                                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">DAX</span>
-                                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Power Query</span>
-                                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">SQL</span>
-                                    </div>
-                                    <button onclick="toggleCaseStudy('case1')" class="font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 transition duration-300">Ver detalhes <i class="fas fa-chevron-down ml-1"></i></button>
-                                </div>
+                                <button onclick="toggleCaseStudy('case3')" class="font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 transition duration-300">Ver detalhes <i class="fas fa-chevron-down ml-1"></i></button>
                             </div>
                         </div>
-                        <div id="case1" class="case-study-content bg-gray-50 dark:bg-gray-800 border-t dark:border-gray-700"><div class="p-6 md:p-8 case-study-details dark:text-gray-300">
-                            <h4>Contexto e Problema</h4><p>A organização possuía um grande volume de processos operacionais, mas a gestão era baseada em relatórios manuais e planilhas fragmentadas. Isso dificultava a análise de produtividade, o acompanhamento de prazos e a identificação de gargalos.</p>
-                            <h4>Processo e Solução</h4>
-                            <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li><strong>ETL com Power Query:</strong> extração e transformação de dados de múltiplas fontes.</li>
-                                <li><strong>Modelagem de Dados:</strong> criação de modelo dimensional (Star Schema).</li>
-                                <li><strong>Cálculos com DAX:</strong> desenvolvimento de indicadores como tempo médio de estoque e finalização.</li>
-                            </ul>
-                            <h4>Entregáveis e Resultados</h4><p>Dashboard interativo em Power BI. Entre os benefícios:</p>
-                            <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li>Identificação de gargalos no fluxo, reduzindo prazos de conclusão.</li>
-                                <li>Detecção de descumprimentos de prazos, orientando correções.</li>
-                            </ul>
-                            
-                            <h4 class="mt-8 mb-4">Dashboard Interativo</h4>
-                            <div class="bg-gray-200 dark:bg-gray-700 p-6 rounded-lg text-center mb-4" id="btn-container-1">
-                                <p class="mb-4 text-gray-700 dark:text-gray-200">Clique abaixo para carregar o painel interativo (pode levar alguns segundos).</p>
-                                <button onclick="loadBI('bi-container-1', 'btn-container-1', 'https://app.powerbi.com/view?r=eyJrIjoiNDczMDA4N2EtMWVkOC00OWNlLTlhY2EtOTAxNGNjNWMxYjE3IiwidCI6IjExZGJiZmUyLTg5YjgtNDU0OS1iZTEwLWNlYzM2NGU1OTU1MSIsImMiOjR9')" class="bg-blue-600 text-white font-bold py-2 px-6 rounded shadow hover:bg-blue-700 transition">Carregar Dashboard</button>
-                            </div>
-                            <div id="bi-container-1" class="relative w-full hidden shadow-lg rounded-lg overflow-hidden border border-gray-200 dark:border-gray-600" style="padding-top: 56.25%;"></div>
-                            
-                            <div class="mt-4 bg-blue-50 dark:bg-blue-900 border-l-4 border-blue-500 p-4 rounded-r-lg">
-                                <p class="text-sm text-blue-800 dark:text-blue-100"><strong><i class="fas fa-lightbulb mr-2"></i>Dica de Análise:</strong> Filtre pelo período de maior volume e observe como o <em>SLA de finalização</em> se comporta. Note que a automação de ETL reduziu o tempo manual em mais de 20%.</p>
-                            </div>
-
-                            <h4 class="mt-8">Galeria do Projeto</h4>
-                            <div class="project-gallery mt-4" data-project-id="case1">
-                                <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_1.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_1.jpg" alt="Dashboard Operacional" class="w-full h-auto object-contain rounded-md shadow"></a></div>
-                                <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_2.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_2.jpg" alt="Tela 2" class="w-full h-auto object-contain rounded-md shadow"></a></div>
-                                <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_3.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_3.jpg" alt="Tela 3" class="w-full h-auto object-contain rounded-md shadow"></a></div>
-                                <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_4.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_4.jpg" alt="Tela 4" class="w-full h-auto object-contain rounded-md shadow"></a></div>
-                                <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_5.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_5.jpg" alt="Tela 5" class="w-full h-auto object-contain rounded-md shadow"></a></div>
-                                <a class="prev" onclick="plusSlides('case1', -1)">&#10094;</a>
-                                <a class="next" onclick="plusSlides('case1', 1)">&#10095;</a>
-                            </div>
-                        </div></div>
                     </div>
-
-                    <div class="bg-white dark:bg-darkCard rounded-lg shadow-lg overflow-hidden border dark:border-gray-700">
-                        <div class="p-6 md:p-8">
-                            <div class="md:flex md:items-start md:gap-8">
-                                <div class="w-full md:w-1/3 project-image-container mb-4 md:mb-0">
-                                    <a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_ate/dash_ate_1.jpg" target="_blank">
-                                        <img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_ate/dash_ate_1.jpg" alt="Dashboard de Atendimento" class="w-full h-auto object-cover rounded-md shadow">
-                                    </a>
-                                </div>
-                                <div class="flex-1">
-                                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Dashboard de Atendimento</h3>
-                                    <p class="text-gray-600 dark:text-gray-400 mb-4">Análise e monitoramento de tickets de suporte para otimizar o tempo de resolução e a eficiência da equipe.</p>
-                                    <div class="flex flex-wrap gap-2 mb-6">
-                                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Power BI</span>
-                                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
-                                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">DAX</span>
-                                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">ETL</span>
-                                    </div>
-                                    <button onclick="toggleCaseStudy('case2')" class="font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 transition duration-300">Ver detalhes <i class="fas fa-chevron-down ml-1"></i></button>
-                                </div>
-                            </div>
+                    <div id="case3" class="case-study-content bg-gray-50 dark:bg-gray-800 border-t dark:border-gray-700"><div class="p-6 md:p-8 case-study-details dark:text-gray-300">
+                        <h4>Contexto e Problema</h4><p>O time utilizava relatórios dispersos em Excel, o que dificultava a análise de custos e a comparação entre diferentes unidades de negócio.</p>
+                        <h4>Processo e Solução</h4>
+                        <ul class="list-disc list-inside mt-2 space-y-1">
+                            <li><strong>ETL com Power Query:</strong> tratamento e consolidação de dados financeiros.</li>
+                            <li><strong>Modelagem e DAX:</strong> desenvolvimento de medidas como custos totais, despesas e margem operacional.</li>
+                        </ul>
+                        <h4>Entregáveis e Resultados</h4><p>Dashboard em Power BI com visão consolidada gerando:</p>
+                        <ul class="list-disc list-inside mt-2 space-y-1">
+                            <li>Identificação de unidades com baixa eficiência.</li>
+                            <li>Priorização de investimentos de forma automatizada.</li>
+                        </ul>
+                        
+                        <h4 class="mt-8 mb-4">Dashboard Interativo</h4>
+                        <div class="bg-gray-200 dark:bg-gray-700 p-6 rounded-lg text-center mb-4" id="btn-container-3">
+                            <p class="mb-4 text-gray-700 dark:text-gray-200">Clique abaixo para carregar o painel interativo (pode levar alguns segundos).</p>
+                            <button onclick="loadBI('bi-container-3', 'btn-container-3', 'https://app.powerbi.com/view?r=eyJrIjoiNDg0ZTI4Y2ItMmRlNS00MzE2LWExYjgtM2M4NTk4N2IyYjJmIiwidCI6IjExZGJiZmUyLTg5YjgtNDU0OS1iZTEwLWNlYzM2NGU1OTU1MSIsImMiOjR9')" class="bg-blue-600 text-white font-bold py-2 px-6 rounded shadow hover:bg-blue-700 transition">Carregar Dashboard</button>
                         </div>
-                        <div id="case2" class="case-study-content bg-gray-50 dark:bg-gray-800 border-t dark:border-gray-700"><div class="p-6 md:p-8 case-study-details dark:text-gray-300">
-                           <h4>Contexto e Problema</h4><p>A equipe lidava com alto volume de tickets sem visibilidade clara de indicadores, dificultando a priorização e gerando acúmulo de atrasos.</p>
-                            <h4>Processo e Solução</h4>
-                            <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li><strong>ETL com Python:</strong> consolidação de relatórios em Excel e banco de dados.</li>
-                                <li><strong>Modelagem de Dados:</strong> estruturação de tabelas fato e dimensões.</li>
-                                <li><strong>Cálculos com DAX:</strong> métricas como volume de contatos pendentes e distribuição por segmento.</li>
-                            </ul>
-                            <h4>Entregáveis e Resultados</h4><p>Dashboard que trouxe visibilidade em tempo quase real, resultando em:</p>
-                            <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li>Redução significativa do acúmulo de chamados atrasados (Vencidos).</li>
-                                <li>Melhora na alocação de esforços e eficiência no cumprimento de prazos.</li>
-                            </ul>
-                            
-                            <h4 class="mt-8 mb-4">Dashboard Interativo</h4>
-                            <div class="bg-gray-200 dark:bg-gray-700 p-6 rounded-lg text-center mb-4" id="btn-container-2">
-                                <p class="mb-4 text-gray-700 dark:text-gray-200">Clique abaixo para carregar o painel interativo (pode levar alguns segundos).</p>
-                                <button onclick="loadBI('bi-container-2', 'btn-container-2', 'https://app.powerbi.com/view?r=eyJrIjoiYjQ1ZWZjY2MtMTE0OC00M2I5LTlmNDYtMjJlZThjYjcwYmM5IiwidCI6IjExZGJiZmUyLTg5YjgtNDU0OS1iZTEwLWNlYzM2NGU1OTU1MSIsImMiOjR9')" class="bg-blue-600 text-white font-bold py-2 px-6 rounded shadow hover:bg-blue-700 transition">Carregar Dashboard</button>
-                            </div>
-                            <div id="bi-container-2" class="relative w-full hidden shadow-lg rounded-lg overflow-hidden border border-gray-200 dark:border-gray-600" style="padding-top: 56.25%;"></div>
-                            
-                            <div class="mt-4 bg-blue-50 dark:bg-blue-900 border-l-4 border-blue-500 p-4 rounded-r-lg">
-                                <p class="text-sm text-blue-800 dark:text-blue-100"><strong><i class="fas fa-lightbulb mr-2"></i>Dica de Análise:</strong> Veja o gráfico de "Tickets Vencidos". O foco principal aqui foi a identificação visual rápida para priorização da equipe no Grupo Évora.</p>
-                            </div>
-
-                            <h4 class="mt-8">Galeria do Projeto</h4>
-                            <div class="project-gallery mt-4" data-project-id="case2">
-                                <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_ate/dash_ate_1.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_ate/dash_ate_1.jpg" alt="Tela 1" class="w-full h-auto object-contain rounded-md shadow"></a></div>
-                                <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_ate/dash_ate_2.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_ate/dash_ate_2.jpg" alt="Tela 2" class="w-full h-auto object-contain rounded-md shadow"></a></div>
-                                <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_ate/dash_ate_3.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_ate/dash_ate_3.jpg" alt="Tela 3" class="w-full h-auto object-contain rounded-md shadow"></a></div>
-                                <a class="prev" onclick="plusSlides('case2', -1)">&#10094;</a>
-                                <a class="next" onclick="plusSlides('case2', 1)">&#10095;</a>
-                            </div>
-                        </div></div>
-                    </div>
-
-                    <div class="bg-white dark:bg-darkCard rounded-lg shadow-lg overflow-hidden border dark:border-gray-700">
-                        <div class="p-6 md:p-8">
-                            <div class="md:flex md:items-start md:gap-8">
-                                <div class="w-full md:w-1/3 project-image-container mb-4 md:mb-0">
-                                    <a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_1.jpg" target="_blank">
-                                        <img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_1.jpg" alt="Dashboard Financeiro" class="w-full h-auto object-cover rounded-md shadow">
-                                    </a>
-                                </div>
-                                <div class="flex-1">
-                                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Dashboard Financeiro</h3>
-                                    <p class="text-gray-600 dark:text-gray-400 mb-4">Visão consolidada de custos para análise de desempenho, eficiência e suporte à decisão estratégica.</p>
-                                    <div class="flex flex-wrap gap-2 mb-6">
-                                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Power BI</span>
-                                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">DAX</span>
-                                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">DataViz</span>
-                                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">ETL</span>
-                                    </div>
-                                    <button onclick="toggleCaseStudy('case3')" class="font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 transition duration-300">Ver detalhes <i class="fas fa-chevron-down ml-1"></i></button>
-                                </div>
-                            </div>
+                        <div id="bi-container-3" class="relative w-full hidden shadow-lg rounded-lg overflow-hidden border border-gray-200 dark:border-gray-600" style="padding-top: 56.25%;"></div>
+                        
+                        <div class="mt-4 bg-blue-50 dark:bg-blue-900 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                            <p class="text-sm text-blue-800 dark:text-blue-100"><strong><i class="fas fa-lightbulb mr-2"></i>Dica de Análise:</strong> Explore a comparação entre as unidades de negócio. Este painel permite identificar instantaneamente onde estão os maiores custos fixos.</p>
                         </div>
-                        <div id="case3" class="case-study-content bg-gray-50 dark:bg-gray-800 border-t dark:border-gray-700"><div class="p-6 md:p-8 case-study-details dark:text-gray-300">
-                            <h4>Contexto e Problema</h4><p>O time utilizava relatórios dispersos em Excel, o que dificultava a análise de custos e a comparação entre diferentes unidades de negócio.</p>
-                            <h4>Processo e Solução</h4>
-                            <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li><strong>ETL com Power Query:</strong> tratamento e consolidação de dados financeiros.</li>
-                                <li><strong>Modelagem e DAX:</strong> desenvolvimento de medidas como custos totais, despesas e margem operacional.</li>
-                            </ul>
-                            <h4>Entregáveis e Resultados</h4><p>Dashboard em Power BI com visão consolidada gerando:</p>
-                            <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li>Identificação de unidades com baixa eficiência.</li>
-                                <li>Priorização de investimentos de forma automatizada.</li>
-                            </ul>
-                            
-                            <h4 class="mt-8 mb-4">Dashboard Interativo</h4>
-                            <div class="bg-gray-200 dark:bg-gray-700 p-6 rounded-lg text-center mb-4" id="btn-container-3">
-                                <p class="mb-4 text-gray-700 dark:text-gray-200">Clique abaixo para carregar o painel interativo (pode levar alguns segundos).</p>
-                                <button onclick="loadBI('bi-container-3', 'btn-container-3', 'https://app.powerbi.com/view?r=eyJrIjoiNDg0ZTI4Y2ItMmRlNS00MzE2LWExYjgtM2M4NTk4N2IyYjJmIiwidCI6IjExZGJiZmUyLTg5YjgtNDU0OS1iZTEwLWNlYzM2NGU1OTU1MSIsImMiOjR9')" class="bg-blue-600 text-white font-bold py-2 px-6 rounded shadow hover:bg-blue-700 transition">Carregar Dashboard</button>
-                            </div>
-                            <div id="bi-container-3" class="relative w-full hidden shadow-lg rounded-lg overflow-hidden border border-gray-200 dark:border-gray-600" style="padding-top: 56.25%;"></div>
-                            
-                            <div class="mt-4 bg-blue-50 dark:bg-blue-900 border-l-4 border-blue-500 p-4 rounded-r-lg">
-                                <p class="text-sm text-blue-800 dark:text-blue-100"><strong><i class="fas fa-lightbulb mr-2"></i>Dica de Análise:</strong> Explore a comparação entre as unidades de negócio. Este painel permite identificar instantaneamente onde estão os maiores custos fixos.</p>
-                            </div>
 
-                            <h4 class="mt-8">Galeria do Projeto</h4>
-                            <div class="project-gallery mt-4" data-project-id="case3">
-                                <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_1.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_1.jpg" alt="Tela 1" class="w-full h-auto object-contain rounded-md shadow"></a></div>
-                                <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_2.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_2.jpg" alt="Tela 2" class="w-full h-auto object-contain rounded-md shadow"></a></div>
-                                <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_3.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_3.jpg" alt="Tela 3" class="w-full h-auto object-contain rounded-md shadow"></a></div>
-                                <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_4.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_4.jpg" alt="Tela 4" class="w-full h-auto object-contain rounded-md shadow"></a></div>
-                                <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_5.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_5.jpg" alt="Tela 5" class="w-full h-auto object-contain rounded-md shadow"></a></div>
-                                <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_6.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_6.jpg" alt="Tela 6" class="w-full h-auto object-contain rounded-md shadow"></a></div>
-                                <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_7.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_7.jpg" alt="Tela 7" class="w-full h-auto object-contain rounded-md shadow"></a></div>
-                                <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_8.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_8.jpg" alt="Tela 8" class="w-full h-auto object-contain rounded-md shadow"></a></div>
-                                <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_9.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_9.jpg" alt="Tela 9" class="w-full h-auto object-contain rounded-md shadow"></a></div>
-                                <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_10.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_10.jpg" alt="Tela 10" class="w-full h-auto object-contain rounded-md shadow"></a></div>
-                                <a class="prev" onclick="plusSlides('case3', -1)">&#10094;</a>
-                                <a class="next" onclick="plusSlides('case3', 1)">&#10095;</a>
-                            </div>
-                        </div></div>
-                    </div>
+                        <h4 class="mt-8">Galeria do Projeto</h4>
+                        <div class="project-gallery mt-4" data-project-id="case3">
+                            <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_1.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_1.jpg" alt="Tela 1" class="w-full h-auto object-contain rounded-md shadow"></a></div>
+                            <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_2.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_2.jpg" alt="Tela 2" class="w-full h-auto object-contain rounded-md shadow"></a></div>
+                            <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_3.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_3.jpg" alt="Tela 3" class="w-full h-auto object-contain rounded-md shadow"></a></div>
+                            <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_4.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_4.jpg" alt="Tela 4" class="w-full h-auto object-contain rounded-md shadow"></a></div>
+                            <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_5.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_5.jpg" alt="Tela 5" class="w-full h-auto object-contain rounded-md shadow"></a></div>
+                            <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_6.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_6.jpg" alt="Tela 6" class="w-full h-auto object-contain rounded-md shadow"></a></div>
+                            <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_7.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_7.jpg" alt="Tela 7" class="w-full h-auto object-contain rounded-md shadow"></a></div>
+                            <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_8.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_8.jpg" alt="Tela 8" class="w-full h-auto object-contain rounded-md shadow"></a></div>
+                            <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_9.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_9.jpg" alt="Tela 9" class="w-full h-auto object-contain rounded-md shadow"></a></div>
+                            <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_10.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_fin/dash_fin_10.jpg" alt="Tela 10" class="w-full h-auto object-contain rounded-md shadow"></a></div>
+                            <a class="prev" onclick="plusSlides('case3', -1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides('case3', 1)">&#10095;</a>
+                        </div>
+                    </div></div>
                 </div>
+
+                <div class="bg-white dark:bg-darkCard rounded-lg shadow-lg overflow-hidden border dark:border-gray-700">
+                    <div class="p-6 md:p-8">
+                        <div class="md:flex md:items-start md:gap-8">
+                            <div class="w-full md:w-1/3 project-image-container mb-4 md:mb-0">
+                                <a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_1.jpg" target="_blank">
+                                    <img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_1.jpg" alt="Dashboard Operacional" class="w-full h-auto object-cover rounded-md shadow">
+                                </a>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Dashboard Operacional</h3>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4">Análise de produtividade, prazos e gargalos para otimizar a eficiência de processos operacionais.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Power BI</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">DAX</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Power Query</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">SQL</span>
+                                </div>
+                                <button onclick="toggleCaseStudy('case1')" class="font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 transition duration-300">Ver detalhes <i class="fas fa-chevron-down ml-1"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="case1" class="case-study-content bg-gray-50 dark:bg-gray-800 border-t dark:border-gray-700"><div class="p-6 md:p-8 case-study-details dark:text-gray-300">
+                        <h4>Contexto e Problema</h4><p>A organização possuía um grande volume de processos operacionais, mas a gestão era baseada em relatórios manuais e planilhas fragmentadas. Isso dificultava a análise de produtividade, o acompanhamento de prazos e a identificação de gargalos.</p>
+                        <h4>Processo e Solução</h4>
+                        <ul class="list-disc list-inside mt-2 space-y-1">
+                            <li><strong>ETL com Power Query:</strong> extração e transformação de dados de múltiplas fontes.</li>
+                            <li><strong>Modelagem de Dados:</strong> criação de modelo dimensional (Star Schema).</li>
+                            <li><strong>Cálculos com DAX:</strong> desenvolvimento de indicadores como tempo médio de estoque e finalização.</li>
+                        </ul>
+                        <h4>Entregáveis e Resultados</h4><p>Dashboard interativo em Power BI. Entre os benefícios:</p>
+                        <ul class="list-disc list-inside mt-2 space-y-1">
+                            <li>Identificação de gargalos no fluxo, reduzindo prazos de conclusão.</li>
+                            <li>Detecção de descumprimentos de prazos, orientando correções.</li>
+                        </ul>
+                        
+                        <h4 class="mt-8 mb-4">Dashboard Interativo</h4>
+                        <div class="bg-gray-200 dark:bg-gray-700 p-6 rounded-lg text-center mb-4" id="btn-container-1">
+                            <p class="mb-4 text-gray-700 dark:text-gray-200">Clique abaixo para carregar o painel interativo (pode levar alguns segundos).</p>
+                            <button onclick="loadBI('bi-container-1', 'btn-container-1', 'https://app.powerbi.com/view?r=eyJrIjoiNDczMDA4N2EtMWVkOC00OWNlLTlhY2EtOTAxNGNjNWMxYjE3IiwidCI6IjExZGJiZmUyLTg5YjgtNDU0OS1iZTEwLWNlYzM2NGU1OTU1MSIsImMiOjR9')" class="bg-blue-600 text-white font-bold py-2 px-6 rounded shadow hover:bg-blue-700 transition">Carregar Dashboard</button>
+                        </div>
+                        <div id="bi-container-1" class="relative w-full hidden shadow-lg rounded-lg overflow-hidden border border-gray-200 dark:border-gray-600" style="padding-top: 56.25%;"></div>
+                        
+                        <div class="mt-4 bg-blue-50 dark:bg-blue-900 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                            <p class="text-sm text-blue-800 dark:text-blue-100"><strong><i class="fas fa-lightbulb mr-2"></i>Dica de Análise:</strong> Filtre pelo período de maior volume e observe como o <em>SLA de finalização</em> se comporta. Note que a automação de ETL reduziu o tempo manual em mais de 20%.</p>
+                        </div>
+
+                        <h4 class="mt-8">Galeria do Projeto</h4>
+                        <div class="project-gallery mt-4" data-project-id="case1">
+                            <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_1.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_1.jpg" alt="Dashboard Operacional" class="w-full h-auto object-contain rounded-md shadow"></a></div>
+                            <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_2.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_2.jpg" alt="Tela 2" class="w-full h-auto object-contain rounded-md shadow"></a></div>
+                            <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_3.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_3.jpg" alt="Tela 3" class="w-full h-auto object-contain rounded-md shadow"></a></div>
+                            <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_4.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_4.jpg" alt="Tela 4" class="w-full h-auto object-contain rounded-md shadow"></a></div>
+                            <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_5.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_op/dash_op_5.jpg" alt="Tela 5" class="w-full h-auto object-contain rounded-md shadow"></a></div>
+                            <a class="prev" onclick="plusSlides('case1', -1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides('case1', 1)">&#10095;</a>
+                        </div>
+                    </div></div>
+                </div>
+
+                <div class="bg-white dark:bg-darkCard rounded-lg shadow-lg overflow-hidden border dark:border-gray-700">
+                    <div class="p-6 md:p-8">
+                        <div class="md:flex md:items-start md:gap-8">
+                            <div class="w-full md:w-1/3 project-image-container mb-4 md:mb-0">
+                                <a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_ate/dash_ate_1.jpg" target="_blank">
+                                    <img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_ate/dash_ate_1.jpg" alt="Dashboard de Atendimento" class="w-full h-auto object-cover rounded-md shadow">
+                                </a>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Dashboard de Atendimento</h3>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4">Análise e monitoramento de tickets de suporte para otimizar o tempo de resolução e a eficiência da equipe.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Power BI</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">DAX</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">ETL</span>
+                                </div>
+                                <button onclick="toggleCaseStudy('case2')" class="font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 transition duration-300">Ver detalhes <i class="fas fa-chevron-down ml-1"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="case2" class="case-study-content bg-gray-50 dark:bg-gray-800 border-t dark:border-gray-700"><div class="p-6 md:p-8 case-study-details dark:text-gray-300">
+                        <h4>Contexto e Problema</h4><p>A equipe lidava com alto volume de tickets sem visibilidade clara de indicadores, dificultando a priorização e gerando acúmulo de atrasos.</p>
+                        <h4>Processo e Solução</h4>
+                        <ul class="list-disc list-inside mt-2 space-y-1">
+                            <li><strong>ETL com Python:</strong> consolidação de relatórios em Excel e banco de dados.</li>
+                            <li><strong>Modelagem de Dados:</strong> estruturação de tabelas fato e dimensões.</li>
+                            <li><strong>Cálculos com DAX:</strong> métricas como volume de contatos pendentes e distribuição por segmento.</li>
+                        </ul>
+                        <h4>Entregáveis e Resultados</h4><p>Dashboard que trouxe visibilidade em tempo quase real, resultando em:</p>
+                        <ul class="list-disc list-inside mt-2 space-y-1">
+                            <li>Redução significativa do acúmulo de chamados atrasados (Vencidos).</li>
+                            <li>Melhora na alocação de esforços e eficiência no cumprimento de prazos.</li>
+                        </ul>
+                        
+                        <h4 class="mt-8 mb-4">Dashboard Interativo</h4>
+                        <div class="bg-gray-200 dark:bg-gray-700 p-6 rounded-lg text-center mb-4" id="btn-container-2">
+                            <p class="mb-4 text-gray-700 dark:text-gray-200">Clique abaixo para carregar o painel interativo (pode পেলে levar alguns segundos).</p>
+                            <button onclick="loadBI('bi-container-2', 'btn-container-2', 'https://app.powerbi.com/view?r=eyJrIjoiYjQ1ZWZjY2MtMTE0OC00M2I5LTlmNDYtMjJlZThjYjcwYmM5IiwidCI6IjExZGJiZmUyLTg5YjgtNDU0OS1iZTEwLWNlYzM2NGU1OTU1MSIsImMiOjR9')" class="bg-blue-600 text-white font-bold py-2 px-6 rounded shadow hover:bg-blue-700 transition">Carregar Dashboard</button>
+                        </div>
+                        <div id="bi-container-2" class="relative w-full hidden shadow-lg rounded-lg overflow-hidden border border-gray-200 dark:border-gray-600" style="padding-top: 56.25%;"></div>
+                        
+                        <div class="mt-4 bg-blue-50 dark:bg-blue-900 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                            <p class="text-sm text-blue-800 dark:text-blue-100"><strong><i class="fas fa-lightbulb mr-2"></i>Dica de Análise:</strong> Veja o gráfico de "Tickets Vencidos". O foco principal aqui foi a identificação visual rápida para priorização da equipe no Grupo Évora.</p>
+                        </div>
+
+                        <h4 class="mt-8">Galeria do Projeto</h4>
+                        <div class="project-gallery mt-4" data-project-id="case2">
+                            <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_ate/dash_ate_1.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_ate/dash_ate_1.jpg" alt="Tela 1" class="w-full h-auto object-contain rounded-md shadow"></a></div>
+                            <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_ate/dash_ate_2.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_ate/dash_ate_2.jpg" alt="Tela 2" class="w-full h-auto object-contain rounded-md shadow"></a></div>
+                            <div class="gallery-slide"><a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_ate/dash_ate_3.jpg" target="_blank"><img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/dash_ate/dash_ate_3.jpg" alt="Tela 3" class="w-full h-auto object-contain rounded-md shadow"></a></div>
+                            <a class="prev" onclick="plusSlides('case2', -1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides('case2', 1)">&#10095;</a>
+                        </div>
+                    </div></div>
+                </div>
+
             </div>
 
-            <div>
-                <h3 class="text-2xl font-bold text-center mb-10 text-gray-700 dark:text-gray-300 border-b-2 dark:border-gray-700 pb-2">Projetos de Python & Automação</h3>
-                <div class="space-y-10">
-                    <div class="bg-white dark:bg-darkCard rounded-lg shadow-lg overflow-hidden border dark:border-gray-700">
-                        <div class="p-6 md:p-8">
-                            <div class="md:flex md:items-start md:gap-8">
-                                <div class="w-full md:w-1/5 project-image-container mb-4 md:mb-0">
-                                    <a href="https://SauloSapucaia.github.io/python_grafic.jpg" target="_blank">
-                                        <img src="https://SauloSapucaia.github.io/python_grafic.jpg" alt="Ajuste de Métrica" class="w-full aspect-square object-cover rounded-md shadow">
-                                    </a>
+            <div id="category-python" class="space-y-10 hidden">
+             
+                <div class="bg-white dark:bg-darkCard rounded-lg shadow-lg overflow-hidden border dark:border-gray-700">
+                    <div class="p-6 md:p-8">
+                        <div class="md:flex md:items-start md:gap-8">
+                            <div class="w-full md:w-1/5 project-image-container mb-4 md:mb-0">
+                                <a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/case_6.jpg" target="_blank" rel="noopener noreferrer">
+                                    <img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/case_6.jpg" alt="Arquitetura de Integração de APIs e Fabric" class="w-full aspect-square object-cover rounded-md shadow">
+                                </a>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Pipeline End-to-End: APIs, Azure Fabric e Monitoramento</h3>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4">Desenvolvimento de pipeline completo com Python, bancos de dados no Azure (Fabric) e Power Automate para processamento de JSON e controle via Power BI.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Azure Fabric</span>
+                                    <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">Power Automate</span>
+                                    <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">Power BI</span>
                                 </div>
-                                <div class="flex-1">
-                                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Ajuste de Métrica de Performance</h3>
-                                    <p class="text-gray-600 dark:text-gray-400 mb-4">Refino de uma métrica de desempenho com Python para refletir a realidade operacional.</p>
-                                    <div class="flex flex-wrap gap-2 mb-6">
-                                        <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
-                                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Regra de Negócio</span>
-                                    </div>
-                                    <button onclick="toggleCaseStudy('case4')" class="font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 transition duration-300">Ver detalhes <i class="fas fa-chevron-down ml-1"></i></button>
-                                </div>
+                                <button onclick="toggleCaseStudy('case6')" class="font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 transition duration-300">Ver detalhes <i class="fas fa-chevron-down ml-1 transform transition-transform"></i></button>
                             </div>
                         </div>
-                        <div id="case4" class="case-study-content bg-gray-50 dark:bg-gray-800 border-t dark:border-gray-700"><div class="p-6 md:p-8 case-study-details dark:text-gray-300">
-                            <h4>Contexto e Problema</h4><p>Uma métrica interna não refletia adequadamente a realidade, distorcendo análises.</p>
+                    </div>
+                    <div id="case6" class="case-study-content bg-gray-50 dark:bg-gray-800 border-t dark:border-gray-700">
+                        <div class="p-6 md:p-8 case-study-details dark:text-gray-300">
+                            <h4>Contexto e Problema</h4>
+                            <p>O fluxo operacional dependia da verificação manual em sistemas externos para identificar a entrada de novos processos, exigindo que a equipe consultasse a plataforma mais de 10 vezes ao dia para realizar o cadastro no sistema interno. Essa rotina repetitiva consumia tempo, gerava alto esforço operacional e estava vulnerável a falhas ou atrasos sistêmicos.</p>
+                            
                             <h4>Processo e Solução</h4>
                             <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li><strong>Ajustes em Python:</strong> revisão do código para contemplar novos cenários.</li>
-                                <li><strong>Validação Analítica:</strong> testes comparativos entre métricas.</li>
+                                <li><strong>Integração e Pipeline:</strong> Criação de pipeline em Python para consumo de APIs REST de terceiros, realizando a extração e o processamento automatizado dos novos processos (payloads em formato JSON).</li>
+                                <li><strong>Cloud & Engenharia de Dados:</strong> Estruturação e gravação das informações capturadas em um banco de dados hospedado no Azure, orquestrado através do Microsoft Fabric.</li>
+                                <li><strong>Automação de Comunicação:</strong> Integração direta com o Power Automate para o disparo automatizado de e-mails, garantindo a notificação imediata das partes envolvidas a cada novo cadastro.</li>
                             </ul>
-                            <h4>Entregáveis e Resultados</h4><p>Métrica revisada que trouxe maior confiabilidade aos indicadores.</p>
-                        </div></div>
-                    </div>
-                    
-                    <div class="bg-white dark:bg-darkCard rounded-lg shadow-lg overflow-hidden border dark:border-gray-700">
-                        <div class="p-6 md:p-8">
-                            <div class="md:flex md:items-start md:gap-8">
-                                <div class="w-full md:w-1/5 project-image-container mb-4 md:mb-0">
-                                    <a href="https://SauloSapucaia.github.io/python_tech.jpg" target="_blank" rel="noopener noreferrer">
-                                        <img src="https://SauloSapucaia.github.io/python_tech.jpg" alt="Automação de Input de Relatórios" class="w-full aspect-square object-cover rounded-md shadow">
-                                    </a>
-                                </div>
-                                <div class="flex-1">
-                                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Automação de Input de Relatórios</h3>
-                                    <p class="text-gray-600 dark:text-gray-400 mb-4">Automação de tarefas manuais de envio de relatórios, resultando em aumento de produtividade e redução de erros.</p>
-                                    <div class="flex flex-wrap gap-2 mb-6">
-                                        <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
-                                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Web Automation</span>
-                                        <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">RPA</span>
-                                    </div>
-                                    <button onclick="toggleCaseStudy('case5')" class="font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 transition duration-300">Ver detalhes <i class="fas fa-chevron-down ml-1 transform transition-transform"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="case5" class="case-study-content bg-gray-50 dark:bg-gray-800 border-t dark:border-gray-700"><div class="p-6 md:p-8 case-study-details dark:text-gray-300">
-                            <h4>Contexto e Problema</h4><p>O processo de envio de relatórios em PDF para um sistema online era feito manualmente, consumindo tempo e sujeito a falhas. Isso limitava a produtividade e atrasava etapas críticas da operação.</p>
-                            <h4>Processo e Solução</h4>
+                            
+                            <h4>Entregáveis e Resultados</h4>
+                            <p>Um ecossistema de dados automatizado e robusto que entregou:</p>
                             <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li><strong>Automação em Python:</strong> desenvolvimento de script para login, localização de processos e upload automatizado de documentos.</li>
-                                <li><strong>Integração com Relatórios:</strong> identificação automática de processos concluídos para evitar duplicidades.</li>
-                                <li><strong>Validação:</strong> implementação de logs e verificações para garantir o sucesso de cada envio.</li>
+                                <li><strong>Eficiência e Zero Falhas:</strong> Eliminação total do esforço operacional com as consultas repetitivas manuais, reduzindo drasticamente o tempo de cadastro e garantindo que nenhum processo fosse perdido.</li>
+                                <li><strong>Dashboard de Governança:</strong> Criação de um painel interativo no Power BI, consumindo os dados diretamente do banco no Azure, permitindo monitorar o volume de processos recebidos e acompanhar a saúde e execução da automação em tempo real.</li>
                             </ul>
-                            <h4>Entregáveis e Resultados</h4><p>Automação robusta que passou a integrar o fluxo diário, com benefícios como:</p>
-                            <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li>Aumento expressivo na produtividade.</li>
-                                <li>Eliminação de falhas manuais e maior confiabilidade nos processos.</li>
-                                <li>Liberação da equipe para atividades de maior valor agregado.</li>
-                            </ul>
-                        </div></div>
-                    </div>
-
-                    <div class="bg-white dark:bg-darkCard rounded-lg shadow-lg overflow-hidden border dark:border-gray-700">
-                        <div class="p-6 md:p-8">
-                            <div class="md:flex md:items-start md:gap-8">
-                                <div class="w-full md:w-1/5 project-image-container mb-4 md:mb-0">
-                                    <a href="#" target="_blank" rel="noopener noreferrer">
-                                        <img src="https://via.placeholder.com/400?text=Arquitetura+End-to-End" alt="Integração de APIs e Fabric" class="w-full aspect-square object-cover rounded-md shadow bg-gray-200 dark:bg-gray-700">
-                                    </a>
-                                </div>
-                                <div class="flex-1">
-                                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Pipeline End-to-End: APIs, Azure Fabric e Monitoramento</h3>
-                                    <p class="text-gray-600 dark:text-gray-400 mb-4">Desenvolvimento de pipeline completo com Python, bancos de dados no Azure (Fabric) e Power Automate para processamento de JSON e controle via Power BI.</p>
-                                    <div class="flex flex-wrap gap-2 mb-6">
-                                        <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
-                                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Azure Fabric</span>
-                                        <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">Power Automate</span>
-                                        <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">Power BI</span>
-                                    </div>
-                                    <button onclick="toggleCaseStudy('case6')" class="font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 transition duration-300">Ver detalhes <i class="fas fa-chevron-down ml-1 transform transition-transform"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="case6" class="case-study-content bg-gray-50 dark:bg-gray-800 border-t dark:border-gray-700">
-                            <div class="p-6 md:p-8 case-study-details dark:text-gray-300">
-                                <h4>Contexto e Problema</h4>
-                                <p>O fluxo operacional dependia da verificação manual em sistemas externos para identificar a entrada de novos processos, exigindo que a equipe consultasse a plataforma mais de 10 vezes ao dia para realizar o cadastro no sistema interno. Essa rotina repetitiva consumia tempo, gerava alto esforço operacional e estava vulnerável a falhas ou atrasos sistêmicos.</p>
-                                
-                                <h4>Processo e Solução</h4>
-                                <ul class="list-disc list-inside mt-2 space-y-1">
-                                    <li><strong>Integração e Pipeline:</strong> Criação de pipeline em Python para consumo de APIs REST de terceiros, realizando a extração e o processamento automatizado dos novos processos (payloads em formato JSON).</li>
-                                    <li><strong>Cloud & Engenharia de Dados:</strong> Estruturação e gravação das informações capturadas em um banco de dados hospedado no Azure, orquestrado através do Microsoft Fabric.</li>
-                                    <li><strong>Automação de Comunicação:</strong> Integração direta com o Power Automate para o disparo automatizado de e-mails, garantindo a notificação imediata das partes envolvidas a cada novo cadastro.</li>
-                                </ul>
-                                
-                                <h4>Entregáveis e Resultados</h4>
-                                <p>Um ecossistema de dados automatizado e robusto que entregou:</p>
-                                <ul class="list-disc list-inside mt-2 space-y-1">
-                                    <li><strong>Eficiência e Zero Falhas:</strong> Eliminação total do esforço operacional com as consultas repetitivas manuais, reduzindo drasticamente o tempo de cadastro e garantindo que nenhum processo fosse perdido.</li>
-                                    <li><strong>Dashboard de Governança:</strong> Criação de um painel interativo no Power BI, consumindo os dados diretamente do banco no Azure, permitindo monitorar o volume de processos recebidos e acompanhar a saúde e execução da automação em tempo real.</li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
-
                 </div>
-            </div>
+                
+                
+                <div class="bg-white dark:bg-darkCard rounded-lg shadow-lg overflow-hidden border dark:border-gray-700">
+                    <div class="p-6 md:p-8">
+                        <div class="md:flex md:items-start md:gap-8">
+                            <div class="w-full md:w-1/5 project-image-container mb-4 md:mb-0">
+                                <a href="https://SauloSapucaia.github.io/python_grafic.jpg" target="_blank">
+                                    <img src="https://SauloSapucaia.github.io/python_grafic.jpg" alt="Ajuste de Métrica" class="w-full aspect-square object-cover rounded-md shadow">
+                                </a>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Ajuste de Métrica de Performance (Giro de Estoque)</h3>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4">Refatoração de código para correção de falha analítica e alinhamento de regra de negócio operacional.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Regra de Negócio</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Validação Analítica</span>
+                                </div>
+                                <button onclick="toggleCaseStudy('case4')" class="font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 transition duration-300">Ver detalhes <i class="fas fa-chevron-down ml-1"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="case4" class="case-study-content bg-gray-50 dark:bg-gray-800 border-t dark:border-gray-700"><div class="p-6 md:p-8 case-study-details dark:text-gray-300">
+                        <h4>Contexto e Problema</h4>
+                        <p>A regra de negócio original utilizada para calcular a pontuação mensal da equipe apresentava uma falha analítica: o cálculo de "Giro de Estoque" ignorava os processos cancelados que haviam sido acionados no próprio mês. Isso distorcia a projeção de acionamentos e prejudicava a avaliação real do desempenho operacional.</p>
+                        
+                        <h4>Processo e Solução</h4>
+                        <ul class="list-disc list-inside mt-2 space-y-1">
+                            <li><strong>Refatoração em Python:</strong> Análise e alteração do código legado para criar novas variáveis capazes de mapear, isolar e contabilizar os processos cancelados dentro do escopo do mês vigente.</li>
+                            <li><strong>Alinhamento de Regra de Negócio:</strong> Ajuste da lógica matemática para que a divisão do estoque atual pela projeção de acionamentos considerasse o volume total de esforço da equipe.</li>
+                        </ul>
+                        
+                        <h4>Entregáveis e Resultados</h4>
+                        <p>A refatoração garantiu um indicador de Giro de Estoque 100% preciso. A métrica passou a refletir com extrema fidelidade a realidade e a carga de trabalho da operação, garantindo avaliações de performance justas e confiáveis para a tomada de decisão da liderança.</p>
+                    </div></div>
+                </div>
+                
+                <div class="bg-white dark:bg-darkCard rounded-lg shadow-lg overflow-hidden border dark:border-gray-700">
+                    <div class="p-6 md:p-8">
+                        <div class="md:flex md:items-start md:gap-8">
+                            <div class="w-full md:w-1/5 project-image-container mb-4 md:mb-0">
+                                <a href="https://SauloSapucaia.github.io/python_tech.jpg" target="_blank" rel="noopener noreferrer">
+                                    <img src="https://SauloSapucaia.github.io/python_tech.jpg" alt="Automação de Input de Relatórios" class="w-full aspect-square object-cover rounded-md shadow">
+                                </a>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">RPA para Input de Relatórios (Web Automation)</h3>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4">Automação de sistema web com Selenium e manipulação de dados com Pandas, triplicando a produtividade diária e zerando falhas.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Selenium</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Pandas / Numpy</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">SQL</span>
+                                </div>
+                                <button onclick="toggleCaseStudy('case5')" class="font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 transition duration-300">Ver detalhes <i class="fas fa-chevron-down ml-1 transform transition-transform"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="case5" class="case-study-content bg-gray-50 dark:bg-gray-800 border-t dark:border-gray-700"><div class="p-6 md:p-8 case-study-details dark:text-gray-300">
+                        <h4>Contexto e Problema</h4>
+                        <p>O processo de preenchimento de dados e upload de relatórios (PDFs) para o portal do cliente era manual, sujeito a erros de digitação e extremamente moroso. Um analista dedicava grande parte de sua jornada (8h) para processar cerca de 100 documentos. O acúmulo sistêmico (backlog) gerava atrasos, retrabalho e frequentes reclamações dos clientes.</p>
+                        
+                        <h4>Processo e Solução</h4>
+                        <ul class="list-disc list-inside mt-2 space-y-1">
+                            <li><strong>RPA com Python & Selenium:</strong> Desenvolvimento de um robô utilizando <code>ActionChains</code> para navegação complexa, interações sistêmicas avançadas e upload automatizado no portal web.</li>
+                            <li><strong>Tratamento e Qualidade:</strong> Uso das bibliotecas Pandas e Numpy para ler, tratar e validar matematicamente os dados antes do input, garantindo a integridade da informação.</li>
+                            <li><strong>Rastreabilidade com SQL:</strong> Integração com banco de dados para registrar <em>logs</em>, controlando com precisão quais processos já haviam sido concluídos para evitar duplicidades.</li>
+                        </ul>
+                        
+                        <h4>Entregáveis e Resultados</h4>
+                        <p>A substituição do trabalho manual pela automação transformou a operação:</p>
+                        <ul class="list-disc list-inside mt-2 space-y-1">
+                            <li><strong>Escalabilidade:</strong> O volume diário saltou de 100 para uma média de 300 a 450 processos, executados pelo robô em cerca de 4 horas ininterruptas.</li>
+                            <li><strong>Qualidade e Satisfação:</strong> Eliminação completa de erros no preenchimento de dados, zerando o backlog acumulado, mitigando o retrabalho e cessando as reclamações dos clientes finais.</li>
+                        </ul>
+                    </div></div>
+                </div>
+
+            </div> 
         </section>
 
         <section id="habilidades" class="py-20">
@@ -469,13 +486,12 @@
                     <h3 class="text-2xl font-bold dark:text-white">Analista de Dados</h3>
                     <p class="text-lg font-semibold text-blue-700 dark:text-blue-400 mb-4">Grupo Évora</p>
                     <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
-                        <li>Desenvolvimento e manutenção de dashboards em Power BI para acompanhamento de KPIs de clientes.</li>
-                        <li>Tratamento e modelagem de dados utilizando Linguagem M e DAX.</li>
-                        <li>Orquestração de pipelines de dados e gerenciamento de banco de dados em nuvem utilizando o ecossistema <strong>Microsoft Fabric</strong>.</li>
-                        <li>Integração de APIs de terceiros para automação de fluxo de dados, processamento de documentos e disparo de notificações via e-mail (Power Automate).</li>
-                        <li>Criação de scripts para otimização e automação de relatórios.</li>
-                        <li>Análise de dados financeiros e operacionais para suportar decisões gerenciais.</li>
-                        <li>Colaboração em projetos de análise de dados com Python.</li>
+                        <li><strong>Business Intelligence & Analytics:</strong> Desenvolvimento de ecossistemas de BI ponta a ponta, desde a modelagem dimensional (Star Schema) até a criação de dashboards interativos em Power BI com DAX avançado.</li>
+                        <li><strong>Engenharia de Dados (ETL):</strong> Extração, transformação e carga de dados de múltiplas fontes (bancos relacionais, planilhas, APIs) utilizando Python, SQL Server e Linguagem M.</li>
+                        <li><strong>Automação & RPA:</strong> Criação de robôs e scripts de Web Scraping em Python para automatizar inputs de relatórios e rotinas sistêmicas, eliminando falhas manuais e reduzindo drasticamente o esforço operacional.</li>
+                        <li><strong>Cloud & Orquestração:</strong> Integração de APIs REST, orquestração de pipelines de dados e estruturação de bancos de dados em nuvem utilizando o ecossistema <strong>Microsoft Fabric</strong>.</li>
+                        <li><strong>Fluxos Inteligentes:</strong> Desenvolvimento de roteamentos e disparo de alertas automatizados via <strong>Power Automate</strong>, garantindo governança e comunicação em tempo real.</li>
+                        <li><strong>Inteligência de Negócio:</strong> Análise aprofundada de dados financeiros e operacionais (monitoramento de SLAs, tickets de atendimento e margens), refinando métricas de performance para suportar decisões gerenciais de alto nível.</li>
                     </ul>
                 </div>
             </div>
@@ -484,39 +500,169 @@
         <section id="formacao" class="py-20 bg-white dark:bg-darkCard rounded-lg shadow-xl -mx-6 px-6 border dark:border-gray-700">
             <h2 class="text-3xl font-bold text-center mb-12 dark:text-white">Formação Acadêmica</h2>
             <div class="max-w-4xl mx-auto">
-                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-md relative border-l-4 border-blue-500">
+                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-md relative border-l-4 border-blue-500 mb-12">
                     <div class="absolute -left-3 top-8 w-6 h-6 bg-blue-500 rounded-full border-4 border-white dark:border-gray-900"></div>
                     <p class="text-gray-500 dark:text-gray-400 mb-1">Ago 2025 - Ago 2027 (Previsão)</p>
                     <h3 class="text-2xl font-bold dark:text-white">Curso Superior de Tecnologia (CST), Data Science</h3>
-                    <p class="text-lg font-semibold text-blue-700 dark:text-blue-400 mb-4">FIAP</p>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">
-                        Capacitação em arquitetura e integração de dados, Big Data, NoSQL, governança e segurança, SQL e banco de dados não-relacional, BI, Data Warehousing, Machine Learning, Deep Learning e Cloud. Foco em transformar dados complexos em insights estratégicos com análise preditiva e visualização avançada.
+                    <p class="text-lg font-semibold text-blue-700 dark:text-blue-400 mb-6">FIAP</p>
+                    
+                    <p class="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                        Formação com forte viés prático e voltada para a resolução de desafios de negócios. O currículo abrange a jornada completa dos dados: desde a Arquitetura (Big Data, Cloud, SQL e NoSQL), passando por Data Warehousing e Business Intelligence, até a Inteligência Artificial (Machine Learning e Deep Learning).
                     </p>
+
+                    <h4 class="font-bold text-xl text-gray-800 dark:text-white mb-8 border-b pb-2 dark:border-gray-700">Trilha de Conhecimento (Roadmap)</h4>
+                    
+                    <div class="border-l-2 border-gray-200 dark:border-gray-700 ml-3 md:ml-4 space-y-10">
+                        
+                        <div class="relative pl-6">
+                            <span class="absolute w-4 h-4 rounded-full bg-green-500 ring-4 ring-gray-50 dark:ring-gray-800 -left-[9px] top-1"></span>
+                            <div class="mb-2 flex flex-wrap items-center gap-3">
+                                <span class="bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded tracking-wider">FASE 1</span>
+                                <h5 class="font-bold text-gray-800 dark:text-gray-200 text-lg">Database Essentials</h5>
+                            </div>
+                            <p class="text-xs font-bold text-green-600 dark:text-green-400 mb-2 uppercase tracking-wide">
+                                <i class="far fa-calendar-check mr-1"></i> FASE CONCLUÍDA
+                            </p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400"><strong>Objetivo:</strong> Introduzir os conceitos de banco de dados, aplicar os modelos conceitual e lógico de modelagem. Modelagem relacional/física e implementar práticas de linguagem SQL e Python.</p>
+                        </div>
+
+                        <div class="relative pl-6">
+                            <span class="absolute w-4 h-4 rounded-full bg-green-500 ring-4 ring-gray-50 dark:ring-gray-800 -left-[9px] top-1"></span>
+                            <div class="mb-2 flex flex-wrap items-center gap-3">
+                                <span class="bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded tracking-wider">FASE 2</span>
+                                <h5 class="font-bold text-gray-800 dark:text-gray-200 text-lg">Start Data Management</h5>
+                            </div>
+                            <p class="text-xs font-bold text-green-600 dark:text-green-400 mb-2 uppercase tracking-wide">
+                                <i class="far fa-calendar-check mr-1"></i> FASE CONCLUÍDA
+                            </p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400"><strong>Objetivo:</strong> Aprofundar os conceitos de programação em Python. Implementar e manipular os dados de um banco de dados relacional através da linguagem SQL. Introdução a Governança e Qualidade de Dados em projetos Data Science.</p>
+                        </div>
+
+                        <div class="relative pl-6">
+                            <span class="absolute w-4 h-4 rounded-full bg-green-500 ring-4 ring-gray-50 dark:ring-gray-800 -left-[9px] top-1"></span>
+                            <div class="mb-2 flex flex-wrap items-center gap-3">
+                                <span class="bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded tracking-wider">FASE 3</span>
+                                <h5 class="font-bold text-gray-800 dark:text-gray-200 text-lg">SQL Extension Language</h5>
+                            </div>
+                            <p class="text-xs font-bold text-green-600 dark:text-green-400 mb-2 uppercase tracking-wide">
+                                <i class="far fa-calendar-check mr-1"></i> FASE CONCLUÍDA
+                            </p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400"><strong>Objetivo:</strong> Explorando consultas avançadas em SQL e os comandos avançados da linguagem SQL através de PL/SQL. Aprofundando os conceitos sobre Python. Entendendo a LGPD e os ambientes Data Driven.</p>
+                        </div>
+
+                        <div class="relative pl-6">
+                            <span class="absolute w-4 h-4 rounded-full bg-green-500 ring-4 ring-gray-50 dark:ring-gray-800 -left-[9px] top-1"></span>
+                            <div class="mb-2 flex flex-wrap items-center gap-3">
+                                <span class="bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded tracking-wider">FASE 4</span>
+                                <h5 class="font-bold text-gray-800 dark:text-gray-200 text-lg">Programming & Infrastructure</h5>
+                            </div>
+                            <p class="text-xs font-bold text-green-600 dark:text-green-400 mb-2 uppercase tracking-wide">
+                                <i class="far fa-calendar-check mr-1"></i> FASE CONCLUÍDA
+                            </p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400"><strong>Objetivo:</strong> Explorando os comandos avançados da linguagem SQL através de PL/SQL. Conceitos e aplicação de hardware e virtualização. Conceitos sobre sistemas operacionais, ambiente e comandos Linux. Conceitos sobre Segurança em ambientes onpremisse. Conceitos Arquitetura e Gerenciamento de banco de dados Oracle. Introdução a computação em nuvem e auditoria.</p>
+                        </div>
+
+                        <div class="relative pl-6">
+                            <span class="absolute w-4 h-4 rounded-full bg-pink-600 ring-4 ring-gray-50 dark:ring-gray-800 -left-[9px] top-1"></span>
+                            <div class="mb-2 flex flex-wrap items-center gap-3">
+                                <span class="bg-pink-600 text-white text-[10px] font-bold px-2 py-1 rounded tracking-wider">FASE 5</span>
+                                <h5 class="font-bold text-gray-800 dark:text-gray-200 text-lg">NoSQL & Intro Data Science Statistics</h5>
+                            </div>
+                            <p class="text-xs font-bold text-pink-600 dark:text-pink-400 mb-2 uppercase tracking-wide">
+                                <i class="far fa-calendar-alt mr-1"></i> DE 09/02/2026 ATÉ 18/03/2026
+                            </p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400"><strong>Objetivo:</strong> Conhecer e aplicar outras estruturas de armazenamento como a NoSQL. Conceitos e aplicações de estatistica, utilizando Python para análise de dados. Entender as estratégias de distribuição e integração de dados corporativos. Conhecendo ferramentas de integração de dados e data quality. Entender tipos de sistemas baseados em bancos de dados.</p>
+                        </div>
+
+                        <div class="relative pl-6">
+                            <span class="absolute w-4 h-4 rounded-full bg-gray-400 dark:bg-gray-600 ring-4 ring-gray-50 dark:ring-gray-800 -left-[9px] top-1"></span>
+                            <div class="mb-2 flex flex-wrap items-center gap-3">
+                                <span class="border border-gray-400 text-gray-500 dark:text-gray-400 text-[10px] font-bold px-2 py-1 rounded tracking-wider">FASE 6</span>
+                                <h5 class="font-bold text-gray-500 dark:text-gray-400 text-lg">Big Data Architecture</h5>
+                            </div>
+                            <p class="text-xs font-bold text-gray-500 dark:text-gray-500 mb-2 uppercase tracking-wide">
+                                <i class="far fa-calendar-alt mr-1"></i> A PARTIR DE 19/03/2026
+                            </p>
+                            <p class="text-sm text-gray-500 dark:text-gray-500"><strong>Objetivo:</strong> Conceitos relativos a Big Data. Explorar a Integração e ingestão de dados. Conceitos e aplicações de estatistica, utilizando Python para análise de dados.</p>
+                        </div>
+
+                        <div class="relative pl-6">
+                            <span class="absolute w-4 h-4 rounded-full bg-gray-400 dark:bg-gray-600 ring-4 ring-gray-50 dark:ring-gray-800 -left-[9px] top-1"></span>
+                            <div class="mb-2 flex flex-wrap items-center gap-3">
+                                <span class="border border-gray-400 text-gray-500 dark:text-gray-400 text-[10px] font-bold px-2 py-1 rounded tracking-wider">FASE 7</span>
+                                <h5 class="font-bold text-gray-500 dark:text-gray-400 text-lg">Empowering Teams With SSBI</h5>
+                            </div>
+                            <p class="text-xs font-bold text-gray-500 dark:text-gray-500 mb-2 uppercase tracking-wide">
+                                <i class="far fa-calendar-alt mr-1"></i> A PARTIR DE 30/04/2026
+                            </p>
+                            <p class="text-sm text-gray-500 dark:text-gray-500"><strong>Objetivo:</strong> Explorar os assuntos relacionados a inteligência nos negócios, e análise (BI & Analytics) e arquitetura para tomada de decisão em grandes volumes de dados. Conceitos e aplicações de estatistica, utilizando Python para análise de dados. Análise de texto e imagem com Python.</p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="contato" class="py-20 text-center">
+        <section id="certificacoes" class="py-20">
+            <h2 class="text-3xl font-bold text-center mb-12 dark:text-white">Licenças e Certificações</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="bg-white dark:bg-darkCard p-6 rounded-lg shadow-md border-l-4 border-red-500 dark:border-gray-700 hover:shadow-lg transition">
+                    <i class="fas fa-university text-3xl text-red-500 mb-4"></i>
+                    <h3 class="text-lg font-bold dark:text-white mb-2">Modelagem, Programação e Qualidade de Dados</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">FIAP - Bronze Certified</p>
+                    <p class="text-xs font-semibold text-gray-500 dark:text-gray-500">Qualificação Profissional | 2025</p>
+                </div>
+
+                <div class="bg-white dark:bg-darkCard p-6 rounded-lg shadow-md border-l-4 border-green-500 dark:border-gray-700 hover:shadow-lg transition">
+                    <i class="fab fa-python text-3xl text-green-500 mb-4"></i>
+                    <h3 class="text-lg font-bold dark:text-white mb-2">Fundamentos de Python para Data Science</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Data Science Academy (DSA)</p>
+                    <p class="text-xs font-semibold text-gray-500 dark:text-gray-500">Nível Intermediário | 72 horas</p>
+                </div>
+
+                <div class="bg-white dark:bg-darkCard p-6 rounded-lg shadow-md border-l-4 border-yellow-500 dark:border-gray-700 hover:shadow-lg transition">
+                    <i class="fas fa-chart-bar text-3xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-lg font-bold dark:text-white mb-2">Formação Completa em Power BI</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">DATAB Inteligência & Estratégia</p>
+                    <p class="text-xs font-semibold text-gray-500 dark:text-gray-500">Carga horária: 60 horas</p>
+                </div>
+
+                <div class="bg-white dark:bg-darkCard p-6 rounded-lg shadow-md border-l-4 border-blue-500 dark:border-gray-700 hover:shadow-lg transition">
+                    <i class="fas fa-robot text-3xl text-blue-500 mb-4"></i>
+                    <h3 class="text-lg font-bold dark:text-white mb-2">Imersão Inteligência Artificial</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Alura & Google Gemini</p>
+                    <p class="text-xs font-semibold text-gray-500 dark:text-gray-500">Tecnologia e GenAI | 2025</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contato" class="py-20 text-center border-t dark:border-gray-700">
             <h2 class="text-3xl font-bold mb-4 dark:text-white">Vamos Conversar?</h2>
-            <p class="text-gray-600 dark:text-gray-400 mb-10">Interessado em otimizar seus processos com dados? Entre em contato ou baixe meu currículo!</p>
+            <p class="text-gray-600 dark:text-gray-400 mb-10">Interessado em otimizar seus processos com dados? Entre em contato, veja meus códigos ou baixe meu currículo!</p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="mailto:saulo.sapucaia1014@gmail.com" class="flex items-center bg-gray-100 dark:bg-gray-800 px-6 py-3 rounded-full hover:bg-red-500 hover:text-white transition font-bold shadow-sm">
-                    <i class="fas fa-envelope mr-2"></i> E-mail
+                
+                <a href="https://www.linkedin.com/in/saulo-sapucaia-2821401b9" target="_blank" rel="noopener noreferrer" class="bg-[#0077b5] text-white font-bold py-3 px-8 rounded-full hover:bg-[#005582] transition duration-300 shadow-lg flex items-center">
+                    <i class="fab fa-linkedin fa-lg mr-2"></i> LinkedIn
                 </a>
-                <a href="https://wa.me/5511993995516" target="_blank" rel="noopener noreferrer" class="flex items-center bg-gray-100 dark:bg-gray-800 px-6 py-3 rounded-full hover:bg-green-500 hover:text-white transition font-bold shadow-sm">
-                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                
+                <a href="https://github.com/SauloSapucaia" target="_blank" rel="noopener noreferrer" class="bg-gray-900 dark:bg-gray-700 text-white font-bold py-3 px-8 rounded-full hover:bg-black transition duration-300 shadow-lg flex items-center">
+                    <i class="fab fa-github fa-lg mr-2"></i> GitHub
                 </a>
-                <a href="https://www.linkedin.com/in/saulo-sapucaia-2821401b9" target="_blank" rel="noopener noreferrer" class="bg-[#0077b5] text-white font-bold py-3 px-8 rounded-full hover:opacity-90 transition font-bold shadow-lg flex items-center">
-                    <i class="fab fa-linkedin mr-2"></i> Conectar no LinkedIn
+                
+                <a href="https://www.kaggle.com/saulosapucaia" target="_blank" rel="noopener noreferrer" class="bg-[#20BEFF] text-white font-bold py-3 px-8 rounded-full hover:bg-[#1CA8E5] transition duration-300 shadow-lg flex items-center">
+                    <i class="fab fa-kaggle fa-lg mr-2"></i> Kaggle
                 </a>
-                <a href="https://github.com/SauloSapucaia" target="_blank" rel="noopener noreferrer" class="bg-gray-900 text-white font-bold py-3 px-8 rounded-full hover:opacity-90 transition font-bold shadow-lg flex items-center">
-                    <i class="fab fa-github mr-2"></i> GitHub
+
+                <a href="mailto:saulo.sapucaia1014@gmail.com" class="bg-red-500 text-white font-bold py-3 px-8 rounded-full hover:bg-red-600 transition duration-300 shadow-lg flex items-center">
+                    <i class="fas fa-envelope fa-lg mr-2"></i> E-mail
                 </a>
-                <a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/Cv_Saulo_Sapucaia_v10.03.26.pdf" 
-                   download 
-                   class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition font-bold shadow-lg flex items-center">
-                    <i class="fas fa-file-pdf mr-2"></i> Baixar CV
+                
+                <a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/Cv_Saulo_Sapucaia_v10.03.26.pdf" download class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 shadow-lg flex items-center">
+                    <i class="fas fa-file-pdf fa-lg mr-2"></i> Baixar CV
                 </a>
+                
             </div>
         </section>
 
@@ -549,6 +695,35 @@
             mobileMenu.classList.toggle('hidden');
         });
         
+        // Função das Abas de Projetos (Navegação BI / Python)
+        function showCategory(category) {
+            const biContainer = document.getElementById('category-bi');
+            const pythonContainer = document.getElementById('category-python');
+            const btnBi = document.getElementById('btn-bi');
+            const btnPython = document.getElementById('btn-python');
+
+            // Classes para o botão ATIVO (Azul)
+            const activeClass = "bg-blue-600 text-white font-bold py-2 px-6 rounded-full shadow-md transition duration-300 flex items-center";
+            // Classes para o botão INATIVO (Cinza)
+            const inactiveClass = "bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300 font-bold py-2 px-6 rounded-full shadow-md hover:bg-gray-300 dark:hover:bg-gray-600 transition duration-300 flex items-center";
+
+            if (category === 'bi') {
+                // Mostra BI, esconde Python
+                biContainer.classList.remove('hidden');
+                pythonContainer.classList.add('hidden');
+                // Atualiza cores dos botões
+                btnBi.className = activeClass;
+                btnPython.className = inactiveClass;
+            } else if (category === 'python') {
+                // Mostra Python, esconde BI
+                pythonContainer.classList.remove('hidden');
+                biContainer.classList.add('hidden');
+                // Atualiza cores dos botões
+                btnPython.className = activeClass;
+                btnBi.className = inactiveClass;
+            }
+        }
+
         // Expandir Case Study
         function toggleCaseStudy(caseId) {
             const content = document.getElementById(caseId);
