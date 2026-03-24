@@ -508,8 +508,11 @@
                             <h4>Entregáveis e Resultados</h4>
                             <p>O estudo comprovou analiticamente que o acúmulo de riqueza (PIB) isolado não garante proporcionalidade no desenvolvimento humano (IDHM), evidenciando o "Paradoxo da Riqueza" em polos industriais e agropecuários. Além disso, a análise estatística formou a base estrutural de dados que posteriormente alimentou algoritmos preditivos e de clusterização em projetos de Ciência de Dados.</p>
                             
-                            <div class="mt-6">
-                                <a href="https://github.com/SauloSapucaia" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gray-900 dark:bg-gray-700 text-white font-bold py-2 px-6 rounded hover:bg-black transition duration-300">
+                            <div class="flex flex-wrap gap-4 mt-6">
+                                <a href="https://saulosapucaia.github.io/Pojeto_EDA_Brasil/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-orange-600 text-white font-bold py-2 px-6 rounded hover:bg-orange-700 transition duration-300 shadow-md">
+                                    Visualizar Estudo <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                                <a href="https://github.com/SauloSapucaia/Pojeto_EDA_Brasil" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gray-900 dark:bg-gray-700 text-white font-bold py-2 px-6 rounded hover:bg-black transition duration-300 shadow-md">
                                     <i class="fab fa-github mr-2"></i> Ver Código no GitHub
                                 </a>
                             </div>
@@ -529,34 +532,52 @@
                 
                 <div class="bg-white dark:bg-darkCard rounded-lg shadow-lg overflow-hidden border dark:border-gray-700">
                     <div class="p-6 md:p-8">
-                        <div class="md:flex md:items-center md:gap-8">
-                            <div class="w-full md:w-1/4 project-image-container mb-4 md:mb-0 flex justify-center">
-                                <i class="fas fa-brain text-6xl text-blue-500"></i>
+                        <div class="md:flex md:items-start md:gap-8">
+                            <div class="w-full md:w-1/4 project-image-container mb-4 md:mb-0 flex justify-center items-center bg-gray-100 dark:bg-gray-800 rounded-lg min-h-[200px]">
+                                <i class="fas fa-brain text-6xl text-purple-500"></i>
                             </div>
                             <div class="flex-1">
                                 <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Concreto Inteligente: Previsão com Machine Learning</h3>
-                                <p class="text-gray-600 dark:text-gray-400 mb-4">Estudo de caso focado na aplicação de algoritmos de regressão para prever a resistência compressiva do concreto. Meus primeiros passos práticos em Ciência de Dados.</p>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4">Desenvolvimento de um modelo preditivo com XGBoost e um otimizador de custos baseado em simulações estatísticas para traços de concreto de alta performance.</p>
                                 <div class="flex flex-wrap gap-2 mb-6">
                                     <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
-                                    <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">Machine Learning</span>
-                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Scikit-Learn</span>
-                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Regressão</span>
+                                    <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">XGBoost & SHAP</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Monte Carlo</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Deploy de API</span>
                                 </div>
-                                
-                                <div class="flex flex-wrap gap-4 mt-6">
-                                    <a href="https://saulosapucaia.github.io/concreto_inteligente/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-blue-600 text-white font-bold py-2 px-6 rounded hover:bg-blue-700 transition duration-300">
-                                        Visualizar Estudo <i class="fas fa-external-link-alt ml-2"></i>
-                                    </a>
-                                    <a href="https://github.com/SauloSapucaia/concreto_inteligente" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gray-900 dark:bg-gray-700 text-white font-bold py-2 px-6 rounded hover:bg-black transition duration-300">
-                                        <i class="fab fa-github mr-2"></i> Ver Código no GitHub
-                                    </a>
-                                </div>
+                                <button onclick="toggleCaseStudy('case8')" class="font-bold text-purple-600 dark:text-purple-400 hover:text-purple-800 transition duration-300">Ver detalhes <i class="fas fa-chevron-down ml-1 transform transition-transform"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="case8" class="case-study-content bg-gray-50 dark:bg-gray-800 border-t dark:border-gray-700">
+                        <div class="p-6 md:p-8 case-study-details dark:text-gray-300">
+                            <h4>Contexto e Problema</h4>
+                            <p>A formulação de concreto de alta performance exige o balanceamento complexo de múltiplos materiais (cimento, escória, cinza volante, aditivos, etc.). O desafio era criar um modelo capaz de prever a resistência à compressão (MPa) baseando-se nas proporções químicas, com o objetivo de reduzir o tempo de testes físicos em laboratório (que demoram até 28 dias) e otimizar o custo financeiro da obra.</p>
+                            
+                            <h4>Processo e Solução</h4>
+                            <ul class="list-disc list-inside mt-2 space-y-1">
+                                <li><strong>Prevenção de Multicolinearidade:</strong> Aplicação de Feature Engineering para criar a variável "Fator Água/Cimento" (Lei de Abrams), blindando o modelo contra falsos R² (R² de vaidade) e dando sentido físico à IA.</li>
+                                <li><strong>Modelagem Avançada:</strong> Avaliação contra baselines (Regressão Linear e Random Forest) e escolha do XGBoost, submetido a tuning de hiperparâmetros (RandomizedSearchCV) e Validação Cruzada (K-Fold).</li>
+                                <li><strong>Explicabilidade da IA (SHAP):</strong> Utilização de SHAP values para abrir a "caixa-preta" do algoritmo, comprovando para os engenheiros quais materiais e lógicas a IA prioriza na hora do cálculo.</li>
+                                <li><strong>Otimizador de Custos:</strong> Desenvolvimento de um algoritmo baseado em simulações de Monte Carlo que testa milhares de combinações para sugerir a receita comercial mais barata que atenda à resistência alvo.</li>
+                            </ul>
+                            
+                            <h4>Entregáveis e Resultados</h4>
+                            <p>O modelo XGBoost vencedor atingiu uma precisão impressionante com um <strong>R² de 0.9229</strong> e um erro médio absoluto (MAE) de apenas <strong>3.01 MPa</strong>. Para garantir usabilidade, o projeto não ficou apenas no Jupyter Notebook: foi "produtizado" em um laboratório virtual interativo, conectado a uma API RESTful em Python que calcula predições estatísticas e custos em tempo real.</p>
+                            
+                            <div class="flex flex-wrap gap-4 mt-6">
+                                <a href="https://saulosapucaia.github.io/concreto_inteligente/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-purple-600 text-white font-bold py-2 px-6 rounded hover:bg-purple-700 transition duration-300 shadow-md">
+                                    Visualizar App Interativo <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                                <a href="https://github.com/SauloSapucaia/concreto_inteligente" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gray-900 dark:bg-gray-700 text-white font-bold py-2 px-6 rounded hover:bg-black transition duration-300 shadow-md">
+                                    <i class="fab fa-github mr-2"></i> Ver Código no GitHub
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-            </div> 
+            </div>
 
         </section>
 
