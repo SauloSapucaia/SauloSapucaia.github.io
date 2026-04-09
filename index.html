@@ -472,7 +472,7 @@
 
             </div>
 
-            <div id="category-analise" class="space-y-10 block">
+            <div id="category-analise" class="space-y-10 hidden">
                 
                 <div class="bg-white dark:bg-darkCard rounded-lg shadow-lg overflow-hidden border dark:border-gray-700">
                     <div class="p-6 md:p-8">
@@ -567,17 +567,73 @@
                             
                             <div class="flex flex-wrap gap-4 mt-6">
                                 <a href="https://saulosapucaia.github.io/concreto_inteligente/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-purple-600 text-white font-bold py-2 px-6 rounded hover:bg-purple-700 transition duration-300 shadow-md">
-                                    Visualizar App Interativo <i class="fas fa-external-link-alt ml-2"></i>
+                                    Acessar Projeto <i class="fas fa-external-link-alt ml-2"></i>
                                 </a>
                                 <a href="https://github.com/SauloSapucaia/concreto_inteligente" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gray-900 dark:bg-gray-700 text-white font-bold py-2 px-6 rounded hover:bg-black transition duration-300 shadow-md">
-                                    <i class="fab fa-github mr-2"></i> Ver Código no GitHub
+                                    <i class="fab fa-github mr-2"></i> Ver Repositório no GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="bg-white dark:bg-darkCard rounded-lg shadow-lg overflow-hidden border dark:border-gray-700">
+                    <div class="p-6 md:p-8">
+                        <div class="md:flex md:items-start md:gap-8">
+                            <div class="w-full md:w-1/4 project-image-container mb-4 md:mb-0 flex justify-center items-center bg-gray-100 dark:bg-gray-800 rounded-lg min-h-[200px]">
+                                <i class="fas fa-shield-alt text-6xl text-red-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Motor Sentinela: Detecção de Fraudes em FIDCs (Nuclea)</h3>
+                                    <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider border border-amber-200">
+                                        <i class="fas fa-hammer mr-1"></i> Em Desenvolvimento
+                                    </span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4">Pipeline inteligente para identificação de anomalias em Fundos de Investimento em Direitos Creditórios, integrando modelos de Machine Learning e heurísticas de negócio para mitigar riscos financeiros.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Isolation Forest & LOF</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Feature Engineering</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">APIs (Bacen/IBGE)</span>
+                                </div>
+                                <button onclick="toggleCaseStudy('case9')" class="font-bold text-red-600 dark:text-red-400 hover:text-red-800 transition duration-300">Ver detalhes <i class="fas fa-chevron-down ml-1 transform transition-transform"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="case9" class="case-study-content bg-gray-50 dark:bg-gray-800 border-t dark:border-gray-700">
+                        <div class="p-6 md:p-8 case-study-details dark:text-gray-300">
+                            <div class="mb-6 p-4 bg-amber-50 dark:bg-amber-900/30 border-l-4 border-amber-500 rounded-r-lg">
+                                <p class="text-sm text-amber-800 dark:text-amber-200">
+                                    <strong><i class="fas fa-exclamation-triangle mr-2"></i>Status do Projeto:</strong> Esta solução encontra-se em fase de desenvolvimento e validação técnica, necessitando de revisões estruturais antes da finalização.
+                                </p>
+                            </div>
+
+                            <h4>Contexto e Desafio</h4>
+                            <p>Desenvolvido para o Enterprise Challenge em parceria com a <strong>Nuclea</strong>, o projeto foca na segurança do ecossistema de FIDCs. O objetivo é automatizar a detecção de padrões suspeitos como "boletos zumbis", "pagamentos fantasmas" e colusão entre partes.</p>
+                            
+                            <h4>Arquitetura Técnica</h4>
+                            <ul class="list-disc list-inside mt-2 space-y-1">
+                                <li><strong>Enriquecimento Externo:</strong> Integração dinâmica com APIs do BACEN (Selic) e IBGE (CNAE) para contextualizar o risco macro e setorial.</li>
+                                <li><strong>Feature Engineering:</strong> Criação de variáveis de comportamento (Z-Score setorial e por UF) e análise de concentração de beneficiários.</li>
+                                <li><strong>Modelagem Híbrida:</strong> Uso de <em>Isolation Forest</em> e <em>Local Outlier Factor (LOF)</em> com redução de dimensionalidade (PCA) para identificar anomalias em dados multidimensionais.</li>
+                                <li><strong>Explicabilidade:</strong> Implementação de lógica para detalhamento textual do motivo das anomalias detectadas pela IA.</li>
+                            </ul>
+                            
+                            <h4>Resultados Preliminares</h4>
+                            <p>O motor já classifica registros em níveis de criticidade, permitindo a exportação de um MVP enriquecido para auditoria e visualização em dashboards.</p>
+                            
+                            <div class="flex flex-wrap gap-4 mt-6">
+                                <a href="https://saulosapucaia.github.io/Sentinela-FIDC/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-red-600 text-white font-bold py-2 px-6 rounded hover:bg-red-700 transition duration-300 shadow-md">
+                                    Acessar Projeto <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                                <a href="https://github.com/SauloSapucaia/Sentinela-FIDC" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gray-900 dark:bg-gray-700 text-white font-bold py-2 px-6 rounded hover:bg-black transition duration-300 shadow-md">
+                                    <i class="fab fa-github mr-2"></i> Ver Repositório no GitHub
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-            </div>
+                </div>
 
         </section>
 
