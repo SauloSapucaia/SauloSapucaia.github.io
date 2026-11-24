@@ -8,15 +8,15 @@
     <!-- Open Graph / preview (LinkedIn, WhatsApp, etc.) -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Saulo Sapucaia" />
-    <meta property="og:title" content="Saulo Sapucaia — Analista de Dados & Automação" />
-    <meta property="og:description" content="8 projetos: BI, engenharia de dados, RPA e machine learning. De dashboards em Power BI a modelo de ML em produção via API REST." />
+    <meta property="og:title" content="Saulo Sapucaia — Analista de Dados, Cloud & Ciência de Dados" />
+    <meta property="og:description" content="Evolução histórica (2019–2027) e 11 projetos: BI, engenharia de dados (Microsoft Fabric & RPA), análise de dados e machine learning em produção." />
     <meta property="og:url" content="https://saulosapucaia.github.io/" />
     <meta property="og:image" content="https://saulosapucaia.github.io/dash_fin/dash_fin_1.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Saulo Sapucaia — Analista de Dados & Automação" />
-    <meta name="twitter:description" content="8 projetos: BI, engenharia de dados, RPA e machine learning." />
+    <meta name="twitter:title" content="Saulo Sapucaia — Analista de Dados, Cloud & Ciência de Dados" />
+    <meta name="twitter:description" content="Evolução histórica (2019–2027) e 11 projetos: BI, engenharia de dados, análise de dados e machine learning." />
     <meta name="twitter:image" content="https://saulosapucaia.github.io/dash_fin/dash_fin_1.jpg" />
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -51,7 +51,7 @@
         }
         .case-study-content.open { 
             display: block; 
-            max-height: 3000px; 
+            max-height: 6000px; 
         }
         .case-study-details h4 {
             font-size: 1.125rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem;
@@ -72,6 +72,9 @@
         .project-image-container:hover img { transform: scale(1.05); }
         /* Ajuste Dark Mode Headings */
         html.dark .case-study-details h4 { color: #60a5fa; border-bottom-color: #374151; }
+        /* Curva Cumulativa Interativa */
+        .evo-node { cursor: pointer; transition: transform 0.2s ease; transform-box: fill-box; transform-origin: center; }
+        .evo-node:hover { transform: scale(1.25); }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 dark:bg-darkBg dark:text-gray-100 transition-colors duration-300">
@@ -84,17 +87,19 @@
                 <a href="#projetos" class="text-gray-300 hover:text-white transition duration-300">Projetos</a>
                 <a href="#habilidades" class="text-gray-300 hover:text-white transition duration-300">Habilidades</a>
                 <a href="#experiencia" class="text-gray-300 hover:text-white transition duration-300">Experiência</a>
-                <button id="theme-toggle" class="text-gray-300 hover:text-white focus:outline-none p-2 rounded-lg border border-gray-600">
+                <a href="#formacao" class="text-gray-300 hover:text-white transition duration-300">Formação</a>
+                <a href="#evolucao" class="text-gray-300 hover:text-white transition duration-300">Evolução</a>
+                <button id="theme-toggle" class="text-gray-300 hover:text-white focus:outline-none p-2 rounded-lg border border-gray-600" aria-label="Alternar tema">
                     <i id="theme-toggle-dark-icon" class="fas fa-moon"></i>
                     <i id="theme-toggle-light-icon" class="hidden fas fa-sun"></i>
                 </button>
                 <a href="#contato" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition font-bold">Contato</a>
             </div>
             <div class="md:hidden flex items-center space-x-4">
-                <button id="theme-toggle-mobile" class="text-gray-300 p-2 focus:outline-none">
+                <button id="theme-toggle-mobile" class="text-gray-300 p-2 focus:outline-none" aria-label="Alternar tema">
                     <i class="fas fa-adjust fa-lg"></i>
                 </button>
-                <button id="menu-btn" class="text-gray-300 focus:outline-none">
+                <button id="menu-btn" class="text-gray-300 focus:outline-none" aria-label="Abrir menu">
                     <i class="fas fa-bars fa-lg"></i>
                 </button>
             </div>
@@ -104,6 +109,8 @@
             <a href="#projetos" class="block px-6 py-2 text-sm text-gray-200 hover:bg-gray-600">Projetos</a>
             <a href="#habilidades" class="block px-6 py-2 text-sm text-gray-200 hover:bg-gray-600">Habilidades</a>
             <a href="#experiencia" class="block px-6 py-2 text-sm text-gray-200 hover:bg-gray-600">Experiência</a>
+            <a href="#formacao" class="block px-6 py-2 text-sm text-gray-200 hover:bg-gray-600">Formação</a>
+            <a href="#evolucao" class="block px-6 py-2 text-sm text-gray-200 hover:bg-gray-600">Evolução</a>
             <a href="#contato" class="block px-6 py-2 text-sm text-gray-200 hover:bg-gray-600">Contato</a>
         </div>
     </header>
@@ -112,46 +119,52 @@
 
         <section class="text-center py-20">
             <h1 class="text-4xl md:text-6xl font-bold mb-4 dark:text-white">Saulo Sapucaia</h1>
-            <p class="text-xl md:text-2xl text-blue-600 dark:text-blue-400 font-medium mb-8">Analista de Dados | Especialista em Power BI | Conhecimentos em Python & SQL</p>
+            <p class="text-xl md:text-2xl text-blue-600 dark:text-blue-400 font-medium mb-8">Analista de Dados | Power BI, Python &amp; SQL | Engenharia Cloud (Fabric) &amp; Ciência de Dados</p>
             <p class="max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400 mb-8">
-                Transformando dados em insights acionáveis e decisões estratégicas por meio de dashboards interativos em Power BI, modelagem de dados e análises aprofundadas com apoio de Python & SQL.
+                Transformando dados em insights acionáveis e decisões estratégicas — de dashboards interativos em Power BI e modelagem SQL até pipelines em nuvem (Microsoft Fabric), automações RPA e modelos de Machine Learning em produção.
             </p>
-            <a href="#projetos" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 text-lg shadow-lg">
-                Conheça meus projetos
-            </a>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#projetos" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 text-lg shadow-lg">
+                    Conheça meus projetos
+                </a>
+                <a href="#evolucao" class="bg-white dark:bg-darkCard text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300 text-lg shadow-sm">
+                    Minha Evolução (2019–2027)
+                </a>
+            </div>
         </section>
 
         <section id="sobre" class="py-20 border-t dark:border-gray-700">
             <div class="grid md:grid-cols-5 gap-10 items-center">
                 <div class="md:col-span-2">
                     <div class="bg-white dark:bg-darkCard p-8 rounded-2xl shadow-xl text-center">
-                        <img src="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/Sobre_mim.jpeg" class="rounded-full mx-auto w-48 h-48 object-cover mb-6 border-4 border-blue-500 shadow-md">
+                        <img src="./Sobre_mim.jpeg" alt="Saulo Sapucaia" class="rounded-full mx-auto w-48 h-48 object-cover mb-6 border-4 border-blue-500 shadow-md">
                         <h3 class="text-2xl font-bold dark:text-white">Saulo Sapucaia</h3>
                         <p class="text-blue-600 dark:text-blue-400 font-medium">Data Science e Big Data - FIAP</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">7+ anos no Grupo Évora · 2º Ano FIAP (Fase 4)</p>
                     </div>
                 </div>
                 <div class="md:col-span-3">
                     <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-600 pl-4 dark:text-white">Sobre Mim</h2>
                     <p class="text-lg text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-                        Focado em extrair inteligência de dados, atuo no <strong>Grupo Évora</strong> otimizando processos e monitorando KPIs. Atualmente curso Data Science e Big Data na <strong>FIAP</strong>, unindo prática de mercado com técnicas avançadas de análise preditiva.
+                        Focado em extrair inteligência de dados, atuo há mais de <strong>7 anos no Grupo Évora</strong> otimizando processos, automatizando pipelines em nuvem e monitorando KPIs. Atualmente curso o <strong>2º ano de Data Science e Big Data na FIAP</strong>, unindo prática corporativa com engenharia de dados, estatística e técnicas avançadas de Machine Learning.
                     </p>
                     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 text-center mt-2">
-                        <div class="p-4 bg-blue-50 dark:bg-gray-800 rounded-lg border border-blue-100 dark:border-gray-700 shadow-sm hover:shadow-md transition">
+                        <button onclick="goToProjectCategory('bi')" class="p-4 bg-blue-50 dark:bg-gray-800 rounded-lg border border-blue-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-blue-400 transition cursor-pointer">
                             <span class="block font-bold text-blue-700 dark:text-blue-400 text-2xl">15+</span>
                             <span class="text-xs font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wide mt-1 block">Projetos BI</span>
-                        </div>
-                        <div class="p-4 bg-blue-50 dark:bg-gray-800 rounded-lg border border-blue-100 dark:border-gray-700 shadow-sm hover:shadow-md transition">
+                        </button>
+                        <button onclick="goToProjectCategory('engenharia')" class="p-4 bg-blue-50 dark:bg-gray-800 rounded-lg border border-blue-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-green-400 transition cursor-pointer">
                             <span class="block font-bold text-green-600 dark:text-green-400 text-2xl">7</span>
-                            <span class="text-xs font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wide mt-1 block">Engenharia & RPA</span>
-                        </div>
-                        <div class="p-4 bg-blue-50 dark:bg-gray-800 rounded-lg border border-blue-100 dark:border-gray-700 shadow-sm hover:shadow-md transition">
-                            <span class="block font-bold text-orange-600 dark:text-orange-400 text-2xl">1</span>
+                            <span class="text-xs font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wide mt-1 block">Engenharia &amp; RPA</span>
+                        </button>
+                        <button onclick="goToProjectCategory('analise')" class="p-4 bg-blue-50 dark:bg-gray-800 rounded-lg border border-blue-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-orange-400 transition cursor-pointer">
+                            <span class="block font-bold text-orange-600 dark:text-orange-400 text-2xl">2</span>
                             <span class="text-xs font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wide mt-1 block">Análise de Dados</span>
-                        </div>
-                        <div class="p-4 bg-blue-50 dark:bg-gray-800 rounded-lg border border-blue-100 dark:border-gray-700 shadow-sm hover:shadow-md transition">
-                            <span class="block font-bold text-purple-600 dark:text-purple-400 text-2xl">1</span>
+                        </button>
+                        <button onclick="goToProjectCategory('datascience')" class="p-4 bg-blue-50 dark:bg-gray-800 rounded-lg border border-blue-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-purple-400 transition cursor-pointer">
+                            <span class="block font-bold text-purple-600 dark:text-purple-400 text-2xl">3</span>
                             <span class="text-xs font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wide mt-1 block">Ciência de Dados</span>
-                        </div>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -162,16 +175,16 @@
             
             <div class="flex flex-wrap justify-center gap-4 mb-12">
                 <button id="btn-bi" onclick="showCategory('bi')" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-full shadow-md transition duration-300 flex items-center">
-                    <i class="fas fa-chart-pie mr-2"></i> Business Intelligence
+                    <i class="fas fa-chart-pie mr-2"></i> Business Intelligence (3)
                 </button>
                 <button id="btn-analise" onclick="showCategory('analise')" class="bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300 font-bold py-2 px-6 rounded-full shadow-md hover:bg-gray-300 dark:hover:bg-gray-600 transition duration-300 flex items-center">
-                    <i class="fas fa-search mr-2"></i> Análise de Dados
+                    <i class="fas fa-search mr-2"></i> Análise de Dados (2)
                 </button>
                 <button id="btn-engenharia" onclick="showCategory('engenharia')" class="bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300 font-bold py-2 px-6 rounded-full shadow-md hover:bg-gray-300 dark:hover:bg-gray-600 transition duration-300 flex items-center">
-                    <i class="fas fa-network-wired mr-2"></i> Engenharia de Dados & RPA
+                    <i class="fas fa-network-wired mr-2"></i> Engenharia de Dados &amp; RPA (3)
                 </button>
                 <button id="btn-datascience" onclick="showCategory('datascience')" class="bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300 font-bold py-2 px-6 rounded-full shadow-md hover:bg-gray-300 dark:hover:bg-gray-600 transition duration-300 flex items-center">
-                    <i class="fas fa-brain mr-2"></i> Ciência de Dados
+                    <i class="fas fa-brain mr-2"></i> Ciência de Dados (3)
                 </button>
             </div>
             
@@ -399,9 +412,10 @@
                             
                             <h4>Processo e Solução</h4>
                             <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li><strong>Integração e Pipeline:</strong> Criação de pipeline em Python para consumo de APIs REST de terceiros, realizando a extração e o processamento automatizado dos novos cadastros (payloads em formato JSON).</li>
-                                <li><strong>Cloud & Engenharia de Dados:</strong> Estruturação e gravação das informações capturadas em um banco de dados hospedado no Azure, orquestrado através do Microsoft Fabric.</li>
-                                <li><strong>Automação de Comunicação:</strong> Integração direta com o Power Automate para o disparo automatizado de alertas, garantindo a notificação imediata das partes envolvidas a cada novo registro.</li>
+                                <li><strong>Integração Resiliente:</strong> Pipeline em Python consumindo APIs REST com autenticação JWT Bearer, paginação, Rate Limiting e Retry exponencial com backoff.</li>
+                                <li><strong>3 Modos Autônomos por Horário:</strong> <em>Captura</em> (novos processos), <em>Enriquecimento</em> (backfill agendado de dados pesados) e <em>Auditoria</em> (varredura semanal silenciosa às sextas 18h para conciliação e baixa automática).</li>
+                                <li><strong>Cloud &amp; Segurança:</strong> Gravação estruturada no <strong>Microsoft Fabric (SQL Server / T-SQL)</strong> via <strong>Azure Entra ID</strong> e parametrização EAV no banco (zero hardcode de credenciais).</li>
+                                <li><strong>Automação de Comunicação:</strong> Integração via Webhooks no Power Automate para disparo imediato de alertas a cada novo registro.</li>
                             </ul>
                             
                             <h4>Entregáveis e Resultados</h4>
@@ -526,13 +540,67 @@
                             </ul>
                             
                             <h4>Entregáveis e Resultados</h4>
-                            <p>O estudo comprovou analiticamente que o acúmulo de riqueza (PIB) isolado não garante proporcionalidade no desenvolvimento humano (IDHM), evidenciando o "Paradoxo da Riqueza" em polos industriais e agropecuários. Além disso, a análise estatística formou a base estrutural de dados que posteriormente alimentou algoritmos preditivos e de clusterização em projetos de Ciência de Dados.</p>
+                            <p>O estudo comprovou analiticamente que o acúmulo de riqueza (PIB) isolado não garante proporcionalidade no desenvolvimento humano (IDHM), evidenciando o "Paradoxo da Riqueza" em polos industriais e agropecuários. Na <strong>Fase 2 (evolução em 2026)</strong>, o projeto escalou para <strong>Clusterização (K-Means)</strong> por comportamento econômico e modelagem preditiva com <strong>Random Forest</strong>.</p>
                             
                             <div class="flex flex-wrap gap-4 mt-6">
                                 <a href="https://saulosapucaia.github.io/Projeto_EDA_Brasil/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-orange-600 text-white font-bold py-2 px-6 rounded hover:bg-orange-700 transition duration-300 shadow-md">
                                     Visualizar Estudo <i class="fas fa-external-link-alt ml-2"></i>
                                 </a>
                                 <a href="https://github.com/SauloSapucaia/Projeto_EDA_Brasil" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gray-900 dark:bg-gray-700 text-white font-bold py-2 px-6 rounded hover:bg-black transition duration-300 shadow-md">
+                                    <i class="fab fa-github mr-2"></i> Ver Código no GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-darkCard rounded-lg shadow-lg overflow-hidden border dark:border-gray-700">
+                    <div class="p-6 md:p-8">
+                        <div class="md:flex md:items-start md:gap-8">
+                            <div class="w-full md:w-1/4 project-image-container mb-4 md:mb-0 flex justify-center items-center bg-gray-100 dark:bg-gray-800 rounded-lg min-h-[200px]">
+                                <i class="fas fa-fire text-6xl text-orange-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap items-center gap-2 mb-2">
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">BreathAlert BR: Queimadas e Saúde Respiratória no Brasil (2016–2025)</h3>
+                                    <span class="bg-pink-100 text-pink-800 dark:bg-pink-900/40 dark:text-pink-300 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider border border-pink-200 dark:border-pink-800">
+                                        FIAP · Global Solution 2026
+                                    </span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4">Investigação de 10 anos cruzando 4 bases públicas brasileiras (INPE, DATASUS/SIH e IBGE) nos 27 estados para comprovar estatisticamente o impacto defasado das queimadas nas internações respiratórias do SUS.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-orange-100 text-orange-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Pandas &amp; SciPy</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Séries Temporais</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Teste Mann-Whitney</span>
+                                </div>
+                                <button onclick="toggleCaseStudy('case10', this)" class="font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 transition duration-300">Ver detalhes <i class="fas fa-chevron-down ml-1 transform transition-transform"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="case10" class="case-study-content bg-gray-50 dark:bg-gray-800 border-t dark:border-gray-700">
+                        <div class="p-6 md:p-8 case-study-details dark:text-gray-300">
+                            <h4>Contexto e Problema</h4>
+                            <p>Desenvolvido para a <strong>Global Solution 2026 da FIAP</strong>, o estudo investiga se, onde, quando e com qual defasagem temporal os focos de queimada do INPE se refletem em internações respiratórias registradas pelo SUS (DATASUS/SIH) em todos os 27 estados brasileiros entre 2016 e 2025.</p>
+
+                            <h4>Processo e Solução</h4>
+                            <ul class="list-disc list-inside mt-2 space-y-1">
+                                <li><strong>Integração de 4 Bases Públicas:</strong> Cruzamento de focos de queimada (INPE/BDQueimadas), internações respiratórias (DATASUS/SIH), população e área plantada (IBGE/PAM), gerando indicadores normalizados por 100 mil habitantes e por 1.000 ha de lavoura.</li>
+                                <li><strong>Remoção de Sazonalidade &amp; Defasagem (Lag):</strong> Como queimadas atingem pico na seca (ago–out) e internações no inverno (abr–jun), a sazonalidade foi removida via cálculo de anomalias para testar correlações defasadas no tempo.</li>
+                                <li><strong>Validação Não-Paramétrica:</strong> Aplicação de teste de <em>Mann-Whitney</em> e correlação de <em>Spearman</em> (0,47 com área plantada).</li>
+                            </ul>
+
+                            <h4>Entregáveis e Resultados</h4>
+                            <ul class="list-disc list-inside mt-2 space-y-1">
+                                <li><strong>Efeito Cumulativo Comprovado:</strong> No Sudeste, meses de queimada intensa são seguidos (~3 meses depois) por internações acima do normal (<strong>Mann-Whitney p = 0,026</strong>).</li>
+                                <li><strong>Fogo de Abertura vs. Agricultura:</strong> Normalizando por focos / 1.000 ha de lavoura, estados amazônicos disparam (<strong>AM ≈ 201, AC ≈ 77</strong>) frente ao Sul consolidado (<strong>RS ≈ 0,2</strong>).</li>
+                            </ul>
+
+                            <div class="flex flex-wrap gap-4 mt-6">
+                                <a href="https://saulosapucaia.github.io/BreathAlert_BR/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-orange-600 text-white font-bold py-2 px-6 rounded hover:bg-orange-700 transition duration-300 shadow-md">
+                                    Visualizar Estudo <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                                <a href="https://github.com/SauloSapucaia/BreathAlert_BR" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gray-900 dark:bg-gray-700 text-white font-bold py-2 px-6 rounded hover:bg-black transition duration-300 shadow-md">
                                     <i class="fab fa-github mr-2"></i> Ver Código no GitHub
                                 </a>
                             </div>
@@ -576,14 +644,14 @@
                             
                             <h4>Processo e Solução</h4>
                             <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li><strong>Prevenção de Multicolinearidade:</strong> Aplicação de Feature Engineering para criar a variável "Fator Água/Cimento" (Lei de Abrams), blindando o modelo contra falsos R² (R² de vaidade) e dando sentido físico à IA.</li>
-                                <li><strong>Modelagem Avançada:</strong> Avaliação contra baselines (Regressão Linear e Random Forest) e escolha do XGBoost, submetido a tuning de hiperparâmetros (RandomizedSearchCV) e Validação Cruzada (K-Fold).</li>
-                                <li><strong>Explicabilidade da IA (SHAP):</strong> Utilização de SHAP values para abrir a "caixa-preta" do algoritmo, comprovando para os engenheiros quais materiais e lógicas a IA prioriza na hora do cálculo.</li>
-                                <li><strong>Otimizador de Custos:</strong> Desenvolvimento de um algoritmo baseado em simulações de Monte Carlo que testa milhares de combinações para sugerir a receita comercial mais barata que atenda à resistência alvo.</li>
+                                <li><strong>Blindagem Estatística (VIF &amp; Lei de Abrams):</strong> Análise VIF nos agregados inertes e criação da variável <code>water_cement_ratio</code> (Fator Água/Cimento), blindando o modelo contra falsos R² (R² de vaidade) e dando sentido físico à IA.</li>
+                                <li><strong>Benchmark &amp; Tuning:</strong> Comparação contra Regressão Linear (R² 0,5518 · MAE 9,04 MPa) e Random Forest (R² 0,9150 · MAE 3,53 MPa), elegendo o <strong>XGBoost</strong> otimizado via <code>RandomizedSearchCV</code> e K-Fold (k=5, média R² 0,9224 ± 0,0159).</li>
+                                <li><strong>Explicabilidade da IA (SHAP):</strong> Utilização de SHAP values para abrir a "caixa-preta" do algoritmo, comprovando para engenheiros o peso de <code>age_days</code>, <code>water_cement_ratio</code> e adições minerais.</li>
+                                <li><strong>Otimizador de Custos:</strong> Algoritmos Genéticos (DEAP / NSGA-II) e simulações de Monte Carlo sugerindo a receita comercial mais barata para a resistência alvo.</li>
                             </ul>
                             
                             <h4>Entregáveis e Resultados</h4>
-                            <p>O modelo XGBoost vencedor atingiu uma precisão impressionante com um <strong>R² de 0.9229</strong> e um erro médio absoluto (MAE) de apenas <strong>3.01 MPa</strong>. Para garantir usabilidade, o projeto não ficou apenas no Jupyter Notebook: foi "produtizado" em um laboratório virtual interativo, conectado a uma API RESTful em Python que calcula predições estatísticas e custos em tempo real.</p>
+                            <p>O modelo XGBoost vencedor atingiu <strong>R² = 0,9229</strong>, <strong>MAE = 3,01 MPa</strong> e <strong>RMSE = 4,80 MPa</strong>. Produtizado em um laboratório virtual interativo conectado a uma API RESTful em <strong>FastAPI</strong> que calcula predições e custos em tempo real.</p>
                             
                             <div class="flex flex-wrap gap-4 mt-6">
                                 <a href="https://saulosapucaia.github.io/concreto_inteligente/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-purple-600 text-white font-bold py-2 px-6 rounded hover:bg-purple-700 transition duration-300 shadow-md">
@@ -596,60 +664,101 @@
                         </div>
                     </div>
                 </div> 
-                <div class="bg-white dark:bg-darkCard rounded-lg shadow-lg overflow-hidden border dark:border-gray-700">
+                <div class="bg-white dark:bg-darkCard rounded-lg shadow-lg overflow-hidden border border-amber-300 dark:border-amber-700/60">
                     <div class="p-6 md:p-8">
                         <div class="md:flex md:items-start md:gap-8">
                             <div class="w-full md:w-1/4 project-image-container mb-4 md:mb-0 flex justify-center items-center bg-gray-100 dark:bg-gray-800 rounded-lg min-h-[200px]">
                                 <i class="fas fa-shield-alt text-6xl text-red-600"></i>
                             </div>
                             <div class="flex-1">
-                                <div class="flex items-center gap-3 mb-2">
-                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Motor Sentinela: Detecção de Fraudes em FIDCs (Nuclea)</h3>
-                                    <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider border border-amber-200">
-                                        <i class="fas fa-hammer mr-1"></i> Em Desenvolvimento
+                                <div class="flex flex-wrap items-center gap-2 mb-2">
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Motor Sentinela V3.0: Detecção de Fraudes em FIDCs (Núclea)</h3>
+                                    <span class="bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider border border-green-200">
+                                        <i class="fas fa-check mr-1"></i> Finalizado
+                                    </span>
+                                    <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider border border-amber-300">
+                                        <i class="fas fa-trophy mr-1"></i> Destaque da Turma · 1º Ano FIAP
                                     </span>
                                 </div>
-                                <p class="text-gray-600 dark:text-gray-400 mb-4">Pipeline inteligente para identificação de anomalias em Fundos de Investimento em Direitos Creditórios, integrando modelos de Machine Learning e heurísticas de negócio para mitigar riscos financeiros.</p>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4">Projeto final do <strong>FIAP Enterprise Challenge (Núclea)</strong>, reconhecido como <strong>um dos melhores projetos da turma do 1º ano na FIAP</strong>. Pipeline completo com Deep EDA, +15 regras comportamentais, Ensemble IA (Isolation Forest + LOF), Explainable AI (XAI) e dashboard executivo — auditando <strong>7.118 boletos</strong> e preservando <strong>R$ 87,8 Mi</strong>.</p>
                                 <div class="flex flex-wrap gap-2 mb-6">
                                     <span class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
-                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Isolation Forest & LOF</span>
-                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Feature Engineering</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Isolation Forest &amp; LOF</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">PCA &amp; Explainable AI</span>
                                     <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">APIs (Bacen/IBGE)</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Chart.js Dashboard</span>
                                 </div>
-                                <button onclick="toggleCaseStudy('case9')" class="font-bold text-red-600 dark:text-red-400 hover:text-red-800 transition duration-300">Ver detalhes <i class="fas fa-chevron-down ml-1 transform transition-transform"></i></button>
+                                <button onclick="toggleCaseStudy('case9', this)" class="font-bold text-red-600 dark:text-red-400 hover:text-red-800 transition duration-300">Ver detalhes <i class="fas fa-chevron-down ml-1 transform transition-transform"></i></button>
                             </div>
                         </div>
                     </div>
                     <div id="case9" class="case-study-content bg-gray-50 dark:bg-gray-800 border-t dark:border-gray-700">
                         <div class="p-6 md:p-8 case-study-details dark:text-gray-300">
                             <div class="mb-6 p-4 bg-amber-50 dark:bg-amber-900/30 border-l-4 border-amber-500 rounded-r-lg">
-                                <p class="text-sm text-amber-800 dark:text-amber-200">
-                                    <strong><i class="fas fa-exclamation-triangle mr-2"></i>Status do Projeto:</strong> Esta solução encontra-se em fase de desenvolvimento e validação técnica, necessitando de revisões estruturais antes da finalização.
+                                <p class="text-sm text-amber-900 dark:text-amber-200">
+                                    <strong><i class="fas fa-trophy mr-2"></i>Reconhecimento FIAP:</strong> Solução <strong>finalizada na versão V3.0</strong> para o Enterprise Challenge da <strong>Núclea</strong> e destacada como <strong>um dos melhores projetos da turma de 1º ano de Data Science &amp; Big Data na FIAP</strong>.
                                 </p>
                             </div>
 
                             <h4>Contexto e Desafio</h4>
-                            <p>Desenvolvido para o Enterprise Challenge em parceria com a <strong>Nuclea</strong>, o projeto foca na segurança do ecossistema de FIDCs. O objetivo é automatizar a detecção de padrões suspeitos como "boletos zumbis", "pagamentos fantasmas" e colusão entre partes.</p>
+                            <p>Desenvolvido para o <strong>FIAP Enterprise Challenge 2025/2026</strong> em parceria com a <strong>Núclea</strong>, o projeto foca na segurança e rentabilidade de carteiras de FIDCs, automatizando a detecção de padrões suspeitos como "boletos zumbis", "pagamentos fantasmas" e colusão entre partes.</p>
                             
-                            <h4>Arquitetura Técnica</h4>
+                            <h4>Arquitetura Técnica (<code>Sentinela_FIDC.py</code> &amp; Dashboard V3.0)</h4>
                             <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li><strong>Enriquecimento Externo:</strong> Integração dinâmica com APIs do BACEN (Selic) e IBGE (CNAE) para contextualizar o risco macro e setorial.</li>
-                                <li><strong>Feature Engineering:</strong> Criação de variáveis de comportamento (Z-Score setorial e por UF) e análise de concentração de beneficiários.</li>
-                                <li><strong>Modelagem Híbrida:</strong> Uso de <em>Isolation Forest</em> e <em>Local Outlier Factor (LOF)</em> com redução de dimensionalidade (PCA) para identificar anomalias em dados multidimensionais.</li>
-                                <li><strong>Explicabilidade:</strong> Implementação de lógica para detalhamento textual do motivo das anomalias detectadas pela IA.</li>
+                                <li><strong>Deep EDA &amp; Qualidade de Dados:</strong> Diagnóstico de nulos, segmentação de liquidez de CNPJs (base auxiliar) e anomalias temporais que calibram a modelagem.</li>
+                                <li><strong>Enriquecimento &amp; Motor de Regras:</strong> Integração com APIs do BACEN (Selic) e IBGE (CNAE), Z-Score setorial e por UF e <strong>+15 flags comportamentais</strong>.</li>
+                                <li><strong>Ensemble IA + Contamination Adaptativo:</strong> Pipeline com <code>RobustScaler</code>, <code>PCA</code> e combinação de <em>Isolation Forest</em> + <em>Local Outlier Factor (LOF)</em> com taxa de contaminação adaptada a partir da EDA.</li>
+                                <li><strong>Explicabilidade (XAI) &amp; Dashboard Client-Side:</strong> Justificativas textuais automáticas por boleto e dashboard 100% interativo (HTML5 + Tailwind + Chart.js + PapaParse) com Anatomia das Fraudes, Geografia de Risco (Top 5 UFs), Radar IA vs Outros, Tabela de Ameaças e Recomendações de Investimento.</li>
                             </ul>
                             
-                            <h4>Resultados Preliminares</h4>
-                            <p>O motor já classifica registros em níveis de criticidade, permitindo a exportação de um MVP enriquecido para auditoria e visualização em dashboards.</p>
+                            <h4>Resultados Finais (V3.0)</h4>
+                            <p>Transformou <strong>7.118 boletos</strong> em uma carteira auditada de ponta a ponta: <strong>924 boletos críticos bloqueados</strong> (<strong>R$ 87,8 Mi preservados</strong>) e <strong>49,1% da carteira</strong> validada como segura para investimento.</p>
                             
                             <div class="flex flex-wrap gap-4 mt-6">
                                 <a href="https://saulosapucaia.github.io/Sentinela-FIDC/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-red-600 text-white font-bold py-2 px-6 rounded hover:bg-red-700 transition duration-300 shadow-md">
-                                    Acessar Projeto <i class="fas fa-external-link-alt ml-2"></i>
+                                    Acessar Dashboard V3.0 <i class="fas fa-external-link-alt ml-2"></i>
                                 </a>
                                 <a href="https://github.com/SauloSapucaia/Sentinela-FIDC" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gray-900 dark:bg-gray-700 text-white font-bold py-2 px-6 rounded hover:bg-black transition duration-300 shadow-md">
                                     <i class="fab fa-github mr-2"></i> Ver Repositório no GitHub
                                 </a>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-darkCard rounded-lg shadow-lg overflow-hidden border dark:border-gray-700">
+                    <div class="p-6 md:p-8">
+                        <div class="md:flex md:items-start md:gap-8">
+                            <div class="w-full md:w-1/4 project-image-container mb-4 md:mb-0 flex justify-center items-center bg-gray-100 dark:bg-gray-800 rounded-lg min-h-[200px]">
+                                <i class="fas fa-store text-6xl text-amber-500"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap items-center gap-2 mb-2">
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Projeto Data Science: Ri Happy (FIAP 2º Ano)</h3>
+                                    <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider border border-amber-200">
+                                        <i class="fas fa-hammer mr-1"></i> Em Desenvolvimento
+                                    </span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4">Novo projeto de Ciência de Dados atualmente em desenvolvimento para a <strong>Ri Happy</strong> durante o 2º ano na FIAP, aplicando arquitetura Cloud, ingestão de dados, analytics e modelagem preditiva a desafios reais de varejo.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Cloud &amp; Data Ingestion</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">BI &amp; Analytics</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Machine Learning</span>
+                                </div>
+                                <button onclick="toggleCaseStudy('case11', this)" class="font-bold text-purple-600 dark:text-purple-400 hover:text-purple-800 transition duration-300">Ver detalhes <i class="fas fa-chevron-down ml-1 transform transition-transform"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="case11" class="case-study-content bg-gray-50 dark:bg-gray-800 border-t dark:border-gray-700">
+                        <div class="p-6 md:p-8 case-study-details dark:text-gray-300">
+                            <div class="mb-6 p-4 bg-amber-50 dark:bg-amber-900/30 border-l-4 border-amber-500 rounded-r-lg">
+                                <p class="text-sm text-amber-800 dark:text-amber-200">
+                                    <strong><i class="fas fa-rocket mr-2"></i>Status do Projeto (Novembro 2026):</strong> Em desenvolvimento ativo ao longo do 2º ano de Data Science &amp; Big Data na FIAP. Repositório, arquitetura final e resultados serão publicados à medida que as entregas evoluírem.
+                                </p>
+                            </div>
+                            <h4>Contexto e Integração com a Jornada FIAP</h4>
+                            <p>Desenvolvido de forma incremental ao longo das fases do 2º ano na FIAP — integrando <strong>Cloud Data Warehouse</strong> (Fase 1), <strong>Cloud Data Security</strong> (Fase 2), <strong>Data Ingestion</strong> (Fase 3), <strong>BI &amp; Analytics</strong> (Fase 4 atual) e avançando para <strong>Data Viz, Modelagem Estatística e IA Avançada</strong> (Fases 5 a 7 em 2027) aplicados ao negócio da <strong>Ri Happy</strong>.</p>
                         </div>
                     </div>
                 </div>
@@ -673,6 +782,9 @@
                 <div class="skill-card bg-white dark:bg-darkCard p-6 rounded-lg shadow-md w-36 border dark:border-gray-700"><i class="fas fa-layer-group text-4xl text-blue-600 mb-4"></i><h3 class="text-sm font-semibold dark:text-white">ETL</h3></div>
                 
                 <div class="skill-card bg-white dark:bg-darkCard p-6 rounded-lg shadow-md w-36 border dark:border-gray-700"><i class="fas fa-server text-4xl text-blue-600 mb-4"></i><h3 class="text-sm font-semibold dark:text-white">SQL Server</h3></div>
+                <div class="skill-card bg-white dark:bg-darkCard p-6 rounded-lg shadow-md w-36 border dark:border-gray-700"><i class="fas fa-cloud text-4xl text-blue-600 mb-4"></i><h3 class="text-sm font-semibold dark:text-white">Microsoft Fabric</h3></div>
+                <div class="skill-card bg-white dark:bg-darkCard p-6 rounded-lg shadow-md w-36 border dark:border-gray-700"><i class="fas fa-brain text-4xl text-blue-600 mb-4"></i><h3 class="text-sm font-semibold dark:text-white">Machine Learning</h3></div>
+                <div class="skill-card bg-white dark:bg-darkCard p-6 rounded-lg shadow-md w-36 border dark:border-gray-700"><i class="fas fa-plug text-4xl text-blue-600 mb-4"></i><h3 class="text-sm font-semibold dark:text-white">APIs REST</h3></div>
                 <div class="skill-card bg-white dark:bg-darkCard p-6 rounded-lg shadow-md w-36 border dark:border-gray-700"><i class="fas fa-project-diagram text-4xl text-blue-600 mb-4"></i><h3 class="text-sm font-semibold dark:text-white">Modelagem</h3></div>
                 <div class="skill-card bg-white dark:bg-darkCard p-6 rounded-lg shadow-md w-36 border dark:border-gray-700"><i class="fas fa-palette text-4xl text-blue-600 mb-4"></i><h3 class="text-sm font-semibold dark:text-white">DataViz</h3></div>
                 <div class="skill-card bg-white dark:bg-darkCard p-6 rounded-lg shadow-md w-36 border dark:border-gray-700"><i class="fas fa-bullhorn text-4xl text-blue-600 mb-4"></i><h3 class="text-sm font-semibold dark:text-white">Storytelling</h3></div>
@@ -684,10 +796,11 @@
                     <h3 class="text-lg font-bold mb-4 text-gray-800 dark:text-white"><i class="fas fa-laptop-code text-blue-500 mr-2"></i> Hard Skills</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Modelagem Dimensional (Star Schema)</span>
-                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Pipelines de ETL/ELT</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Pipelines ETL/ELT &amp; Microsoft Fabric</span>
                         <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Dashboards Interativos</span>
-                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Web Automation & Scraping</span>
-                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Fundamentos de Machine Learning</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Web Automation &amp; RPA</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Machine Learning (XGBoost, Isolation Forest, SHAP)</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Estatística &amp; Séries Temporais</span>
                     </div>
                 </div>
                 <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg border dark:border-gray-700">
@@ -743,12 +856,43 @@
                         Formação com forte viés prático e voltada para a resolução de desafios de negócios. O currículo abrange a jornada completa dos dados: desde a Arquitetura (Big Data, Cloud, SQL e NoSQL), passando por Data Warehousing e Business Intelligence, até a Inteligência Artificial (Machine Learning e Deep Learning).
                     </p>
 
-                    <h4 class="font-bold text-xl text-gray-800 dark:text-white mb-8 border-b pb-2 dark:border-gray-700">Trilha de Conhecimento (Roadmap)</h4>
+                    <h4 class="font-bold text-xl text-gray-800 dark:text-white mb-4 border-b pb-2 dark:border-gray-700">Trilha de Conhecimento (Roadmap FIAP)</h4>
+
+                    <!-- Barra de progresso das 14 fases -->
+                    <div class="mb-6 bg-white dark:bg-darkCard p-4 rounded-lg border dark:border-gray-700">
+                        <div class="flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm mb-2">
+                            <span class="font-bold text-gray-700 dark:text-gray-200">Progresso Geral: <span class="text-green-600 dark:text-green-400">10 de 14 fases concluídas (71%)</span></span>
+                            <span class="font-bold text-pink-600 dark:text-pink-400">Fase Atual: 2º Ano · Fase 4</span>
+                        </div>
+                        <div class="grid gap-1" style="grid-template-columns: repeat(14, minmax(0, 1fr));">
+                            <div class="h-2 rounded-full bg-green-500" title="1º Ano · Fase 1 (Concluída)"></div>
+                            <div class="h-2 rounded-full bg-green-500" title="1º Ano · Fase 2 (Concluída)"></div>
+                            <div class="h-2 rounded-full bg-green-500" title="1º Ano · Fase 3 (Concluída)"></div>
+                            <div class="h-2 rounded-full bg-green-500" title="1º Ano · Fase 4 (Concluída)"></div>
+                            <div class="h-2 rounded-full bg-green-500" title="1º Ano · Fase 5 (Concluída)"></div>
+                            <div class="h-2 rounded-full bg-green-500" title="1º Ano · Fase 6 (Concluída)"></div>
+                            <div class="h-2 rounded-full bg-green-500" title="1º Ano · Fase 7 (Concluída)"></div>
+                            <div class="h-2 rounded-full bg-green-500" title="2º Ano · Fase 1 (Concluída)"></div>
+                            <div class="h-2 rounded-full bg-green-500" title="2º Ano · Fase 2 (Concluída)"></div>
+                            <div class="h-2 rounded-full bg-green-500" title="2º Ano · Fase 3 (Concluída)"></div>
+                            <div class="h-2 rounded-full bg-pink-600 animate-pulse" title="2º Ano · Fase 4 (Em andamento)"></div>
+                            <div class="h-2 rounded-full bg-gray-300 dark:bg-gray-600" title="2º Ano · Fase 5 (09/02/2027)"></div>
+                            <div class="h-2 rounded-full bg-gray-300 dark:bg-gray-600" title="2º Ano · Fase 6 (19/03/2027)"></div>
+                            <div class="h-2 rounded-full bg-gray-300 dark:bg-gray-600" title="2º Ano · Fase 7 (30/04/2027)"></div>
+                        </div>
+                    </div>
+
+                    <!-- Abas de Ano (mantendo a timeline limpa) -->
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <button id="fiap-btn-year2" onclick="showFiapYear('year2')" class="bg-pink-600 text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-full shadow transition">2º Ano (Em andamento)</button>
+                        <button id="fiap-btn-year1" onclick="showFiapYear('year1')" class="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs sm:text-sm font-bold px-4 py-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 transition">1º Ano (Concluído · 7/7)</button>
+                        <button id="fiap-btn-all" onclick="showFiapYear('all')" class="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs sm:text-sm font-bold px-4 py-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 transition">Ver Todas as 14 Fases</button>
+                    </div>
                     
-                    <div class="border-l-2 border-gray-200 dark:border-gray-700 ml-3 md:ml-4 space-y-10">
+                    <div id="fiap-year-1-block" class="hidden border-l-2 border-gray-200 dark:border-gray-700 ml-3 md:ml-4 space-y-8 mb-10">
                         <div class="relative pl-6">
                             <span class="absolute w-4 h-4 rounded-full bg-green-500 ring-4 ring-gray-50 dark:ring-gray-800 -left-[9px] top-1"></span>
-                            <h5 class="font-bold text-green-700 dark:text-green-400 text-lg">1º Ano (Concluído)</h5>
+                            <h5 class="font-bold text-green-700 dark:text-green-400 text-lg">1º Ano (Concluído · 7/7 Fases)</h5>
                         </div>
 
                         <div class="relative pl-6">
@@ -832,56 +976,58 @@
                             <p class="text-xs font-bold text-green-600 dark:text-green-400 mb-2 uppercase tracking-wide">
                                 <i class="far fa-calendar-check mr-1"></i> FASE CONCLUÍDA
                             </p>
-                            <p class="text-sm text-gray-600 dark:text-gray-400"><strong>Objetivo:</strong> Explorar os assuntos relacionados a inteligência nos negócios, e análise (BI & Analytics) e arquitetura para tomada de decisão em grandes volumes de dados. Conceitos e aplicações de estatistica, utilizando Python para análise de dados. Análise de texto e imagem com Python.</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400"><strong>Objetivo:</strong> Explorar os assuntos relacionados a inteligência nos negócios, e análise (BI &amp; Analytics) e arquitetura para tomada de decisão em grandes volumes de dados. Conceitos e aplicações de estatistica, utilizando Python para análise de dados. Análise de texto e imagem com Python.</p>
+                        </div>
+                    </div>
+
+                    <div id="fiap-year-2-block" class="border-l-2 border-gray-200 dark:border-gray-700 ml-3 md:ml-4 space-y-8">
+                        <div class="relative pl-6">
+                            <span class="absolute w-4 h-4 rounded-full bg-pink-600 ring-4 ring-gray-50 dark:ring-gray-800 -left-[9px] top-1"></span>
+                            <h5 class="font-bold text-pink-600 dark:text-pink-400 text-lg">2º Ano (Em andamento · 3 concluídas · Fase 4 atual)</h5>
                         </div>
 
                         <div class="relative pl-6">
-                            <span class="absolute w-4 h-4 rounded-full bg-pink-600 ring-4 ring-gray-50 dark:ring-gray-800 -left-[9px] top-1"></span>
-                            <h5 class="font-bold text-pink-600 dark:text-pink-400 text-lg">2º Ano (Em andamento)</h5>
-                        </div>
-
-                        <div class="relative pl-6">
-                            <span class="absolute w-4 h-4 rounded-full bg-pink-600 ring-4 ring-gray-50 dark:ring-gray-800 -left-[9px] top-1"></span>
+                            <span class="absolute w-4 h-4 rounded-full bg-green-500 ring-4 ring-gray-50 dark:ring-gray-800 -left-[9px] top-1"></span>
                             <div class="mb-2 flex flex-wrap items-center gap-3">
-                                <span class="bg-pink-600 text-white text-[10px] font-bold px-2 py-1 rounded tracking-wider">FASE 1</span>
+                                <span class="bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded tracking-wider">FASE 1</span>
                                 <h5 class="font-bold text-gray-800 dark:text-gray-200 text-lg">MAKING STRATEGIC DECISIONS IN THE CLOUD</h5>
                             </div>
-                            <p class="text-xs font-bold text-pink-600 dark:text-pink-400 mb-2 uppercase tracking-wide">
-                                <i class="far fa-calendar-alt mr-1"></i> DE 03/08/2026 A 01/09/2026
+                            <p class="text-xs font-bold text-green-600 dark:text-green-400 mb-2 uppercase tracking-wide">
+                                <i class="far fa-calendar-check mr-1"></i> FASE CONCLUÍDA
                             </p>
                             <p class="text-sm text-gray-600 dark:text-gray-400"><strong>Objetivo:</strong> Capacitar o aluno a estruturar, modelar e implementar ambientes de Data Warehouse e Cloud Solutions, transformando dados em inteligência de negócios escalável, segura e orientada à tomada de decisão.</p>
                         </div>
 
                         <div class="relative pl-6">
-                            <span class="absolute w-4 h-4 rounded-full bg-gray-400 ring-4 ring-gray-50 dark:ring-gray-800 -left-[9px] top-1"></span>
+                            <span class="absolute w-4 h-4 rounded-full bg-green-500 ring-4 ring-gray-50 dark:ring-gray-800 -left-[9px] top-1"></span>
                             <div class="mb-2 flex flex-wrap items-center gap-3">
-                                <span class="bg-gray-500 text-white text-[10px] font-bold px-2 py-1 rounded tracking-wider">FASE 2</span>
+                                <span class="bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded tracking-wider">FASE 2</span>
                                 <h5 class="font-bold text-gray-800 dark:text-gray-200 text-lg">CLOUD DATA SECURITY ENVIRONMENT</h5>
                             </div>
-                            <p class="text-xs font-bold text-gray-500 mb-2 uppercase tracking-wide">
-                                <i class="far fa-calendar-alt mr-1"></i> A PARTIR DE 02/09/2026
+                            <p class="text-xs font-bold text-green-600 dark:text-green-400 mb-2 uppercase tracking-wide">
+                                <i class="far fa-calendar-check mr-1"></i> FASE CONCLUÍDA
                             </p>
                         </div>
 
                         <div class="relative pl-6">
-                            <span class="absolute w-4 h-4 rounded-full bg-gray-400 ring-4 ring-gray-50 dark:ring-gray-800 -left-[9px] top-1"></span>
+                            <span class="absolute w-4 h-4 rounded-full bg-green-500 ring-4 ring-gray-50 dark:ring-gray-800 -left-[9px] top-1"></span>
                             <div class="mb-2 flex flex-wrap items-center gap-3">
-                                <span class="bg-gray-500 text-white text-[10px] font-bold px-2 py-1 rounded tracking-wider">FASE 3</span>
+                                <span class="bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded tracking-wider">FASE 3</span>
                                 <h5 class="font-bold text-gray-800 dark:text-gray-200 text-lg">DATA INGESTION</h5>
                             </div>
-                            <p class="text-xs font-bold text-gray-500 mb-2 uppercase tracking-wide">
-                                <i class="far fa-calendar-alt mr-1"></i> A PARTIR DE 07/10/2026
+                            <p class="text-xs font-bold text-green-600 dark:text-green-400 mb-2 uppercase tracking-wide">
+                                <i class="far fa-calendar-check mr-1"></i> FASE CONCLUÍDA
                             </p>
                         </div>
 
-                        <div class="relative pl-6">
-                            <span class="absolute w-4 h-4 rounded-full bg-gray-400 ring-4 ring-gray-50 dark:ring-gray-800 -left-[9px] top-1"></span>
+                        <div class="relative pl-6 bg-pink-50/70 dark:bg-pink-950/25 border border-pink-200 dark:border-pink-800/60 rounded-lg py-4 pr-4">
+                            <span class="absolute w-4 h-4 rounded-full bg-pink-600 ring-4 ring-pink-200 dark:ring-pink-900 -left-[9px] top-5"></span>
                             <div class="mb-2 flex flex-wrap items-center gap-3">
-                                <span class="bg-gray-500 text-white text-[10px] font-bold px-2 py-1 rounded tracking-wider">FASE 4</span>
-                                <h5 class="font-bold text-gray-800 dark:text-gray-200 text-lg">BUSINESS INTELLIGENCE &amp; ANALYTICS</h5>
+                                <span class="bg-pink-600 text-white text-[10px] font-bold px-2 py-1 rounded tracking-wider">FASE 4 · ATUAL</span>
+                                <h5 class="font-bold text-gray-900 dark:text-white text-lg">BUSINESS INTELLIGENCE &amp; ANALYTICS</h5>
                             </div>
-                            <p class="text-xs font-bold text-gray-500 mb-2 uppercase tracking-wide">
-                                <i class="far fa-calendar-alt mr-1"></i> A PARTIR DE 11/11/2026
+                            <p class="text-xs font-bold text-green-600 dark:text-green-400 mb-1 uppercase tracking-wide">
+                                <i class="far fa-calendar-alt mr-1"></i> DE 11/11/2026 ATÉ 11/12/2026
                             </p>
                         </div>
 
@@ -917,6 +1063,255 @@
                                 <i class="far fa-calendar-alt mr-1"></i> A PARTIR DE 30/04/2027
                             </p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="evolucao" class="py-20 border-t dark:border-gray-700">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-3 dark:text-white">Evolução Histórica de Conhecimentos</h2>
+                <p class="text-gray-600 dark:text-gray-400 text-center max-w-3xl mx-auto mb-10">
+                    Como meus conhecimentos em dados evoluíram de forma contínua ao longo dos anos — somando Business Intelligence, Engenharia Cloud, Estatística e Machine Learning na prática.
+                </p>
+
+                <!-- Curva Cumulativa Interativa (no estilo visual do site) -->
+                <div class="bg-white dark:bg-darkCard p-6 md:p-8 rounded-xl shadow-md border dark:border-gray-700 mb-8">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-5">
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-900 dark:text-white">Curva Cumulativa de Domínios Técnicos (2019 – 2027)</h3>
+                            <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Clique em qualquer marco no gráfico ou nos filtros abaixo para filtrar a linha do tempo.</p>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-3 text-xs font-medium text-gray-600 dark:text-gray-300">
+                            <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span> BI &amp; DataViz</span>
+                            <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span> Análise &amp; Estatística</span>
+                            <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-green-500"></span> Eng. Cloud &amp; RPA</span>
+                            <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-purple-500"></span> Ciência de Dados &amp; IA</span>
+                        </div>
+                    </div>
+
+                    <div class="w-full overflow-x-auto pb-2">
+                        <svg viewBox="0 0 920 260" class="w-full min-w-[620px] h-auto" role="img" aria-label="Curva cumulativa da evolução de conhecimentos de 2019 a 2027">
+                            <defs>
+                                <linearGradient id="gradBI" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.22"></stop>
+                                    <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.01"></stop>
+                                </linearGradient>
+                                <linearGradient id="gradEng" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#22c55e" stop-opacity="0.20"></stop>
+                                    <stop offset="100%" stop-color="#22c55e" stop-opacity="0.01"></stop>
+                                </linearGradient>
+                                <linearGradient id="gradML" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#a855f7" stop-opacity="0.24"></stop>
+                                    <stop offset="100%" stop-color="#a855f7" stop-opacity="0.01"></stop>
+                                </linearGradient>
+                            </defs>
+
+                            <g stroke="currentColor" class="text-gray-200 dark:text-gray-700" stroke-width="1" stroke-dasharray="4 4">
+                                <line x1="65" y1="40" x2="880" y2="40"></line>
+                                <line x1="65" y1="95" x2="880" y2="95"></line>
+                                <line x1="65" y1="150" x2="880" y2="150"></line>
+                                <line x1="65" y1="205" x2="880" y2="205"></line>
+                            </g>
+
+                            <g class="fill-gray-400 dark:fill-gray-500" font-size="10" font-family="monospace">
+                                <text x="8" y="44">IA / Prod</text>
+                                <text x="8" y="99">Cloud / ML</text>
+                                <text x="8" y="154">Python/SQL</text>
+                                <text x="8" y="209">Base BI</text>
+                            </g>
+
+                            <g stroke="currentColor" class="text-gray-200 dark:text-gray-700" stroke-width="1">
+                                <line x1="95" y1="28" x2="95" y2="215"></line>
+                                <line x1="246" y1="28" x2="246" y2="215"></line>
+                                <line x1="397" y1="28" x2="397" y2="215"></line>
+                                <line x1="548" y1="28" x2="548" y2="215"></line>
+                                <line x1="699" y1="28" x2="699" y2="215"></line>
+                                <line x1="850" y1="28" x2="850" y2="215" stroke-dasharray="4 4"></line>
+                            </g>
+
+                            <!-- BI & DataViz -->
+                            <path d="M 95 185 C 170 155, 195 120, 246 112 C 322 102, 344 96, 397 90 C 472 84, 502 78, 548 74 C 624 68, 661 64, 699 60 L 850 56 L 850 215 L 95 215 Z" fill="url(#gradBI)"></path>
+                            <path d="M 95 185 C 170 155, 195 120, 246 112 C 322 102, 344 96, 397 90 C 472 84, 502 78, 548 74 C 624 68, 661 64, 699 60" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"></path>
+                            <path d="M 699 60 L 850 56" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-dasharray="6 5"></path>
+
+                            <!-- Análise & Estatística -->
+                            <path d="M 246 195 C 314 175, 348 142, 397 132 C 472 118, 507 104, 548 96 C 622 82, 661 72, 699 66" fill="none" stroke="#f97316" stroke-width="3" stroke-linecap="round"></path>
+                            <path d="M 699 66 L 850 48" fill="none" stroke="#f97316" stroke-width="2.5" stroke-dasharray="6 5"></path>
+
+                            <!-- Engenharia Cloud & RPA -->
+                            <path d="M 397 198 C 463 172, 507 130, 548 116 C 622 92, 661 70, 699 56 L 850 50 L 850 215 L 397 215 Z" fill="url(#gradEng)"></path>
+                            <path d="M 397 198 C 463 172, 507 130, 548 116 C 622 92, 661 70, 699 56" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round"></path>
+                            <path d="M 699 56 L 850 50" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-dasharray="6 5"></path>
+
+                            <!-- Ciência de Dados & IA -->
+                            <path d="M 548 195 C 612 155, 656 82, 699 44 L 850 28 L 850 215 L 548 215 Z" fill="url(#gradML)"></path>
+                            <path d="M 548 195 C 612 155, 656 82, 699 44" fill="none" stroke="#a855f7" stroke-width="3.2" stroke-linecap="round"></path>
+                            <path d="M 699 44 L 850 28" fill="none" stroke="#a855f7" stroke-width="2.8" stroke-dasharray="6 5"></path>
+
+                            <!-- Marcos Clicáveis -->
+                            <g onclick="selectEra('2019-2022')" data-era-node="2019-2022" class="evo-node">
+                                <circle cx="95" cy="185" r="9" fill="#3b82f6" fill-opacity="0.22"></circle>
+                                <circle cx="95" cy="185" r="5" fill="#3b82f6" stroke="#ffffff" stroke-width="2"></circle>
+                                <text x="95" y="236" text-anchor="middle" class="fill-gray-700 dark:fill-gray-300 font-bold" font-size="11">2019–22</text>
+                                <text x="95" y="250" text-anchor="middle" class="fill-gray-500" font-size="9.5">Évora &amp; BI</text>
+                            </g>
+
+                            <g onclick="selectEra('2023')" data-era-node="2023" class="evo-node">
+                                <circle cx="246" cy="112" r="9" fill="#3b82f6" fill-opacity="0.22"></circle>
+                                <circle cx="246" cy="112" r="5" fill="#3b82f6" stroke="#ffffff" stroke-width="2"></circle>
+                                <text x="246" y="236" text-anchor="middle" class="fill-gray-700 dark:fill-gray-300 font-bold" font-size="11">2023</text>
+                                <text x="246" y="250" text-anchor="middle" class="fill-gray-500" font-size="9.5">Power BI &amp; SQL</text>
+                            </g>
+
+                            <g onclick="selectEra('2024')" data-era-node="2024" class="evo-node">
+                                <circle cx="397" cy="132" r="9" fill="#f97316" fill-opacity="0.22"></circle>
+                                <circle cx="397" cy="132" r="5" fill="#f97316" stroke="#ffffff" stroke-width="2"></circle>
+                                <text x="397" y="236" text-anchor="middle" class="fill-gray-700 dark:fill-gray-300 font-bold" font-size="11">2024</text>
+                                <text x="397" y="250" text-anchor="middle" class="fill-gray-500" font-size="9.5">Python &amp; EDA</text>
+                            </g>
+
+                            <g onclick="selectEra('2025')" data-era-node="2025" class="evo-node">
+                                <circle cx="548" cy="116" r="10" fill="#22c55e" fill-opacity="0.22"></circle>
+                                <circle cx="548" cy="116" r="5.5" fill="#22c55e" stroke="#ffffff" stroke-width="2"></circle>
+                                <text x="548" y="236" text-anchor="middle" class="fill-gray-700 dark:fill-gray-300 font-bold" font-size="11">2025</text>
+                                <text x="548" y="250" text-anchor="middle" class="fill-gray-500" font-size="9.5">RPA &amp; FIAP 1º Ano</text>
+                            </g>
+
+                            <g onclick="selectEra('2026')" data-era-node="2026" class="evo-node">
+                                <circle cx="699" cy="44" r="12" fill="#db2777" fill-opacity="0.22"></circle>
+                                <circle cx="699" cy="44" r="6" fill="#db2777" stroke="#ffffff" stroke-width="2"></circle>
+                                <rect x="668" y="12" width="62" height="18" rx="9" fill="#db2777"></rect>
+                                <text x="699" y="24" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="9.5">AGORA</text>
+                                <text x="699" y="236" text-anchor="middle" fill="#db2777" font-weight="bold" font-size="11">2026</text>
+                                <text x="699" y="250" text-anchor="middle" class="fill-gray-500" font-size="9.5">Fabric, ML &amp; IA</text>
+                            </g>
+
+                            <g onclick="selectEra('2027')" data-era-node="2027" class="evo-node">
+                                <circle cx="850" cy="28" r="9" fill="#a855f7" fill-opacity="0.20"></circle>
+                                <circle cx="850" cy="28" r="5" fill="#a855f7" stroke="#ffffff" stroke-width="2"></circle>
+                                <text x="850" y="236" text-anchor="middle" fill="#9333ea" font-weight="bold" font-size="11">2027</text>
+                                <text x="850" y="250" text-anchor="middle" class="fill-gray-500" font-size="9.5">Formatura &amp; IA</text>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="mt-4 pt-4 border-t dark:border-gray-700 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <p id="era-summary-text" class="text-xs sm:text-sm text-gray-600 dark:text-gray-300">
+                            <strong>Trajetória completa (2019–2027):</strong> de Power BI e SQL a Microsoft Fabric, RPA e Machine Learning em produção.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 shrink-0">
+                            <button onclick="selectEra('all')" data-era-btn="all" class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full transition">Todos</button>
+                            <button onclick="selectEra('2019-2022')" data-era-btn="2019-2022" class="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-bold px-3 py-1 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 transition">2019–22</button>
+                            <button onclick="selectEra('2023')" data-era-btn="2023" class="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-bold px-3 py-1 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 transition">2023</button>
+                            <button onclick="selectEra('2024')" data-era-btn="2024" class="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-bold px-3 py-1 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 transition">2024</button>
+                            <button onclick="selectEra('2025')" data-era-btn="2025" class="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-bold px-3 py-1 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 transition">2025</button>
+                            <button onclick="selectEra('2026')" data-era-btn="2026" class="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-bold px-3 py-1 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 transition">2026</button>
+                            <button onclick="selectEra('2027')" data-era-btn="2027" class="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-bold px-3 py-1 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 transition">2027</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-darkCard p-6 md:p-8 rounded-xl shadow-md border dark:border-gray-700">
+                    <div class="border-l-2 border-gray-200 dark:border-gray-700 ml-3 md:ml-4 space-y-8">
+
+                        <div data-era-item="2019-2022" class="relative pl-6">
+                            <span class="absolute w-4 h-4 rounded-full bg-blue-500 ring-4 ring-white dark:ring-darkCard -left-[9px] top-1"></span>
+                            <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                                <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-bold px-2.5 py-0.5 rounded-full">2019 – 2022</span>
+                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Base Corporativa &amp; Primeiro Contato com BI</h3>
+                            </div>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-2.5">
+                                Início no <strong>Grupo Évora (Ago/2019)</strong> atuando próximo a operações, prazos e controles gerenciais. A busca por substituir planilhas manuais por indicadores confiáveis levou ao primeiro contato estruturado com Power BI (Semana do Power BI — DATAB, Set/2022).
+                            </p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Excel Avançado</span>
+                                <span class="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Processos &amp; KPIs</span>
+                                <span class="bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Power BI Base</span>
+                            </div>
+                        </div>
+
+                        <div data-era-item="2023" class="relative pl-6">
+                            <span class="absolute w-4 h-4 rounded-full bg-blue-600 ring-4 ring-white dark:ring-darkCard -left-[9px] top-1"></span>
+                            <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                                <span class="bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 text-xs font-bold px-2.5 py-0.5 rounded-full">2023</span>
+                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Consolidação em Power BI, Modelagem &amp; SQL</h3>
+                            </div>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-2.5">
+                                Conclusão da <strong>Formação Completa em Power BI (60h, Jun/2023)</strong> e <strong>SQL Aplicado ao Power BI (Jul/2023 — DATAB)</strong>, somados aos primeiros scripts em Python para manipulação de dados. Criação do GitHub (Nov/2023) e entrega de dashboards corporativos completos (Operacional, Financeiro e Atendimento).
+                            </p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Star Schema</span>
+                                <span class="bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">DAX &amp; Linguagem M</span>
+                                <span class="bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">SQL Server</span>
+                                <span class="bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">DataViz &amp; Storytelling</span>
+                                <span class="bg-orange-100 dark:bg-orange-900/40 text-orange-800 dark:text-orange-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Python</span>
+                            </div>
+                        </div>
+
+                        <div data-era-item="2024" class="relative pl-6">
+                            <span class="absolute w-4 h-4 rounded-full bg-orange-500 ring-4 ring-white dark:ring-darkCard -left-[9px] top-1"></span>
+                            <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                                <span class="bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-300 text-xs font-bold px-2.5 py-0.5 rounded-full">2024</span>
+                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Python Analítico, Estatística &amp; EDA em Escala</h3>
+                            </div>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-2.5">
+                                Aprofundamento em <strong>Python para Data Science (72h — DSA, Mai/2024)</strong>, lançamento do primeiro estudo aberto com mais de 5.570 municípios (<strong>Projeto EDA Brasil</strong> com Regressão OLS) e refatoração de regras analíticas críticas em Python no Grupo Évora.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="bg-orange-100 dark:bg-orange-900/40 text-orange-800 dark:text-orange-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Pandas &amp; NumPy</span>
+                                <span class="bg-orange-100 dark:bg-orange-900/40 text-orange-800 dark:text-orange-300 text-xs font-medium px-2.5 py-0.5 rounded-full">EDA &amp; Feature Engineering</span>
+                                <span class="bg-orange-100 dark:bg-orange-900/40 text-orange-800 dark:text-orange-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Estatística &amp; OLS</span>
+                                <span class="bg-green-100 dark:bg-green-900/40 text-green-800 dark:text-green-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Refatoração Python</span>
+                            </div>
+                        </div>
+
+                        <div data-era-item="2025" class="relative pl-6">
+                            <span class="absolute w-4 h-4 rounded-full bg-green-500 ring-4 ring-white dark:ring-darkCard -left-[9px] top-1"></span>
+                            <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                                <span class="bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-300 text-xs font-bold px-2.5 py-0.5 rounded-full">2025</span>
+                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Engenharia de Dados, RPA &amp; 1º Ano FIAP Concluído</h3>
+                            </div>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-2.5">
+                                Início da graduação em <strong>Data Science e Big Data na FIAP (Ago/2025)</strong> com conclusão das <strong>7 fases do 1º ano</strong>, qualificação <strong>FIAP Bronze Certified (Dez/2025)</strong> em Modelagem, Programação e Qualidade de Dados e <strong>Imersão IA (Alura &amp; Google Gemini)</strong>. Em produção, criação de robôs RPA com Selenium + SQL reduzindo o tempo operacional pela metade.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="bg-green-100 dark:bg-green-900/40 text-green-800 dark:text-green-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Selenium RPA</span>
+                                <span class="bg-green-100 dark:bg-green-900/40 text-green-800 dark:text-green-300 text-xs font-medium px-2.5 py-0.5 rounded-full">PL/SQL &amp; Oracle</span>
+                                <span class="bg-green-100 dark:bg-green-900/40 text-green-800 dark:text-green-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Linux, NoSQL &amp; Big Data</span>
+                                <span class="bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">SSBI &amp; LGPD</span>
+                                <span class="bg-purple-100 dark:bg-purple-900/40 text-purple-800 dark:text-purple-300 text-xs font-medium px-2.5 py-0.5 rounded-full">GenAI</span>
+                            </div>
+                        </div>
+
+                        <div data-era-item="2026" class="relative pl-6">
+                            <span class="absolute w-4 h-4 rounded-full bg-pink-600 ring-4 ring-white dark:ring-darkCard -left-[9px] top-1"></span>
+                            <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                                <span class="bg-pink-600 text-white text-xs font-bold px-2.5 py-0.5 rounded-full">2026 · ATUAL</span>
+                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Cloud (Microsoft Fabric), ML em Produção &amp; 2º Ano FIAP</h3>
+                            </div>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-2.5">
+                                Consolidação em nuvem e ciência de dados aplicada: <strong>Concreto Inteligente</strong> (XGBoost + SHAP + API FastAPI), finalização do <strong>Motor Sentinela V3.0</strong> (<strong>um dos melhores projetos da turma de 1º ano da FIAP</strong>, preservando R$ 87,8 Mi), <strong>Pipeline corporativo em Microsoft Fabric + APIs JWT + Power Automate</strong>, <strong>BreathAlert BR</strong> (Global Solution 2026 · 10 anos INPE/DATASUS), conquista da qualificação <strong>FIAP Silver Certified (Jul/2026)</strong> em Arquitetura de Analytics e Big Data, conclusão das <strong>Fases 1 a 3 do 2º ano FIAP</strong>, avanço na <strong>Fase 4 (BI &amp; Analytics)</strong> e início do novo projeto de Data Science para a <strong>Ri Happy</strong>.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="bg-green-100 dark:bg-green-900/40 text-green-800 dark:text-green-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Microsoft Fabric &amp; Azure</span>
+                                <span class="bg-green-100 dark:bg-green-900/40 text-green-800 dark:text-green-300 text-xs font-medium px-2.5 py-0.5 rounded-full">APIs REST / JWT &amp; Data Ingestion</span>
+                                <span class="bg-purple-100 dark:bg-purple-900/40 text-purple-800 dark:text-purple-300 text-xs font-medium px-2.5 py-0.5 rounded-full">XGBoost, Isolation Forest &amp; LOF</span>
+                                <span class="bg-purple-100 dark:bg-purple-900/40 text-purple-800 dark:text-purple-300 text-xs font-medium px-2.5 py-0.5 rounded-full">SHAP (XAI) &amp; FastAPI</span>
+                                <span class="bg-orange-100 dark:bg-orange-900/40 text-orange-800 dark:text-orange-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Séries Temporais &amp; Mann-Whitney</span>
+                            </div>
+                        </div>
+
+                        <div data-era-item="2027" class="relative pl-6">
+                            <span class="absolute w-4 h-4 rounded-full bg-gray-400 ring-4 ring-white dark:ring-darkCard -left-[9px] top-1"></span>
+                            <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                                <span class="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-bold px-2.5 py-0.5 rounded-full">2027 · PRÓXIMO HORIZONTE</span>
+                                <h3 class="font-bold text-lg text-gray-900 dark:text-white">Modelagem Estatística, IA Avançada &amp; Formatura FIAP</h3>
+                            </div>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                                Conclusão do CST em Data Science &amp; Big Data na FIAP cobrindo <strong>Data Viz &amp; Data Science</strong> (Fev/2027), <strong>Building Statistical Models</strong> (Mar/2027) e <strong>Advanced Models and AI</strong> (Abr/2027).
+                            </p>
+                        </div>
 
                     </div>
                 </div>
@@ -927,32 +1322,52 @@
             <h2 class="text-3xl font-bold text-center mb-12 dark:text-white">Licenças e Certificações</h2>
             <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
                 
-                <div class="bg-white dark:bg-darkCard p-6 rounded-lg shadow-md border-l-4 border-red-500 dark:border-gray-700 hover:shadow-lg transition">
-                    <i class="fas fa-university text-3xl text-red-500 mb-4"></i>
-                    <h3 class="text-lg font-bold dark:text-white mb-2">Modelagem, Programação e Qualidade de Dados</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">FIAP - Bronze Certified</p>
-                    <p class="text-xs font-semibold text-gray-500 dark:text-gray-500">Qualificação Profissional | 2025</p>
+                <div class="bg-white dark:bg-darkCard p-6 rounded-lg shadow-md border-l-4 border-pink-600 dark:border-pink-500 hover:shadow-lg transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fas fa-award text-3xl text-pink-600 dark:text-pink-400"></i>
+                        <span class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Silver Certified</span>
+                    </div>
+                    <h3 class="text-lg font-bold dark:text-white mb-2">Arquitetura de Analytics e Big Data</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">FIAP - Silver Certified</p>
+                    <p class="text-xs font-semibold text-gray-500 dark:text-gray-400">Qualificação Profissional | Jul 2026</p>
                 </div>
 
-                <div class="bg-white dark:bg-darkCard p-6 rounded-lg shadow-md border-l-4 border-green-500 dark:border-gray-700 hover:shadow-lg transition">
+                <div class="bg-white dark:bg-darkCard p-6 rounded-lg shadow-md border-l-4 border-red-500 dark:border-red-500 hover:shadow-lg transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fas fa-university text-3xl text-red-500"></i>
+                        <span class="bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Bronze Certified</span>
+                    </div>
+                    <h3 class="text-lg font-bold dark:text-white mb-2">Modelagem, Programação e Qualidade de Dados</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">FIAP - Bronze Certified</p>
+                    <p class="text-xs font-semibold text-gray-500 dark:text-gray-400">Qualificação Profissional | Dez 2025</p>
+                </div>
+
+                <div class="bg-white dark:bg-darkCard p-6 rounded-lg shadow-md border-l-4 border-blue-500 dark:border-blue-500 hover:shadow-lg transition">
+                    <i class="fas fa-robot text-3xl text-blue-500 mb-4"></i>
+                    <h3 class="text-lg font-bold dark:text-white mb-2">Imersão Inteligência Artificial</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Alura &amp; Google Gemini</p>
+                    <p class="text-xs font-semibold text-gray-500 dark:text-gray-400">Tecnologia e GenAI | 2025</p>
+                </div>
+
+                <div class="bg-white dark:bg-darkCard p-6 rounded-lg shadow-md border-l-4 border-green-500 dark:border-green-500 hover:shadow-lg transition">
                     <i class="fab fa-python text-3xl text-green-500 mb-4"></i>
                     <h3 class="text-lg font-bold dark:text-white mb-2">Fundamentos de Python para Data Science</h3>
                     <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Data Science Academy (DSA)</p>
-                    <p class="text-xs font-semibold text-gray-500 dark:text-gray-500">Nível Intermediário | 72 horas</p>
+                    <p class="text-xs font-semibold text-gray-500 dark:text-gray-400">Nível Intermediário | 72 horas | Mai 2024</p>
                 </div>
 
-                <div class="bg-white dark:bg-darkCard p-6 rounded-lg shadow-md border-l-4 border-yellow-500 dark:border-gray-700 hover:shadow-lg transition">
+                <div class="bg-white dark:bg-darkCard p-6 rounded-lg shadow-md border-l-4 border-orange-500 dark:border-orange-500 hover:shadow-lg transition">
+                    <i class="fas fa-database text-3xl text-orange-500 mb-4"></i>
+                    <h3 class="text-lg font-bold dark:text-white mb-2">Introdução ao SQL Aplicado ao Power BI</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">DATAB Inteligência &amp; Estratégia</p>
+                    <p class="text-xs font-semibold text-gray-500 dark:text-gray-400">Consultas SQL &amp; Integração BI | Jul 2023</p>
+                </div>
+
+                <div class="bg-white dark:bg-darkCard p-6 rounded-lg shadow-md border-l-4 border-yellow-500 dark:border-yellow-500 hover:shadow-lg transition">
                     <i class="fas fa-chart-bar text-3xl text-yellow-500 mb-4"></i>
                     <h3 class="text-lg font-bold dark:text-white mb-2">Formação Completa em Power BI</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">DATAB Inteligência & Estratégia</p>
-                    <p class="text-xs font-semibold text-gray-500 dark:text-gray-500">Carga horária: 60 horas</p>
-                </div>
-
-                <div class="bg-white dark:bg-darkCard p-6 rounded-lg shadow-md border-l-4 border-blue-500 dark:border-gray-700 hover:shadow-lg transition">
-                    <i class="fas fa-robot text-3xl text-blue-500 mb-4"></i>
-                    <h3 class="text-lg font-bold dark:text-white mb-2">Imersão Inteligência Artificial</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Alura & Google Gemini</p>
-                    <p class="text-xs font-semibold text-gray-500 dark:text-gray-500">Tecnologia e GenAI | 2025</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">DATAB Inteligência &amp; Estratégia</p>
+                    <p class="text-xs font-semibold text-gray-500 dark:text-gray-400">Carga horária: 60 horas | Jun 2023</p>
                 </div>
 
             </div>
@@ -979,7 +1394,7 @@
                     <i class="fab fa-kaggle fa-lg mr-2"></i> Kaggle
                 </a>
                 
-                <a href="https://raw.githubusercontent.com/SauloSapucaia/SauloSapucaia.github.io/main/Cv_Saulo_Sapucaia_v10.03.26.pdf" download class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 shadow-lg flex items-center">
+                <a href="./Cv_Saulo_Sapucaia_v10.03.26.pdf" download class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 shadow-lg flex items-center">
                     <i class="fas fa-file-pdf fa-lg mr-2"></i> Baixar CV
                 </a>
                 
@@ -993,27 +1408,103 @@
     </footer>
 
     <script>
-        // Tema e Dark Mode
+        // Tema e Dark Mode (Modo Claro padrão + persistência)
         const themeBtn = document.getElementById('theme-toggle');
         const mobileThemeBtn = document.getElementById('theme-toggle-mobile');
         const darkIcon = document.getElementById('theme-toggle-dark-icon');
         const lightIcon = document.getElementById('theme-toggle-light-icon');
 
+        function applySavedTheme(isDark) {
+            document.documentElement.classList.toggle('dark', isDark);
+            darkIcon.classList.toggle('hidden', isDark);
+            lightIcon.classList.toggle('hidden', !isDark);
+        }
+
+        applySavedTheme(localStorage.getItem('saulo-theme') === 'dark');
+
         function toggleTheme() {
-            document.documentElement.classList.toggle('dark');
-            darkIcon.classList.toggle('hidden');
-            lightIcon.classList.toggle('hidden');
+            const nextIsDark = !document.documentElement.classList.contains('dark');
+            localStorage.setItem('saulo-theme', nextIsDark ? 'dark' : 'light');
+            applySavedTheme(nextIsDark);
         }
 
         themeBtn.addEventListener('click', toggleTheme);
         mobileThemeBtn.addEventListener('click', toggleTheme);
 
-        // Menu Mobile
+        // Menu Mobile (fecha ao clicar em um link)
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+        mobileMenu.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Atalho dos contadores do "Sobre Mim" para a aba correspondente em Projetos
+        function goToProjectCategory(category) {
+            showCategory(category);
+            const projSection = document.getElementById('projetos');
+            if (projSection) projSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Filtro interativo da Curva Cumulativa & Evolução Histórica
+        const ERA_SUMMARIES = {
+            all: '<strong>Trajetória completa (2019–2027):</strong> de Power BI e SQL a Microsoft Fabric, RPA e Machine Learning em produção.',
+            '2019-2022': '<strong>2019 – 2022:</strong> Base operacional no Grupo Évora, Excel avançado, KPIs e primeiro contato com Power BI (DATAB).',
+            '2023': '<strong>2023:</strong> Formação Completa em Power BI (60h), Star Schema, DAX, Linguagem M, SQL Server e primeiros passos em Python.',
+            '2024': '<strong>2024:</strong> Python para Data Science (DSA 72h), Pandas/NumPy, Estatística (OLS), Projeto EDA Brasil e refatoração Python no negócio.',
+            '2025': '<strong>2025:</strong> RPA com Selenium + SQL, início da graduação na FIAP (1º Ano 100% concluído), FIAP Bronze Certified e Imersão IA.',
+            '2026': '<strong>2026 (Atual):</strong> Microsoft Fabric, APIs JWT, XGBoost + FastAPI, Motor Sentinela V3.0 (Destaque 1º Ano FIAP), BreathAlert BR, FIAP Silver Certified (Jul/26), 2º Ano FIAP (Fase 4) e Projeto Ri Happy.',
+            '2027': '<strong>2027 (Previsão):</strong> Fases 5, 6 e 7 da FIAP (Data Viz &amp; DS, Statistical Models, Advanced Models &amp; AI) e formatura.'
+        };
+
+        function selectEra(eraKey) {
+            const summaryEl = document.getElementById('era-summary-text');
+            if (summaryEl) summaryEl.innerHTML = ERA_SUMMARIES[eraKey] || ERA_SUMMARIES.all;
+
+            document.querySelectorAll('[data-era-btn]').forEach(btn => {
+                const active = btn.dataset.eraBtn === eraKey;
+                btn.className = active
+                    ? 'bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full transition'
+                    : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-bold px-3 py-1 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 transition';
+            });
+
+            document.querySelectorAll('[data-era-node]').forEach(node => {
+                node.style.opacity = (eraKey === 'all' || node.dataset.eraNode === eraKey) ? '1' : '0.35';
+            });
+
+            document.querySelectorAll('[data-era-item]').forEach(item => {
+                const show = eraKey === 'all' || item.dataset.eraItem === eraKey;
+                item.classList.toggle('hidden', !show);
+            });
+        }
+
+        // Abas da Jornada FIAP (2º Ano / 1º Ano / Todas)
+        function showFiapYear(mode) {
+            const y1 = document.getElementById('fiap-year-1-block');
+            const y2 = document.getElementById('fiap-year-2-block');
+            const b1 = document.getElementById('fiap-btn-year1');
+            const b2 = document.getElementById('fiap-btn-year2');
+            const bAll = document.getElementById('fiap-btn-all');
+            const inactive = 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs sm:text-sm font-bold px-4 py-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 transition';
+
+            [b1, b2, bAll].forEach(b => { if (b) b.className = inactive; });
+
+            if (mode === 'year2') {
+                y2.classList.remove('hidden');
+                y1.classList.add('hidden');
+                b2.className = 'bg-pink-600 text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-full shadow transition';
+            } else if (mode === 'year1') {
+                y1.classList.remove('hidden');
+                y2.classList.add('hidden');
+                b1.className = 'bg-green-600 text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-full shadow transition';
+            } else {
+                y1.classList.remove('hidden');
+                y2.classList.remove('hidden');
+                bAll.className = 'bg-blue-600 text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-full shadow transition';
+            }
+        }
         
         // Função das Abas de Projetos (Business Intelligence / Análise de Dados / Engenharia de Dados / Ciência de Dados)
         function showCategory(category) {
@@ -1066,21 +1557,25 @@
 
 
         // Expandir Case Study
-        function toggleCaseStudy(caseId) {
+        function toggleCaseStudy(caseId, clickedBtn) {
             const content = document.getElementById(caseId);
-            const button = content.parentElement.querySelector('button');
-            const icon = button.querySelector('i');
+            const button = clickedBtn || content.parentElement.querySelector(`button[onclick*="${caseId}"]`) || content.parentElement.querySelector('button');
+            const icon = button ? button.querySelector('i') : null;
             
             if (content.classList.contains('open')) {
                 content.classList.remove('open');
-                icon.classList.remove('fa-chevron-up');
-                icon.classList.add('fa-chevron-down');
-                button.childNodes[0].nodeValue = "Ver detalhes ";
+                if (icon) {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+                if (button && button.childNodes[0]) button.childNodes[0].nodeValue = "Ver detalhes ";
             } else {
                 content.classList.add('open');
-                icon.classList.remove('fa-chevron-down');
-                icon.classList.add('fa-chevron-up');
-                button.childNodes[0].nodeValue = "Ocultar detalhes ";
+                if (icon) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+                if (button && button.childNodes[0]) button.childNodes[0].nodeValue = "Ocultar detalhes ";
             }
         }
 
